@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="175" id="KGk-i7-Jjw" customClass="ServiceInfoListCell">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="174.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_image" translatesAutoresizingMaskIntoConstraints="NO" id="oSS-pb-8cd">
+                        <rect key="frame" x="15" y="23" width="162" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="128" id="00u-H5-f57"/>
+                            <constraint firstAttribute="width" constant="162" id="4iI-bq-FW6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打发打发发大发发打发沙发大发发" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo4-t7-HkP">
+                        <rect key="frame" x="192" y="23" width="153" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="范德萨范德萨发发生大范德萨发大发发达" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ2-GG-Roj">
+                        <rect key="frame" x="192" y="74" width="153" height="31.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssl-w9-evv">
+                        <rect key="frame" x="15" y="174" width="330" height="1"/>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="9rS-uR-Up5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="lo4-t7-HkP" secondAttribute="trailing" constant="5" id="3SO-KC-3CT"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aQ2-GG-Roj" secondAttribute="bottom" constant="10" id="8tt-Ej-LDZ"/>
+                    <constraint firstItem="Ssl-w9-evv" firstAttribute="trailing" secondItem="lo4-t7-HkP" secondAttribute="trailing" id="AMb-Co-hLj"/>
+                    <constraint firstItem="aQ2-GG-Roj" firstAttribute="trailing" secondItem="lo4-t7-HkP" secondAttribute="trailing" id="Drp-Ty-ij1"/>
+                    <constraint firstItem="lo4-t7-HkP" firstAttribute="leading" secondItem="oSS-pb-8cd" secondAttribute="trailing" constant="15" id="MpF-nI-8tL"/>
+                    <constraint firstItem="oSS-pb-8cd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wam-L5-Xcw"/>
+                    <constraint firstItem="aQ2-GG-Roj" firstAttribute="top" secondItem="lo4-t7-HkP" secondAttribute="bottom" constant="15" id="Yz7-xq-Odv"/>
+                    <constraint firstAttribute="bottom" secondItem="Ssl-w9-evv" secondAttribute="bottom" id="Zmm-Jp-Atc"/>
+                    <constraint firstItem="Ssl-w9-evv" firstAttribute="leading" secondItem="oSS-pb-8cd" secondAttribute="leading" id="isH-pE-agN"/>
+                    <constraint firstItem="aQ2-GG-Roj" firstAttribute="leading" secondItem="lo4-t7-HkP" secondAttribute="leading" id="p63-i6-omh"/>
+                    <constraint firstItem="lo4-t7-HkP" firstAttribute="top" secondItem="oSS-pb-8cd" secondAttribute="top" id="pyR-VO-D21"/>
+                    <constraint firstItem="oSS-pb-8cd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="vCE-tB-14Z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="49" y="119.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="temp_image" width="640" height="426"/>
+    </resources>
+</document>

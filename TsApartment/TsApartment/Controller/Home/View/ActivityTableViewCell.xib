@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="ActivityTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="127.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="distribute" translatesAutoresizingMaskIntoConstraints="NO" id="8bG-Jp-1ng">
+                        <rect key="frame" x="15" y="5" width="150" height="117.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="uJk-vQ-3l9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="社区团购直达" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKp-hB-oHe">
+                        <rect key="frame" x="175" y="5" width="98" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动时间：5.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBd-uB-Qjk">
+                        <rect key="frame" x="175" y="108" width="86.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已有142参加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-1k-tRu">
+                        <rect key="frame" x="175" y="32.5" width="70" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8bG-Jp-1ng" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="7ZI-aF-Dqt"/>
+                    <constraint firstItem="8bG-Jp-1ng" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="DE4-W9-w5n"/>
+                    <constraint firstItem="wKp-hB-oHe" firstAttribute="top" secondItem="8bG-Jp-1ng" secondAttribute="top" id="ahV-Gf-oiY"/>
+                    <constraint firstItem="HjO-1k-tRu" firstAttribute="top" secondItem="wKp-hB-oHe" secondAttribute="bottom" constant="8" id="bEt-yT-Nvp"/>
+                    <constraint firstItem="hBd-uB-Qjk" firstAttribute="leading" secondItem="wKp-hB-oHe" secondAttribute="leading" id="eDw-Gx-jdI"/>
+                    <constraint firstItem="wKp-hB-oHe" firstAttribute="leading" secondItem="8bG-Jp-1ng" secondAttribute="trailing" constant="10" id="hV0-bU-iX0"/>
+                    <constraint firstAttribute="bottom" secondItem="8bG-Jp-1ng" secondAttribute="bottom" constant="5" id="p7H-zL-xpa"/>
+                    <constraint firstItem="hBd-uB-Qjk" firstAttribute="bottom" secondItem="8bG-Jp-1ng" secondAttribute="bottom" id="vRP-P9-YK5"/>
+                    <constraint firstItem="HjO-1k-tRu" firstAttribute="leading" secondItem="wKp-hB-oHe" secondAttribute="leading" id="vlY-Wl-KXI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="34" y="96"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="distribute" width="599" height="400"/>
+    </resources>
+</document>

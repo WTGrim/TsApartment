@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DistCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="245" height="219"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="245" height="219"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="distribute" translatesAutoresizingMaskIntoConstraints="NO" id="tXB-Bu-uCY">
+                        <rect key="frame" x="0.0" y="0.0" width="245" height="169"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37度公寓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpO-zI-Lh2">
+                        <rect key="frame" x="0.0" y="174" width="245" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="93d-qx-mME"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hba-XH-24q">
+                        <rect key="frame" x="0.0" y="194" width="245" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="cAD-GG-Lgf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hpO-zI-Lh2" secondAttribute="trailing" id="8c2-Ec-Hsr"/>
+                <constraint firstAttribute="trailing" secondItem="tXB-Bu-uCY" secondAttribute="trailing" id="CGS-S8-csa"/>
+                <constraint firstAttribute="bottom" secondItem="Hba-XH-24q" secondAttribute="bottom" constant="5" id="a5u-dj-rZV"/>
+                <constraint firstItem="Hba-XH-24q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bQO-ke-xuD"/>
+                <constraint firstItem="hpO-zI-Lh2" firstAttribute="top" secondItem="tXB-Bu-uCY" secondAttribute="bottom" constant="5" id="cjG-pf-ClP"/>
+                <constraint firstItem="tXB-Bu-uCY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eNT-HI-csc"/>
+                <constraint firstAttribute="trailing" secondItem="Hba-XH-24q" secondAttribute="trailing" id="f9E-Kn-gqU"/>
+                <constraint firstItem="Hba-XH-24q" firstAttribute="top" secondItem="hpO-zI-Lh2" secondAttribute="bottom" constant="10" id="mLo-gO-ED9"/>
+                <constraint firstItem="tXB-Bu-uCY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rMr-eQ-2Kz"/>
+                <constraint firstItem="hpO-zI-Lh2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zl1-Qs-BGm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="245" height="219"/>
+            <connections>
+                <outlet property="desc" destination="hpO-zI-Lh2" id="DNc-Vc-RtN"/>
+                <outlet property="picture" destination="tXB-Bu-uCY" id="ifI-af-btt"/>
+                <outlet property="price" destination="Hba-XH-24q" id="vtT-1r-rnL"/>
+            </connections>
+            <point key="canvasLocation" x="18.5" y="116.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="distribute" width="280" height="157"/>
+    </resources>
+</document>
