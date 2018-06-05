@@ -27,13 +27,15 @@
     if (dict[kSid]) {
         _sid = dict[kSid];
     }
+    if (dict[kUid]) {
+        _uid = dict[kUid];
+    }
     if (dict[kSex]) {
         _sex = dict[kSex];
     }
     if (dict[kNickName]) {
         _nickName = dict[kNickName];
     }
-    
 }
 
 - (NSDictionary *)userInfoDict{
@@ -43,6 +45,9 @@
     }
     if (!StringIsNull(_sid)) {
         [dict setObject:_sid forKey:kSid];
+    }
+    if (!StringIsNull(_uid)) {
+        [dict setObject:kUid forKey:kUid];
     }
     if (!StringIsNull(_nickName)) {
         [dict setObject:_nickName forKey:kNickName];

@@ -21,6 +21,7 @@
 #import "CentralizedViewController.h"
 #import "DistributedViewController.h"
 #import "CommonBottomView.h"
+#import "NetworkTool.h"
 
 #define CYCLE_H SCREEN_WIDTH * (650 / 750.0)
 #define HEADER_H 40
@@ -37,8 +38,6 @@
 @property(nonatomic, strong)MessageView *messageView;
 //tableView
 @property(nonatomic, strong)UITableView *tableView;
-//数据源
-@property(nonatomic, strong)NSMutableArray *dataArray;
 //轮播
 @property(nonatomic, strong)WTCycleScrollView *cycleScrollView;
 //地图按钮
@@ -47,6 +46,10 @@
 @property(nonatomic, strong)UIView *topView;
 //搜索的view
 @property(nonatomic, strong)UIView *searchView;
+
+//homeBanner
+@property(nonatomic, strong)NSArray *homeBannerArr;
+@property(nonatomic, strong)NSMutableArray *activityArray;
 
 @end
 
@@ -57,6 +60,7 @@
     // Do any additional setup after loading the view from its nib.
     
     [self setupUI];
+    [self getData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -86,6 +90,30 @@
     [self initSearchView];
 }
 
+- (void)getData{
+    
+    [self getHomeBanner];
+}
+
+#pragma mark - 获取首页banner
+- (void)getHomeBanner{
+    [NetworkTool getHomeBannerWithSucceedBlock:^(NSDictionary * _Nullable result) {
+        [self presentHomeBanner:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+- (void)presentHomeBanner:(NSArray *)array{
+    
+    _homeBannerArr = [NSArray arrayWithArray:array];
+    __block NSMutableArray *imgs = [NSMutableArray array];
+    [array enumerateObjectsUsingBlock:^(NSDictionary *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [imgs addObject:[obj objectForKey:kImgUrl]];
+    }];
+    self.cycleScrollView.imageUrlsArray = imgs;
+}
+
 #pragma mark - 设置导航栏
 - (void)initNavBar{
 
@@ -105,8 +133,6 @@
     _topView.contentMode = UIViewContentModeScaleAspectFill;
     [_tableView addSubview:_topView];
     
-    
-    self.cycleScrollView.imageUrlsArray = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527511040590&di=ed2001ef02975c71c987d2ecba5bcbae&imgtype=0&src=http%3A%2F%2Fpic.shejiben.com%2Fattch%2Fday_150328%2F20150328_acb1b271035fc5125be59QzMrWqWJAGh.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527511067406&di=acc9bc0006a2de06c092f3e22569fbd2&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F14%2F31%2F93%2F25S58PICVyj_1024.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527511096581&di=e2da1171e16a06f39130c556dcddfc07&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3D082c3ff1114c510fbac9ea5a09214041%2F96dda144ad3459823ddf04ab07f431adcbef84b6.jpg"];
     [_topView addSubview:self.cycleScrollView];
 }
 
@@ -335,12 +361,7 @@
     return _cycleScrollView;
 }
 
-- (NSMutableArray *)dataArray{
-    if (_dataArray) {
-        _dataArray = [[NSMutableArray alloc]init];
-    }
-    return _dataArray;
-}
+
 
 - (UIButton *)mapBtn{
     if (!_mapBtn) {
@@ -354,6 +375,13 @@
         _mapBtn.layer.shadowColor = RGBA(0, 0, 0, 0.5).CGColor;
     }
     return _mapBtn;
+}
+
+- (NSMutableArray *)activityArray{
+    if (!_activityArray) {
+        _activityArray = [NSMutableArray array];
+    }
+    return _activityArray;
 }
 
 - (void)didReceiveMemoryWarning {

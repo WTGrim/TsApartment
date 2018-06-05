@@ -37,4 +37,28 @@
  */
 + (NSURLSessionDataTask *)getUserInfoWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
 
+/**
+ 个人菜单
+ */
++ (NSURLSessionDataTask *)getUserMenuWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
+/**
+ 我的住所菜单
+ */
++ (NSURLSessionDataTask *)getUserFlatWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
+/**
+ 首页轮播
+ */
++ (NSURLSessionDataTask *)getHomeBannerWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+/**
+ 服务轮播
+ */
++ (NSURLSessionDataTask *)getServiceBannerWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
+/**
+ 社区活动列表
+ */
++ (NSURLSessionDataTask *)getCommunityActivitiesWithPageIndex:(NSInteger)pageIndex count:(NSInteger)count SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
 @end

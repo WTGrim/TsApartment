@@ -12,8 +12,10 @@
 
 /** 是否登录 */
 @property (assign, nonatomic) BOOL isLogin;
-/** 用户登录token*/
+/** 用户登录sid*/
 @property (copy, nonatomic) NSString *sid;
+/** 用户登录uid*/
+@property (copy, nonatomic) NSString *uid;
 /** 用户手机号*/
 @property (copy, nonatomic) NSString *mobile;
 /** 用户性别*/

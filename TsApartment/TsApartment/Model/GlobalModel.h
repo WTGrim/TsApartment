@@ -19,6 +19,8 @@ static NSString *const kCode = @"code";
 static NSString *const kSucceed = @"succeed";
 static NSString *const kError_desc = @"error_desc";
 static NSString *const kSid = @"sid";
+static NSString *const kUid = @"uid";
+
 static NSString *const kSex = @"sex";
 static NSString *const kNickName = @"nickName";
 static NSString *const kUser = @"user";
@@ -34,11 +36,15 @@ static NSString *const kStatus = @"status";
 /**======================搜索=============================**/
 static NSString *const kLocalSearchHistory = @"localSearchHistory";
 
+/**======================个人中心=============================**/
+static NSString *const kName = @"name";
+static NSString *const kImgUrl = @"imgurl";
+static NSString *const kIos = @"ios";
 
-
-
-
-
+/**======================首页=============================**/
+static NSString *const kPage = @"page";
+static NSString *const kCount = @"count";
+static NSString *const kPagination = @"pagination";
 
 
 #endif /* GlobalModel_h */

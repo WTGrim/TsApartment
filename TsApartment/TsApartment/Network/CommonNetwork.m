@@ -38,16 +38,20 @@ static NSString *const kJsonType = @"application/json";
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", nil];
     [manager.requestSerializer setStringEncoding:NSUTF8StringEncoding];
     
-    if ([UserStatus shareInstance].isLogin) {
+    NSMutableArray *finalParam = [NSMutableArray array];
+    finalParam = [params mutableCopy];
+
+    if ([UserStatus shareInstance].isLogin && params != nil) {
 //        [manager.requestSerializer setValue:[UserStatus shareInstance].sid forHTTPHeaderField:@"Authorization"];
-        NSMutableArray *finalParam = [NSMutableArray array];
-        finalParam = [params mutableCopy];
-        [finalParam setValue:[UserStatus shareInstance].sid forKey:kSession];
+        NSMutableArray *session = [NSMutableArray array];
+        [session setValue:[UserStatus shareInstance].uid forKey:kUid];
+        [session setValue:[UserStatus shareInstance].sid forKey:kSid];
+        [finalParam setValue:session forKey:kSession];
     }
     if (showLoader) {
         [AlertView showProgress];
     }
-    NSURLSessionDataTask *dataTask = [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSURLSessionDataTask *dataTask = [manager POST:url parameters:finalParam progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (showLoader) {

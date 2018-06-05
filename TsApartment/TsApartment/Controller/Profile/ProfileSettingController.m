@@ -8,6 +8,7 @@
 
 #import "ProfileSettingController.h"
 #import "UseCameraOrPhoto.h"
+#import "NetworkTool.h"
 
 @interface ProfileSettingController ()
 //头像

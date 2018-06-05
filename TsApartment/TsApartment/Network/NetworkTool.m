@@ -56,4 +56,36 @@
     return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
++ (NSURLSessionDataTask *)getUserMenuWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSString *url = [NSString stringWithFormat:@"%@user/data/nav",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
++ (NSURLSessionDataTask *)getUserFlatWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSString *url = [NSString stringWithFormat:@"%@user/data/home_nav",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
++ (NSURLSessionDataTask *)getHomeBannerWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSString *url = [NSString stringWithFormat:@"%@home/data/banner",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
++ (NSURLSessionDataTask *)getServiceBannerWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSString *url = [NSString stringWithFormat:@"%@service/data/banner",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
++ (NSURLSessionDataTask *)getCommunityActivitiesWithPageIndex:(NSInteger)pageIndex count:(NSInteger)count SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *pagination = [[NSMutableDictionary alloc]init];
+    [pagination setObject:@(pageIndex) forKey:kPage];
+    [pagination setObject:@(count) forKey:kCount];
+    [param setObject:pagination forKey:kPagination];
+    NSString *url = [NSString stringWithFormat:@"%@home/activity/list",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
+
+
 @end
