@@ -14,6 +14,7 @@
 #import "CommonBottomView.h"
 #import "ServiceInfoListController.h"
 #import "NetworkTool.h"
+#import "publicAreaBookView.h"
 
 #define CYCLE_H SCREEN_WIDTH * (650 / 750.0)
 #define HEADER_H 40
@@ -34,6 +35,8 @@
 @property(nonatomic, strong)NSArray *serviceBannerArr;
 //menu
 @property(nonatomic, strong)NSArray *menuArray;
+//公区预约
+@property(nonatomic, strong)publicAreaBookView *bookView;
 
 @end
 
@@ -99,6 +102,7 @@
 - (void)presentServiceMenu:(NSArray *)array{
     
     _menuArray= [NSArray arrayWithArray:array];
+    [self.bookView setBookViewWithDict:array.lastObject];
     [_tableView reloadData];
 }
 
@@ -232,6 +236,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if (section == 0) {
+        return 100;
+    }
     return CGFLOAT_MIN;
 }
 
@@ -243,6 +250,9 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    if (section == 0) {
+        return self.bookView;
+    }
     return nil;
 }
 
@@ -272,6 +282,13 @@
         _cycleScrollView.placeholderImage = [UIImage imageNamed:@""];
     }
     return _cycleScrollView;
+}
+
+- (publicAreaBookView *)bookView{
+    if (!_bookView) {
+        _bookView = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([publicAreaBookView class]) owner:nil options:nil].firstObject;
+    }
+    return _bookView;
 }
 
 - (void)didReceiveMemoryWarning {

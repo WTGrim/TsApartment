@@ -90,6 +90,29 @@
 //报名
 - (IBAction)applyClick:(UIButton *)sender {
     
+    NSArray *tip = @[@"请输入联系人", @"请输入联系电话", @"请输入参加人数"];
+    NSArray *arr = @[_name, _mobile, _joinNum];
+    
+    __block NSString *message;
+    __block BOOL canGo = true;
+    [arr enumerateObjectsUsingBlock:^(UITextField *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.text.length == 0) {
+            message = tip[idx];
+            canGo = false;
+            *stop = true;
+        }
+    }];
+    
+    if (!canGo) {
+        [WTAlertView showMessage:message];
+        return;
+    }
+    
+    if (![CommonTools isTelNumber:_mobile.text]) {
+        [WTAlertView showMessage:@"请输入正确的联系电话"];
+        return;
+    }
+    
     WEAKSELF;
     [NetworkTool serviceApplyWithId:[[_dict objectForKey:kId] integerValue] Name:_name.text mobile:_mobile.text num:[_joinNum.text integerValue] SucceedBlock:^(NSDictionary * _Nullable result) {
         [weakSelf applySucceed];

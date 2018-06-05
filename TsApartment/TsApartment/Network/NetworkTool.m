@@ -110,7 +110,7 @@
     return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
-+ (NSURLSessionDataTask *)serviceApplyWithId:(NSInteger)Id Name:(NSString *)name mobile:(NSString *)mobile num:(NSString *)num SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
++ (NSURLSessionDataTask *)serviceApplyWithId:(NSInteger)Id Name:(NSString *)name mobile:(NSString *)mobile num:(NSInteger )num SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *pagination = [[NSMutableDictionary alloc]init];
     [pagination setObject:@(Id) forKey:kId];

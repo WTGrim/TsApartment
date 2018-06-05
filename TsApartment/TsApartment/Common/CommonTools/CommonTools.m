@@ -109,4 +109,11 @@ BOOL StringIsNull(NSString *string) {
     return att;
 }
 
++ (NSString *)getFitImgName{
+    if ([CommonTools isFit2xImg]) {
+        return kImgurl2;
+    }
+    return kImgurl3;
+}
+
 @end

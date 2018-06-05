@@ -39,4 +39,7 @@ BOOL StringIsNull(NSString *string);
 + (BOOL)isFit2xImg;
 
 + (NSAttributedString *)getAttrWithString:(NSString *)string attr:(NSDictionary *)attr range:(NSRange)range;
+
+//返回适配图片
++ (NSString *)getFitImgName;
 @end

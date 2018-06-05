@@ -31,7 +31,7 @@
     
     _title.text = [CommonTools getStringWithDict:dict key:kName];
     _desc.text = [CommonTools getStringWithDict:dict key:kDesc];
-    [_icon wt_setImageWithURL:[dict objectForKey:kImgUrl] placeholderImage:[UIImage imageNamed:@""] completed:nil];
+    [_icon wt_setImageWithURL:[dict objectForKey:[CommonTools getFitImgName]] placeholderImage:[UIImage imageNamed:@""] completed:nil];
 }
 
 @end

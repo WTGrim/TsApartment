@@ -60,6 +60,7 @@ static NSString *const kNumber = @"number";
 
 /**======================服务=============================**/
 static NSString *const kDesc = @"desc";
-
+static NSString *const kImgurl2 = @"imgurl2";
+static NSString *const kImgurl3 = @"imgurl3";
 
 #endif /* GlobalModel_h */

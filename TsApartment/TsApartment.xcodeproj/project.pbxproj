@@ -46,6 +46,8 @@
 		0856460220C68785002D861E /* CommunityActHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0856460120C68785002D861E /* CommunityActHeader.xib */; };
 		0856460620C68F92002D861E /* CommunityActDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0856460420C68F92002D861E /* CommunityActDetailCell.m */; };
 		0856460720C68F92002D861E /* CommunityActDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0856460520C68F92002D861E /* CommunityActDetailCell.xib */; };
+		0856460A20C6BB8F002D861E /* publicAreaBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0856460920C6BB8F002D861E /* publicAreaBookView.m */; };
+		0856460E20C6BBAD002D861E /* publicAreaBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0856460D20C6BBAD002D861E /* publicAreaBookView.xib */; };
 		0866539620BE340200004F92 /* LocationChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539420BE340200004F92 /* LocationChooseCell.m */; };
 		0866539D20BE456A00004F92 /* PhotoClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539A20BE456A00004F92 /* PhotoClipViewController.m */; };
 		0866539E20BE456A00004F92 /* UseCameraOrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539B20BE456A00004F92 /* UseCameraOrPhoto.m */; };
@@ -196,6 +198,9 @@
 		0856460320C68F92002D861E /* CommunityActDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityActDetailCell.h; sourceTree = "<group>"; };
 		0856460420C68F92002D861E /* CommunityActDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityActDetailCell.m; sourceTree = "<group>"; };
 		0856460520C68F92002D861E /* CommunityActDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityActDetailCell.xib; sourceTree = "<group>"; };
+		0856460820C6BB8F002D861E /* publicAreaBookView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = publicAreaBookView.h; sourceTree = "<group>"; };
+		0856460920C6BB8F002D861E /* publicAreaBookView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = publicAreaBookView.m; sourceTree = "<group>"; };
+		0856460D20C6BBAD002D861E /* publicAreaBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = publicAreaBookView.xib; sourceTree = "<group>"; };
 		0866539320BE340200004F92 /* LocationChooseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationChooseCell.h; sourceTree = "<group>"; };
 		0866539420BE340200004F92 /* LocationChooseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationChooseCell.m; sourceTree = "<group>"; };
 		0866539920BE456A00004F92 /* PhotoClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoClipViewController.h; sourceTree = "<group>"; };
@@ -649,6 +654,9 @@
 				086653B120BE9C4D00004F92 /* ServiceOnlineCollectionViewCell.xib */,
 				086653B420BE9C6900004F92 /* ServiceOnlineCell.h */,
 				086653B520BE9C6900004F92 /* ServiceOnlineCell.m */,
+				0856460820C6BB8F002D861E /* publicAreaBookView.h */,
+				0856460920C6BB8F002D861E /* publicAreaBookView.m */,
+				0856460D20C6BBAD002D861E /* publicAreaBookView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -967,6 +975,7 @@
 				0830AC8F20C143E100EF0CB0 /* ContractTableViewCell.xib in Resources */,
 				08E20CCE20BBFB0F009FFAE1 /* DistCollectionViewCell.xib in Resources */,
 				081BC4C620B5632900AD0C0A /* HomeViewController.xib in Resources */,
+				0856460E20C6BBAD002D861E /* publicAreaBookView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,6 +1097,7 @@
 				0866539E20BE456A00004F92 /* UseCameraOrPhoto.m in Sources */,
 				0869DE1E20BD5AD0006A3BF1 /* CentralizeCell.m in Sources */,
 				081BC4CF20B5632900AD0C0A /* UserStatus.m in Sources */,
+				0856460A20C6BB8F002D861E /* publicAreaBookView.m in Sources */,
 				08A8DDC120BFFE7B00AADC3E /* SearchHotTableViewCell.m in Sources */,
 				0869DE0B20BCFE1A006A3BF1 /* WTAlertView.m in Sources */,
 				08E20CC520BBEE14009FFAE1 /* WTCycleScrollView.m in Sources */,
