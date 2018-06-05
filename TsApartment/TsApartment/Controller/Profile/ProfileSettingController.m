@@ -99,6 +99,7 @@
 #pragma mark - 保存操作
 - (void)saveClick{
     
+    [NetworkTool ]
 }
 
 #pragma mark - 退出登录

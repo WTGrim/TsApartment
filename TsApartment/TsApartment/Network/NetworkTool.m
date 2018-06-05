@@ -76,6 +76,11 @@
     return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
++ (NSURLSessionDataTask *)editUserInfoWithNickName:(NSString *)nickName sex:(NSString *)sex file:(id)files password:(NSString *)password SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    
+    
+}
+
 + (NSURLSessionDataTask *)getCommunityActivitiesWithPageIndex:(NSInteger)pageIndex count:(NSInteger)count SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *pagination = [[NSMutableDictionary alloc]init];

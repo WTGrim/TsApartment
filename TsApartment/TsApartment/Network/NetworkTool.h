@@ -38,6 +38,11 @@
 + (NSURLSessionDataTask *)getUserInfoWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
 
 /**
+ 用户信息修改
+ */
++ (NSURLSessionDataTask *)editUserInfoWithNickName:(NSString *)nickName sex:(NSString *)sex file:(id)files password:(NSString *)password SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
+/**
  个人菜单
  */
 + (NSURLSessionDataTask *)getUserMenuWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
