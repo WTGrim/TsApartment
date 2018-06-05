@@ -85,6 +85,7 @@
 #pragma mark - 初始化视图
 - (void)setupUI{
 
+    _pageIndex = 1;
     [self initNavBar];
     [self initTableView];
     [self initTopView];

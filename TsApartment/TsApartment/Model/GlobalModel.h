@@ -47,9 +47,17 @@ static NSString *const kCount = @"count";
 static NSString *const kPagination = @"pagination";
 static NSString *const kTitle = @"title";
 static NSString *const kActivity_time = @"activity_time";
+static NSString *const kAddress = @"address";
+static NSString *const kLimit = @"limit";
+
+static NSString *const kShare = @"share";
+static NSString *const kContent = @"content";
+
 static NSString *const kIndex_img = @"index_img";
 static NSString *const kPartake = @"partake";
 static NSString *const kId = @"id";
+static NSString *const kNumber = @"number";
+
 /**======================服务=============================**/
 static NSString *const kDesc = @"desc";
 

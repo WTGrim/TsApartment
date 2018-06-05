@@ -76,6 +76,9 @@
  */
 + (NSURLSessionDataTask *)getServiceMenuWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
 
-
+/**
+ 活动报名
+ */
++ (NSURLSessionDataTask *)serviceApplyWithId:(NSInteger)Id Name:(NSString *)name mobile:(NSString *)mobile num:(NSInteger)num SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
 
 @end

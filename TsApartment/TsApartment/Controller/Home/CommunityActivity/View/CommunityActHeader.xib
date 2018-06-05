@@ -222,7 +222,7 @@
                                             <rect key="frame" x="85" y="2" width="267" height="41"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -262,7 +262,7 @@
                                             <rect key="frame" x="85" y="2" width="267" height="41"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -375,6 +375,7 @@
                 <outlet property="name" destination="OUw-fz-ve3" id="01v-7F-1FV"/>
                 <outlet property="time" destination="TC3-7i-pUQ" id="3bG-08-vqt"/>
                 <outlet property="tips" destination="uo5-6u-gsf" id="eHn-kg-T9Y"/>
+                <outlet property="webBgHeight" destination="sJG-As-7zG" id="TuM-Yz-vR8"/>
                 <outlet property="webBgView" destination="cXZ-M1-t60" id="q8e-Cy-2OB"/>
             </connections>
             <point key="canvasLocation" x="214" y="6"/>

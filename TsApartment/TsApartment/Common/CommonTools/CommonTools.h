@@ -37,4 +37,6 @@ BOOL StringIsNull(NSString *string);
 + (UIViewController *)findViewController:(UIView *)sourceView;
 //2倍图适配
 + (BOOL)isFit2xImg;
+
++ (NSAttributedString *)getAttrWithString:(NSString *)string attr:(NSDictionary *)attr range:(NSRange)range;
 @end

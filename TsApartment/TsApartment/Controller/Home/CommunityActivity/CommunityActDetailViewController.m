@@ -17,6 +17,8 @@
 @property(nonatomic, strong)NSMutableArray *joinListArray;
 //页码
 @property(nonatomic, assign)NSInteger pageIndex;
+@property(nonatomic, strong)CommunityActHeader *header;
+
 @end
 
 @implementation CommunityActDetailViewController
@@ -48,8 +50,9 @@
 - (void)setupUI{
     
     self.title =  @"活动详情";
+    _pageIndex = 1;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(shareClick)];
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT  - SAFE_BOTTOM_HEIGHT) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     _tableView.contentInset = UIEdgeInsetsMake(- SAFE_NAV_HEIGHT, 0, 0, 0);
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.dataSource = self;
@@ -74,6 +77,11 @@
 
 - (void)presentDetail:(NSDictionary *)dict{
     
+    WEAKSELF;
+    [self.header setHeaderWithDict:dict heightCallBack:^(CGFloat height) {
+        weakSelf.header.frame = CGRectMake(0, 0, SCREEN_WIDTH, height);
+        [weakSelf.tableView reloadData];
+    }];
 }
 
 #pragma mark - 活动报名列表
@@ -123,6 +131,14 @@
         _joinListArray = [NSMutableArray array];
     }
     return _joinListArray;
+}
+
+- (CommunityActHeader *)header{
+    if (!_header) {
+        _header = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([CommunityActHeader class]) owner:nil options:nil].firstObject;
+        _tableView.tableHeaderView = _header;
+    }
+    return _header;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -110,4 +110,16 @@
     return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
++ (NSURLSessionDataTask *)serviceApplyWithId:(NSInteger)Id Name:(NSString *)name mobile:(NSString *)mobile num:(NSString *)num SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *pagination = [[NSMutableDictionary alloc]init];
+    [pagination setObject:@(Id) forKey:kId];
+    [pagination setObject:@(num) forKey:kNumber];
+    [param setObject:pagination forKey:kPagination];
+    [param setObject:@(Id) forKey:kId];
+    
+    NSString *url = [NSString stringWithFormat:@"%@home/activity/join_list",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
 @end

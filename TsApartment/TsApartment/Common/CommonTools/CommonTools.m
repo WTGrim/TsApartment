@@ -103,5 +103,10 @@ BOOL StringIsNull(NSString *string) {
     return true;
 }
 
++ (NSAttributedString *)getAttrWithString:(NSString *)string attr:(NSDictionary *)attr range:(NSRange)range{
+    NSMutableAttributedString *att = [[NSMutableAttributedString alloc]initWithString:string];
+    [att addAttributes:attr range:range];
+    return att;
+}
 
 @end
