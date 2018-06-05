@@ -48,6 +48,7 @@
 		0856460720C68F92002D861E /* CommunityActDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0856460520C68F92002D861E /* CommunityActDetailCell.xib */; };
 		0856460A20C6BB8F002D861E /* publicAreaBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0856460920C6BB8F002D861E /* publicAreaBookView.m */; };
 		0856460E20C6BBAD002D861E /* publicAreaBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0856460D20C6BBAD002D861E /* publicAreaBookView.xib */; };
+		0856461120C6BFB8002D861E /* ServiceInfoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0856461020C6BFB8002D861E /* ServiceInfoDetailController.m */; };
 		0866539620BE340200004F92 /* LocationChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539420BE340200004F92 /* LocationChooseCell.m */; };
 		0866539D20BE456A00004F92 /* PhotoClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539A20BE456A00004F92 /* PhotoClipViewController.m */; };
 		0866539E20BE456A00004F92 /* UseCameraOrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539B20BE456A00004F92 /* UseCameraOrPhoto.m */; };
@@ -201,6 +202,8 @@
 		0856460820C6BB8F002D861E /* publicAreaBookView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = publicAreaBookView.h; sourceTree = "<group>"; };
 		0856460920C6BB8F002D861E /* publicAreaBookView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = publicAreaBookView.m; sourceTree = "<group>"; };
 		0856460D20C6BBAD002D861E /* publicAreaBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = publicAreaBookView.xib; sourceTree = "<group>"; };
+		0856460F20C6BFB8002D861E /* ServiceInfoDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceInfoDetailController.h; sourceTree = "<group>"; };
+		0856461020C6BFB8002D861E /* ServiceInfoDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceInfoDetailController.m; sourceTree = "<group>"; };
 		0866539320BE340200004F92 /* LocationChooseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationChooseCell.h; sourceTree = "<group>"; };
 		0866539420BE340200004F92 /* LocationChooseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationChooseCell.m; sourceTree = "<group>"; };
 		0866539920BE456A00004F92 /* PhotoClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoClipViewController.h; sourceTree = "<group>"; };
@@ -577,6 +580,8 @@
 				0830AC9D20C14D9300EF0CB0 /* View */,
 				0830AC9B20C14D8500EF0CB0 /* ServiceInfoListController.h */,
 				0830AC9A20C14D8500EF0CB0 /* ServiceInfoListController.m */,
+				0856460F20C6BFB8002D861E /* ServiceInfoDetailController.h */,
+				0856461020C6BFB8002D861E /* ServiceInfoDetailController.m */,
 			);
 			path = ServiceInfo;
 			sourceTree = "<group>";
@@ -1079,6 +1084,7 @@
 				08E20CD120BBFD2B009FFAE1 /* HomeSectionHeader.m in Sources */,
 				081BC4C320B5632900AD0C0A /* JSONKit.m in Sources */,
 				086653BD20BEB0A400004F92 /* CommonBtn.m in Sources */,
+				0856461120C6BFB8002D861E /* ServiceInfoDetailController.m in Sources */,
 				08AAC79620BBABA900E760AE /* Scanner.m in Sources */,
 				08EBF88F20B800EA00A6FDED /* SegmentItem.m in Sources */,
 				08AAC78920BBA32800E760AE /* MessageView.m in Sources */,
