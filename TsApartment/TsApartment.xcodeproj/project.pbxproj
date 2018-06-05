@@ -37,6 +37,7 @@
 		0830AC9C20C14D8500EF0CB0 /* ServiceInfoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0830AC9A20C14D8500EF0CB0 /* ServiceInfoListController.m */; };
 		0830ACA620C14DE300EF0CB0 /* ServiceInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0830ACA320C14DE300EF0CB0 /* ServiceInfoListCell.m */; };
 		0830ACA720C14DE300EF0CB0 /* ServiceInfoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0830ACA420C14DE300EF0CB0 /* ServiceInfoListCell.xib */; };
+		0841DDA420C625AA006F3704 /* ProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0841DDA220C625AA006F3704 /* ProtocolViewController.m */; };
 		0866539620BE340200004F92 /* LocationChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539420BE340200004F92 /* LocationChooseCell.m */; };
 		0866539D20BE456A00004F92 /* PhotoClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539A20BE456A00004F92 /* PhotoClipViewController.m */; };
 		0866539E20BE456A00004F92 /* UseCameraOrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539B20BE456A00004F92 /* UseCameraOrPhoto.m */; };
@@ -171,6 +172,8 @@
 		0830ACA320C14DE300EF0CB0 /* ServiceInfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceInfoListCell.m; sourceTree = "<group>"; };
 		0830ACA420C14DE300EF0CB0 /* ServiceInfoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceInfoListCell.xib; sourceTree = "<group>"; };
 		0830ACA520C14DE300EF0CB0 /* ServiceInfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceInfoListCell.h; sourceTree = "<group>"; };
+		0841DDA220C625AA006F3704 /* ProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolViewController.m; sourceTree = "<group>"; };
+		0841DDA320C625AA006F3704 /* ProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolViewController.h; sourceTree = "<group>"; };
 		0866539320BE340200004F92 /* LocationChooseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationChooseCell.h; sourceTree = "<group>"; };
 		0866539420BE340200004F92 /* LocationChooseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationChooseCell.m; sourceTree = "<group>"; };
 		0866539920BE456A00004F92 /* PhotoClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoClipViewController.h; sourceTree = "<group>"; };
@@ -468,6 +471,8 @@
 				0869DE0C20BD3A5F006A3BF1 /* EnsurePsdViewController.h */,
 				0869DE0D20BD3A5F006A3BF1 /* EnsurePsdViewController.m */,
 				0869DE0E20BD3A5F006A3BF1 /* EnsurePsdViewController.xib */,
+				0841DDA320C625AA006F3704 /* ProtocolViewController.h */,
+				0841DDA220C625AA006F3704 /* ProtocolViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -979,6 +984,7 @@
 				081BC4D620B5676100AD0C0A /* AlertView.m in Sources */,
 				08E20CD520BC0D5A009FFAE1 /* ActivityTableViewCell.m in Sources */,
 				08A8DDA120BF92E800AADC3E /* DistributedViewController.m in Sources */,
+				0841DDA420C625AA006F3704 /* ProtocolViewController.m in Sources */,
 				08A8DDBE20BFF90900AADC3E /* BasicTableViewCell.m in Sources */,
 				08EBF88E20B800EA00A6FDED /* BadgeSegment.m in Sources */,
 				08A8DDB820BFD23B00AADC3E /* SearchTableViewCell.m in Sources */,

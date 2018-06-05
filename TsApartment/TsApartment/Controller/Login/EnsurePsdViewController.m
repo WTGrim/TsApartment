@@ -8,14 +8,19 @@
 
 #import "EnsurePsdViewController.h"
 #import "NetworkTool.h"
+#import "LoginViewController.h"
 
 @interface EnsurePsdViewController ()
 //密码
 @property (weak, nonatomic) IBOutlet UITextField *psd;
 //重复密码
 @property (weak, nonatomic) IBOutlet UITextField *repeatPsd;
-
+//可见
 @property (weak, nonatomic) IBOutlet UIButton *visibleBtn;
+//注册按钮
+@property (weak, nonatomic) IBOutlet UIButton *signupBtn;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
 @end
 
 @implementation EnsurePsdViewController
@@ -28,7 +33,24 @@
 }
 
 - (void)setupUI{
-    
+   
+    self.title = _type == EnsurePsdType_Signup ? @"设置密码" : @"重置密码";
+    _topMargin.constant = SCREEN_HEIGHT * 0.1;
+
+    switch (self.type) {
+        case 0:
+        {
+            [_signupBtn setTitle:@"注册" forState:UIControlStateNormal];
+        }
+            break;
+        case 1:
+        {
+            [_signupBtn setTitle:@"完成" forState:UIControlStateNormal];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - 注册
@@ -69,15 +91,29 @@
 #pragma mark - 注册成功
 - (void)signSuccess:(NSDictionary *)dict{
     
-    NSMutableDictionary *user = [[NSMutableDictionary alloc]init];
-    user = [[dict objectForKey:kUser] mutableCopy];
-    [user setObject:[[dict objectForKey:@"session"] objectForKey:kSid] forKey:kSid];
-    [[UserStatus shareInstance]initWithDict:[dict objectForKey:kUser]];
-
-    //缓存用户信息到本地
-    [self saveUserInfoWith:user];
-    [self.navigationController popToRootViewControllerAnimated:true];
-
+    switch (self.type) {
+        case 0://注册成功
+            {
+                NSMutableDictionary *user = [[NSMutableDictionary alloc]init];
+                user = [[dict objectForKey:kUser] mutableCopy];
+                [user setObject:[[dict objectForKey:@"session"] objectForKey:kSid] forKey:kSid];
+                [[UserStatus shareInstance]initWithDict:[dict objectForKey:kUser]];
+                
+                //缓存用户信息到本地
+                [self saveUserInfoWith:user];
+                [self.navigationController popToRootViewControllerAnimated:true];
+            }
+            break;
+        case 1://重置密码
+        {
+            LoginViewController *loginVc = [[LoginViewController alloc]init];
+            [self.navigationController popToViewController:loginVc animated:true];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)saveUserInfoWith:(NSDictionary *)result {
@@ -93,7 +129,7 @@
 #pragma mark - 可见
 - (IBAction)visibleClick:(UIButton *)sender {
     sender.selected = !sender.selected;
-    _psd.secureTextEntry = sender.isSelected;
+    _psd.secureTextEntry = !sender.isSelected;
 }
 
 - (void)didReceiveMemoryWarning {

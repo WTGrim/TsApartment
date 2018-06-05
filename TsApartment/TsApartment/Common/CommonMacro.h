@@ -63,6 +63,7 @@
 #define ThemeColor_lightBg RGB(240, 240, 240)
 #define ThemeColor_line RGB(230, 230, 230)
 #define ThemeColor_HomeLine RGB(245, 205, 100)
+#define ThemeColor_Yellow RGB(240, 193, 77)
 
 
 #endif /* CommonMacro_h */

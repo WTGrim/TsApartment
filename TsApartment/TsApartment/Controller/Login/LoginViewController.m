@@ -35,8 +35,9 @@
 - (void)setupUI{
     
     [self setNavigationBarShadowHidden];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"login_delete"] style:UIBarButtonItemStylePlain target:self action:@selector(backClick)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(signupClick:)];
+    self.navigationItem.rightBarButtonItem.tintColor = ThemeColor_Yellow;
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"login_delete"] style:UIBarButtonItemStylePlain target:self action:@selector(backClick)];
     _topMargin.constant = SCREEN_HEIGHT * 0.1;
     
 }
@@ -91,7 +92,9 @@
 #pragma mark - 忘记密码
 - (IBAction)forgetPsdClick:(UIButton *)sender {
     
-    
+    SignUpViewController *signupVc = [[SignUpViewController alloc]init];
+    signupVc.type = SignupType_FindPsd;
+    [self.navigationController pushViewController:signupVc animated:true];
 }
 
 #pragma mark - 三方登录
@@ -101,9 +104,10 @@
 }
 
 #pragma mark - 注册
-- (IBAction)signupClick:(UIButton *)sender {
+- (void)signupClick:(UIButton *)sender {
     
     SignUpViewController *signupVc = [[SignUpViewController alloc]init];
+    signupVc.type = SignupType_Signup;
     [self.navigationController pushViewController:signupVc animated:true];
 }
 

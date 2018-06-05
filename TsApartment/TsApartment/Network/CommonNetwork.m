@@ -39,7 +39,10 @@ static NSString *const kJsonType = @"application/json";
     [manager.requestSerializer setStringEncoding:NSUTF8StringEncoding];
     
     if ([UserStatus shareInstance].isLogin) {
-        [manager.requestSerializer setValue:[UserStatus shareInstance].sid forHTTPHeaderField:@"Authorization"];
+//        [manager.requestSerializer setValue:[UserStatus shareInstance].sid forHTTPHeaderField:@"Authorization"];
+        NSMutableArray *finalParam = [NSMutableArray array];
+        finalParam = [params mutableCopy];
+        [finalParam setValue:[UserStatus shareInstance].sid forKey:kSession];
     }
     if (showLoader) {
         [AlertView showProgress];

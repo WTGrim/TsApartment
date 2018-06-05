@@ -25,6 +25,7 @@ static NSString *const kUser = @"user";
 static NSString *const kSaveUserInfo = @"saveUserInfo";
 static NSString *const kMsg = @"msg";
 static NSString *const kToken = @"token";
+static NSString *const kSession = @"session";
 
 static NSString *const kIndex = @"index";
 static NSString *const kSize = @"size";

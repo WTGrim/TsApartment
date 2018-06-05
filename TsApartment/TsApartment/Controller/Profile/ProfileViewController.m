@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "LoginViewController.h"
+#import "NetworkTool.h"
 
 @interface ProfileViewController ()
 
@@ -20,21 +21,36 @@
     // Do any additional setup after loading the view from its nib.
     
     [self setupUI];
+    [self getData];
 }
-
-//- (void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    if (![UserStatus shareInstance].isLogin) {
-//        LoginViewController *loginVc = [[LoginViewController alloc]init];
-//        [self presentViewController:[[UINavigationController alloc] initWithRootViewController:loginVc] animated:true completion:nil];
-//    }
-//}
 
 #pragma mark - initView
 - (void)setupUI{
     
+    self.title = @"个人中心";
 }
 
+- (void)getData{
+    
+    [NetworkTool getUserInfoWithSucceedBlock:^(NSDictionary * _Nullable result) {
+        [self setData:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+#pragma mark - setData
+- (void)setData:(NSDictionary *)dict{
+    
+}
+
+#pragma mark - 登录注册
+- (IBAction)loginClick:(UITapGestureRecognizer *)sender {
+    LoginViewController *loginVc = [[LoginViewController alloc]init];
+    loginVc.hidesBottomBarWhenPushed = true;
+    [self.navigationController pushViewController:loginVc animated:true];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

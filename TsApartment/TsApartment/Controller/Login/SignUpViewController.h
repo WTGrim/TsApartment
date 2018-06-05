@@ -9,7 +9,7 @@
 #import "BasicViewController.h"
 
 typedef NS_ENUM(NSUInteger, SignupType) {
-    SignupType_Signup,
+    SignupType_Signup = 0,
     SignupType_FindPsd
 };
 

@@ -71,6 +71,9 @@
                                 <constraint firstItem="IGQ-Ix-Mov" firstAttribute="centerY" secondItem="e11-jg-YCy" secondAttribute="centerY" id="Lpz-tL-HlW"/>
                                 <constraint firstItem="IGQ-Ix-Mov" firstAttribute="leading" secondItem="e11-jg-YCy" secondAttribute="leading" constant="20" id="YIf-ks-jXN"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="LlL-0G-VzK" appends="YES" id="AQs-s1-4lH"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-6s-xUV">
                             <rect key="frame" x="0.0" y="100" width="375" height="150"/>
@@ -251,12 +254,29 @@
                                 <constraint firstAttribute="bottom" secondItem="Nzn-rl-X51" secondAttribute="bottom" id="btw-1U-4Nm"/>
                                 <constraint firstItem="Nzn-rl-X51" firstAttribute="leading" secondItem="u6Z-qd-EB0" secondAttribute="leading" id="tVu-56-gvL"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="le8-sy-XsJ" appends="YES" id="O2S-pf-SQf"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mT-Jz-QCC" userLabel="bottom">
-                            <rect key="frame" x="0.0" y="516" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="536" width="375" height="0.0"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" id="pvb-x6-gIw"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSl-ah-qc1">
+                            <rect key="frame" x="0.0" y="416" width="375" height="100"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="y64-mz-1cM">
+                                    <rect key="frame" x="162.5" y="25" width="50" height="50"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="y64-mz-1cM" firstAttribute="centerX" secondItem="CSl-ah-qc1" secondAttribute="centerX" id="C05-TT-EWy"/>
+                                <constraint firstItem="y64-mz-1cM" firstAttribute="centerY" secondItem="CSl-ah-qc1" secondAttribute="centerY" id="CGM-Td-2lt"/>
+                                <constraint firstAttribute="height" constant="100" id="vho-QK-ZRv"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -269,6 +289,8 @@
                         <constraint firstItem="u6Z-qd-EB0" firstAttribute="leading" secondItem="lcY-OC-8tP" secondAttribute="leading" id="B1d-4x-FEh"/>
                         <constraint firstItem="rtX-TF-QWC" firstAttribute="leading" secondItem="lcY-OC-8tP" secondAttribute="leading" id="C37-RH-Wpl"/>
                         <constraint firstAttribute="trailing" secondItem="u6Z-qd-EB0" secondAttribute="trailing" id="Eru-RU-Ha9"/>
+                        <constraint firstAttribute="trailing" secondItem="CSl-ah-qc1" secondAttribute="trailing" id="HBw-AT-T8e"/>
+                        <constraint firstItem="4mT-Jz-QCC" firstAttribute="top" secondItem="CSl-ah-qc1" secondAttribute="bottom" constant="20" id="PeH-84-p6e"/>
                         <constraint firstItem="l4B-6s-xUV" firstAttribute="leading" secondItem="lcY-OC-8tP" secondAttribute="leading" id="SNw-oa-5a4"/>
                         <constraint firstAttribute="trailing" secondItem="4mT-Jz-QCC" secondAttribute="trailing" id="U9L-z4-Wkc"/>
                         <constraint firstAttribute="trailing" secondItem="rtX-TF-QWC" secondAttribute="trailing" id="ZGj-u2-aIF"/>
@@ -276,11 +298,12 @@
                         <constraint firstAttribute="trailing" secondItem="e11-jg-YCy" secondAttribute="trailing" id="dLX-kU-rTA"/>
                         <constraint firstAttribute="bottom" secondItem="4mT-Jz-QCC" secondAttribute="bottom" id="dWZ-st-s6c"/>
                         <constraint firstItem="H5m-96-31d" firstAttribute="leading" secondItem="lcY-OC-8tP" secondAttribute="leading" id="hqv-nF-YZz"/>
-                        <constraint firstItem="4mT-Jz-QCC" firstAttribute="top" secondItem="u6Z-qd-EB0" secondAttribute="bottom" constant="100" id="jf1-mO-ZlC"/>
+                        <constraint firstItem="CSl-ah-qc1" firstAttribute="leading" secondItem="lcY-OC-8tP" secondAttribute="leading" id="mbw-EP-dJ1"/>
                         <constraint firstItem="l4B-6s-xUV" firstAttribute="top" secondItem="e11-jg-YCy" secondAttribute="bottom" id="piJ-7J-5cf"/>
                         <constraint firstItem="u6Z-qd-EB0" firstAttribute="top" secondItem="H5m-96-31d" secondAttribute="bottom" constant="8" id="qRy-qR-e77"/>
                         <constraint firstItem="4mT-Jz-QCC" firstAttribute="leading" secondItem="lcY-OC-8tP" secondAttribute="leading" id="sRC-T6-pyR"/>
                         <constraint firstAttribute="trailing" secondItem="l4B-6s-xUV" secondAttribute="trailing" id="w8G-72-QjS"/>
+                        <constraint firstItem="CSl-ah-qc1" firstAttribute="top" secondItem="u6Z-qd-EB0" secondAttribute="bottom" id="xNl-QF-FXu"/>
                         <constraint firstItem="e11-jg-YCy" firstAttribute="top" secondItem="rtX-TF-QWC" secondAttribute="bottom" id="zyw-Ys-a08"/>
                     </constraints>
                 </scrollView>
@@ -295,8 +318,15 @@
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="4.5" y="53.5"/>
         </view>
+        <tapGestureRecognizer id="LlL-0G-VzK">
+            <connections>
+                <action selector="loginClick:" destination="-1" id="Zdo-64-bTt"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="le8-sy-XsJ"/>
     </objects>
     <resources>
+        <image name="common_bottom" width="50" height="50"/>
         <image name="prifile_appoint" width="30" height="30"/>
         <image name="profile_activity" width="30" height="30"/>
         <image name="profile_bill" width="30" height="30"/>

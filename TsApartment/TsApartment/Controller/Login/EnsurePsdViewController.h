@@ -8,8 +8,14 @@
 
 #import "BasicViewController.h"
 
+typedef NS_ENUM(NSUInteger, EnsurePsdType) {
+    EnsurePsdType_Signup,
+    EnsurePsdType_FindPsd
+};
+
 @interface EnsurePsdViewController : BasicViewController
 
+@property(nonatomic, assign)EnsurePsdType type;
 @property(nonatomic, copy)NSString *mobile;
 
 @end

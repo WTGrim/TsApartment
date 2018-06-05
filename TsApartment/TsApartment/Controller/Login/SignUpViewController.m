@@ -24,6 +24,8 @@
 //注册
 @property (weak, nonatomic) IBOutlet UIButton *signupBtn;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
+
 @end
 
 static const NSInteger kTotalTimeInterval = 60;
@@ -46,8 +48,10 @@ static const NSInteger kTotalTimeInterval = 60;
 #pragma mark - initView
 - (void)setupUI{
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"手机验证";
     _protocolBtn.hidden = _type == SignupType_FindPsd;
+    _checkBtn.hidden = _type == SignupType_FindPsd;
+    _topMargin.constant = SCREEN_HEIGHT * 0.1;
 }
 
 //获取验证码
@@ -150,6 +154,7 @@ static const NSInteger kTotalTimeInterval = 60;
     
     EnsurePsdViewController *ensurePsd = [[EnsurePsdViewController alloc]init];
     ensurePsd.mobile = _phone.text;
+    ensurePsd.type = (NSInteger)self.type;
     [self.navigationController pushViewController:ensurePsd animated:true];
 }
 
