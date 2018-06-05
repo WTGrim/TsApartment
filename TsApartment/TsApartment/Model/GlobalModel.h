@@ -45,6 +45,13 @@ static NSString *const kIos = @"ios";
 static NSString *const kPage = @"page";
 static NSString *const kCount = @"count";
 static NSString *const kPagination = @"pagination";
+static NSString *const kTitle = @"title";
+static NSString *const kActivity_time = @"activity_time";
+static NSString *const kIndex_img = @"index_img";
+static NSString *const kPartake = @"partake";
+static NSString *const kId = @"id";
+/**======================服务=============================**/
+static NSString *const kDesc = @"desc";
 
 
 #endif /* GlobalModel_h */

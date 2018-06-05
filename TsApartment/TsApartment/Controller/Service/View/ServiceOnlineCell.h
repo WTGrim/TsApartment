@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ServiceOnlineCell : UITableViewCell
+@interface ServiceOnlineCell :UITableViewCell
+
+- (void)setCellWithArray:(NSArray *)array;
 
 @end

@@ -86,6 +86,28 @@
     return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
++ (NSURLSessionDataTask *)getCommunityActivityDetailWithId:(NSInteger)Id SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setObject:@(Id) forKey:kId];
+    NSString *url = [NSString stringWithFormat:@"%@home/activity/detail",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
 
++ (NSURLSessionDataTask *)getCommunityActivityJoin_listDetailWithId:(NSInteger)Id pageIndex:(NSInteger)pageIndex count:(NSInteger)count SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *pagination = [[NSMutableDictionary alloc]init];
+    [pagination setObject:@(pageIndex) forKey:kPage];
+    [pagination setObject:@(count) forKey:kCount];
+    [param setObject:pagination forKey:kPagination];
+    [param setObject:@(Id) forKey:kId];
+
+    NSString *url = [NSString stringWithFormat:@"%@home/activity/join_list",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
++ (NSURLSessionDataTask *)getServiceMenuWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSString *url = [NSString stringWithFormat:@"%@service/data/nav",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
 
 @end

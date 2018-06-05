@@ -85,5 +85,23 @@ BOOL StringIsNull(NSString *string) {
     [[NSUserDefaults standardUserDefaults] synchronize]; //手动保存
 }
 
++ (NSString *)getStringWithDict:(NSDictionary *)dict key:(NSString *)key{
+    if (StringIsNull([dict objectForKey:key])) {
+        return @"";
+    }
+    return [dict objectForKey:key];
+}
+
++ (BOOL)isFit2xImg{
+    
+    if ([CommonTools isIphoneX]) {
+        return false;
+    }
+    if (SCREEN_WIDTH > 750) {
+        return false;
+    }
+    return true;
+}
+
 
 @end

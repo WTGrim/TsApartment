@@ -1,13 +1,13 @@
 //
-//  ActivityTableViewCell.h
+//  CommunityActDetailCell.h
 //  TsApartment
 //
-//  Created by SandClock on 2018/5/28.
+//  Created by 董文涛 on 2018/6/5.
 //  Copyright © 2018年 PmMaster. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "BasicTableViewCell.h"
-@interface ActivityTableViewCell :BasicTableViewCell
+@interface CommunityActDetailCell :BasicTableViewCell
 
 @end

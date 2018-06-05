@@ -11,6 +11,7 @@
 #import "NetworkTool.h"
 #import "CommonBtn.h"
 #import <UIButton+WebCache.h>
+#import "MessageViewController.h"
 
 @interface ProfileViewController ()
 
@@ -26,6 +27,9 @@
 @property (weak, nonatomic) IBOutlet CommonBtn *collect;
 @property (weak, nonatomic) IBOutlet CommonBtn *activity;
 @property (weak, nonatomic) IBOutlet CommonBtn *service;
+
+//消息
+@property(nonatomic, strong)MessageBtn *messageBtn;
 //住所类数组
 @property(nonatomic, strong)NSArray *flatClassArr;
 //个人菜单住所
@@ -49,6 +53,10 @@
 - (void)setupUI{
     
     self.title = @"个人中心";
+    _messageBtn = [[MessageBtn alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [_messageBtn setImage:[UIImage imageNamed:@"message"] forState:UIControlStateNormal];
+    [_messageBtn addTarget:self action:@selector(messageClick) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_messageBtn];
 }
 
 - (void)getUserInfoData{
@@ -75,12 +83,12 @@
     NSArray <CommonBtn *> *btnArray = @[_contract, _guard, _visitorManage, _pay];
     NSArray *imgsNames = @[];
     [array enumerateObjectsUsingBlock:^(NSDictionary *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (StringIsNull([obj objectForKey:kName])) {
+        if (!StringIsNull([obj objectForKey:kName])) {
             [btnArray[idx] setTitle:[obj objectForKey:kName] forState:UIControlStateNormal];
         }else{
             
         }
-        if (StringIsNull([obj objectForKey:kImgUrl])) {
+        if (!StringIsNull([obj objectForKey:kImgUrl])) {
             [btnArray[idx] sd_setImageWithURL:[NSURL URLWithString:[obj objectForKey:kImgUrl]] forState:UIControlStateNormal];
         }else{//本地图片
             [btnArray[idx] setImage:imgsNames[idx] forState:UIControlStateNormal];
@@ -103,12 +111,12 @@
     NSArray <CommonBtn *> *btnArray = @[_book, _reservation, _collect, _activity, _service];
     NSArray *imgsNames = @[];
     [array enumerateObjectsUsingBlock:^(NSDictionary *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (StringIsNull([obj objectForKey:kName])) {
+        if (!StringIsNull([obj objectForKey:kName])) {
             [btnArray[idx] setTitle:[obj objectForKey:kName] forState:UIControlStateNormal];
         }else{
             
         }
-        if (StringIsNull([obj objectForKey:kImgUrl])) {
+        if (!StringIsNull([obj objectForKey:kImgUrl])) {
             [btnArray[idx] sd_setImageWithURL:[NSURL URLWithString:[obj objectForKey:kImgUrl]] forState:UIControlStateNormal];
         }else{//本地图片
             [btnArray[idx] setImage:imgsNames[idx] forState:UIControlStateNormal];
@@ -165,6 +173,13 @@
         id classVc = [[c alloc]init];
         [self.navigationController pushViewController:classVc animated:true];
     }
+}
+
+#pragma mark - 消息
+- (void)messageClick{
+    MessageViewController *messageVc = [[MessageViewController alloc]init];
+    messageVc.hidesBottomBarWhenPushed = true;
+    [self.navigationController pushViewController:messageVc animated:true];
 }
 
 #pragma mark - 判断登录

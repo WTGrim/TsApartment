@@ -13,6 +13,7 @@
 #import "ServiceOnlineCell.h"
 #import "CommonBottomView.h"
 #import "ServiceInfoListController.h"
+#import "NetworkTool.h"
 
 #define CYCLE_H SCREEN_WIDTH * (650 / 750.0)
 #define HEADER_H 40
@@ -25,12 +26,14 @@
 
 //tableView
 @property(nonatomic, strong)UITableView *tableView;
-//数据源
-@property(nonatomic, strong)NSMutableArray *dataArray;
 //轮播
 @property(nonatomic, strong)WTCycleScrollView *cycleScrollView;
 //topView做下拉放大
 @property(nonatomic, strong)UIView *topView;
+//banner
+@property(nonatomic, strong)NSArray *serviceBannerArr;
+//menu
+@property(nonatomic, strong)NSArray *menuArray;
 
 @end
 
@@ -41,6 +44,7 @@
     // Do any additional setup after loading the view from its nib.
     
     [self setupUI];
+    [self getData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -66,6 +70,48 @@
     [self initTableView];
     [self initTopView];
 
+}
+
+- (void)getData{
+    [self getServiceBanner];
+    [self getServiceMenu];
+
+}
+
+#pragma mark - 获取服务轮播图
+- (void)getServiceBanner{
+    [NetworkTool getServiceBannerWithSucceedBlock:^(NSDictionary * _Nullable result) {
+        [self presentBanner:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+#pragma mark - 获取服务菜单
+- (void)getServiceMenu{
+    [NetworkTool getServiceMenuWithSucceedBlock:^(NSDictionary * _Nullable result) {
+        [self presentServiceMenu:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+- (void)presentServiceMenu:(NSArray *)array{
+    
+    _menuArray= [NSArray arrayWithArray:array];
+    [_tableView reloadData];
+}
+
+- (void)presentBanner:(NSArray *)array{
+    if (array.count == 0) {
+        
+    }
+    _serviceBannerArr = [NSArray arrayWithArray:array];
+    __block NSMutableArray *imgs = [NSMutableArray array];
+    [array enumerateObjectsUsingBlock:^(NSDictionary *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [imgs addObject:[obj objectForKey:kImgUrl]];
+    }];
+    self.cycleScrollView.imageUrlsArray = imgs;
 }
 
 - (void)initNav{
@@ -97,8 +143,6 @@
     _topView = [[UIView alloc]initWithFrame:CGRectMake(0, -CYCLE_H, SCREEN_WIDTH, CYCLE_H)];
     _topView.contentMode = UIViewContentModeScaleAspectFill;
     [_tableView addSubview:_topView];
-    
-    self.cycleScrollView.imageUrlsArray = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527511040590&di=ed2001ef02975c71c987d2ecba5bcbae&imgtype=0&src=http%3A%2F%2Fpic.shejiben.com%2Fattch%2Fday_150328%2F20150328_acb1b271035fc5125be59QzMrWqWJAGh.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527511067406&di=acc9bc0006a2de06c092f3e22569fbd2&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F14%2F31%2F93%2F25S58PICVyj_1024.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527511096581&di=e2da1171e16a06f39130c556dcddfc07&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3D082c3ff1114c510fbac9ea5a09214041%2F96dda144ad3459823ddf04ab07f431adcbef84b6.jpg"];
     [_topView addSubview:self.cycleScrollView];
 }
 
@@ -136,6 +180,9 @@
         case 0:
         {
             ServiceOnlineCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ServiceOnlineCell class]) forIndexPath:indexPath];
+            if (_menuArray.count != 0) {
+                [cell setCellWithArray:_menuArray];
+            }
             return cell;
         }
             break;
@@ -225,13 +272,6 @@
         _cycleScrollView.placeholderImage = [UIImage imageNamed:@""];
     }
     return _cycleScrollView;
-}
-
-- (NSMutableArray *)dataArray{
-    if (_dataArray) {
-        _dataArray = [[NSMutableArray alloc]init];
-    }
-    return _dataArray;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -31,4 +31,10 @@ BOOL StringIsNull(NSString *string);
 
 //删除缓存
 +(void)removeLocalWithKey:(NSString*)key;
+
++ (NSString *)getStringWithDict:(NSDictionary *)dict key:(NSString *)key;
+
++ (UIViewController *)findViewController:(UIView *)sourceView;
+//2倍图适配
++ (BOOL)isFit2xImg;
 @end

@@ -38,6 +38,14 @@
 		0830ACA620C14DE300EF0CB0 /* ServiceInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0830ACA320C14DE300EF0CB0 /* ServiceInfoListCell.m */; };
 		0830ACA720C14DE300EF0CB0 /* ServiceInfoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0830ACA420C14DE300EF0CB0 /* ServiceInfoListCell.xib */; };
 		0841DDA420C625AA006F3704 /* ProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0841DDA220C625AA006F3704 /* ProtocolViewController.m */; };
+		085645F220C67E34002D861E /* UIImageView+EasyInOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 085645F120C67E34002D861E /* UIImageView+EasyInOut.m */; };
+		085645F520C680BF002D861E /* NSNull+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 085645F420C680BF002D861E /* NSNull+Extension.m */; };
+		085645F820C680EF002D861E /* NSURL+DSpersonEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 085645F720C680EF002D861E /* NSURL+DSpersonEx.m */; };
+		085645FC20C68445002D861E /* CommunityActDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085645FB20C68445002D861E /* CommunityActDetailViewController.m */; };
+		0856460020C68706002D861E /* CommunityActHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 085645FF20C68706002D861E /* CommunityActHeader.m */; };
+		0856460220C68785002D861E /* CommunityActHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0856460120C68785002D861E /* CommunityActHeader.xib */; };
+		0856460620C68F92002D861E /* CommunityActDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0856460420C68F92002D861E /* CommunityActDetailCell.m */; };
+		0856460720C68F92002D861E /* CommunityActDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0856460520C68F92002D861E /* CommunityActDetailCell.xib */; };
 		0866539620BE340200004F92 /* LocationChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539420BE340200004F92 /* LocationChooseCell.m */; };
 		0866539D20BE456A00004F92 /* PhotoClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539A20BE456A00004F92 /* PhotoClipViewController.m */; };
 		0866539E20BE456A00004F92 /* UseCameraOrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866539B20BE456A00004F92 /* UseCameraOrPhoto.m */; };
@@ -174,6 +182,20 @@
 		0830ACA520C14DE300EF0CB0 /* ServiceInfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceInfoListCell.h; sourceTree = "<group>"; };
 		0841DDA220C625AA006F3704 /* ProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolViewController.m; sourceTree = "<group>"; };
 		0841DDA320C625AA006F3704 /* ProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolViewController.h; sourceTree = "<group>"; };
+		085645F020C67E34002D861E /* UIImageView+EasyInOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+EasyInOut.h"; sourceTree = "<group>"; };
+		085645F120C67E34002D861E /* UIImageView+EasyInOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+EasyInOut.m"; sourceTree = "<group>"; };
+		085645F320C680BF002D861E /* NSNull+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+Extension.h"; sourceTree = "<group>"; };
+		085645F420C680BF002D861E /* NSNull+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+Extension.m"; sourceTree = "<group>"; };
+		085645F620C680EE002D861E /* NSURL+DSpersonEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DSpersonEx.h"; sourceTree = "<group>"; };
+		085645F720C680EF002D861E /* NSURL+DSpersonEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DSpersonEx.m"; sourceTree = "<group>"; };
+		085645FA20C68445002D861E /* CommunityActDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityActDetailViewController.h; sourceTree = "<group>"; };
+		085645FB20C68445002D861E /* CommunityActDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityActDetailViewController.m; sourceTree = "<group>"; };
+		085645FE20C68706002D861E /* CommunityActHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityActHeader.h; sourceTree = "<group>"; };
+		085645FF20C68706002D861E /* CommunityActHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityActHeader.m; sourceTree = "<group>"; };
+		0856460120C68785002D861E /* CommunityActHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityActHeader.xib; sourceTree = "<group>"; };
+		0856460320C68F92002D861E /* CommunityActDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityActDetailCell.h; sourceTree = "<group>"; };
+		0856460420C68F92002D861E /* CommunityActDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityActDetailCell.m; sourceTree = "<group>"; };
+		0856460520C68F92002D861E /* CommunityActDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityActDetailCell.xib; sourceTree = "<group>"; };
 		0866539320BE340200004F92 /* LocationChooseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationChooseCell.h; sourceTree = "<group>"; };
 		0866539420BE340200004F92 /* LocationChooseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationChooseCell.m; sourceTree = "<group>"; };
 		0866539920BE456A00004F92 /* PhotoClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoClipViewController.h; sourceTree = "<group>"; };
@@ -409,6 +431,7 @@
 			children = (
 				08A8DD9B20BF924700AADC3E /* Centralized */,
 				08A8DD9A20BF922C00AADC3E /* Distributed */,
+				085645F920C68425002D861E /* CommunityActivity */,
 				08AAC78020BB978D00E760AE /* View */,
 				081BC4A620B5632800AD0C0A /* HomeViewController.h */,
 				081BC4A420B5632800AD0C0A /* HomeViewController.m */,
@@ -566,6 +589,29 @@
 				0830ACA520C14DE300EF0CB0 /* ServiceInfoListCell.h */,
 				0830ACA320C14DE300EF0CB0 /* ServiceInfoListCell.m */,
 				0830ACA420C14DE300EF0CB0 /* ServiceInfoListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		085645F920C68425002D861E /* CommunityActivity */ = {
+			isa = PBXGroup;
+			children = (
+				085645FD20C686E9002D861E /* View */,
+				085645FA20C68445002D861E /* CommunityActDetailViewController.h */,
+				085645FB20C68445002D861E /* CommunityActDetailViewController.m */,
+			);
+			path = CommunityActivity;
+			sourceTree = "<group>";
+		};
+		085645FD20C686E9002D861E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				085645FE20C68706002D861E /* CommunityActHeader.h */,
+				085645FF20C68706002D861E /* CommunityActHeader.m */,
+				0856460120C68785002D861E /* CommunityActHeader.xib */,
+				0856460320C68F92002D861E /* CommunityActDetailCell.h */,
+				0856460420C68F92002D861E /* CommunityActDetailCell.m */,
+				0856460520C68F92002D861E /* CommunityActDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -748,6 +794,12 @@
 		08E20CAD20BBD2B0009FFAE1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				085645F620C680EE002D861E /* NSURL+DSpersonEx.h */,
+				085645F720C680EF002D861E /* NSURL+DSpersonEx.m */,
+				085645F320C680BF002D861E /* NSNull+Extension.h */,
+				085645F420C680BF002D861E /* NSNull+Extension.m */,
+				085645F020C67E34002D861E /* UIImageView+EasyInOut.h */,
+				085645F120C67E34002D861E /* UIImageView+EasyInOut.m */,
 				08A8DDAE20BFA4D000AADC3E /* LeftViewTextField.h */,
 				08A8DDAF20BFA4D000AADC3E /* LeftViewTextField.m */,
 				08E20CAE20BBD42D009FFAE1 /* UIView+Frame.h */,
@@ -895,9 +947,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0869DE0420BCDF05006A3BF1 /* SignUpViewController.xib in Resources */,
+				0856460220C68785002D861E /* CommunityActHeader.xib in Resources */,
 				081BC4CB20B5632900AD0C0A /* ServiceViewController.xib in Resources */,
 				086653B320BE9C4D00004F92 /* ServiceOnlineCollectionViewCell.xib in Resources */,
 				0869DE1020BD3A5F006A3BF1 /* EnsurePsdViewController.xib in Resources */,
+				0856460720C68F92002D861E /* CommunityActDetailCell.xib in Resources */,
 				0830ACA720C14DE300EF0CB0 /* ServiceInfoListCell.xib in Resources */,
 				08E20CD620BC0D5A009FFAE1 /* ActivityTableViewCell.xib in Resources */,
 				0869DE1F20BD5AD0006A3BF1 /* CentralizeCell.xib in Resources */,
@@ -987,6 +1041,7 @@
 				0841DDA420C625AA006F3704 /* ProtocolViewController.m in Sources */,
 				08A8DDBE20BFF90900AADC3E /* BasicTableViewCell.m in Sources */,
 				08EBF88E20B800EA00A6FDED /* BadgeSegment.m in Sources */,
+				085645F220C67E34002D861E /* UIImageView+EasyInOut.m in Sources */,
 				08A8DDB820BFD23B00AADC3E /* SearchTableViewCell.m in Sources */,
 				081BC4CA20B5632900AD0C0A /* ProfileViewController.m in Sources */,
 				086653B220BE9C4D00004F92 /* ServiceOnlineCollectionViewCell.m in Sources */,
@@ -994,10 +1049,14 @@
 				081BC4C120B5632900AD0C0A /* CommonNetwork.m in Sources */,
 				081BC47720B562D400AD0C0A /* main.m in Sources */,
 				08AAC78D20BBAA7200E760AE /* MessageViewController.m in Sources */,
+				085645F820C680EF002D861E /* NSURL+DSpersonEx.m in Sources */,
+				0856460020C68706002D861E /* CommunityActHeader.m in Sources */,
 				0830AC8520C1165A00EF0CB0 /* CommonBottomView.m in Sources */,
 				08A8DD9E20BF929100AADC3E /* CentralizedViewController.m in Sources */,
 				08AAC78320BB97B900E760AE /* HomeLocationView.m in Sources */,
 				08E20CB020BBD42D009FFAE1 /* UIView+Frame.m in Sources */,
+				085645FC20C68445002D861E /* CommunityActDetailViewController.m in Sources */,
+				085645F520C680BF002D861E /* NSNull+Extension.m in Sources */,
 				0830AC8220C0DCA300EF0CB0 /* SearchHotView.m in Sources */,
 				08E20CC620BBEE14009FFAE1 /* CycleScrollCell.m in Sources */,
 				081BC46920B562D400AD0C0A /* AppDelegate.m in Sources */,
@@ -1040,6 +1099,7 @@
 				081BC4C520B5632900AD0C0A /* HomeViewController.m in Sources */,
 				08AAC78620BB9FE200E760AE /* LocationChooseController.m in Sources */,
 				08AAC79C20BBAC0500E760AE /* QRCodeScannerViewController.m in Sources */,
+				0856460620C68F92002D861E /* CommunityActDetailCell.m in Sources */,
 				0869DE0F20BD3A5F006A3BF1 /* EnsurePsdViewController.m in Sources */,
 				08A8DDA720BF952C00AADC3E /* CentraListTableViewCell.m in Sources */,
 				0830AC9C20C14D8500EF0CB0 /* ServiceInfoListController.m in Sources */,

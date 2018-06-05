@@ -22,6 +22,7 @@
 #import "DistributedViewController.h"
 #import "CommonBottomView.h"
 #import "NetworkTool.h"
+#import "CommunityActDetailViewController.h"
 
 #define CYCLE_H SCREEN_WIDTH * (650 / 750.0)
 #define HEADER_H 40
@@ -46,10 +47,11 @@
 @property(nonatomic, strong)UIView *topView;
 //搜索的view
 @property(nonatomic, strong)UIView *searchView;
-
 //homeBanner
 @property(nonatomic, strong)NSArray *homeBannerArr;
 @property(nonatomic, strong)NSMutableArray *activityArray;
+//页码
+@property(nonatomic, assign)NSInteger pageIndex;
 
 @end
 
@@ -86,22 +88,49 @@
     [self initNavBar];
     [self initTableView];
     [self initTopView];
-    [self initMapBtn];
+//    [self initMapBtn];
     [self initSearchView];
 }
 
 - (void)getData{
     
     [self getHomeBanner];
+    [self getCommunityActivities];
 }
 
 #pragma mark - 获取首页banner
 - (void)getHomeBanner{
+    WEAKSELF;
     [NetworkTool getHomeBannerWithSucceedBlock:^(NSDictionary * _Nullable result) {
-        [self presentHomeBanner:[result objectForKey:kData]];
+        [weakSelf presentHomeBanner:[result objectForKey:kData]];
     } failedBlock:^(id  _Nullable errorInfo) {
         [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
     }];
+}
+
+#pragma mark - 获取社区活动
+- (void)getCommunityActivities{
+    WEAKSELF;
+    [NetworkTool getCommunityActivitiesWithPageIndex:_pageIndex count:COMMON_PAGE_SIZE SucceedBlock:^(NSDictionary * _Nullable result) {
+        [weakSelf presentActivities:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [weakSelf.tableView.mj_footer endRefreshing];
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+- (void)presentActivities:(NSArray *)array{
+    
+    [_tableView.mj_footer endRefreshing];
+
+    if (array.count < COMMON_PAGE_SIZE) {
+        [_tableView.mj_footer endRefreshingWithNoMoreData];
+    }
+    [self.activityArray addObjectsFromArray:array];
+    [_tableView reloadData];
+    if (array.count == 0 && _pageIndex == 1) {
+        _tableView.mj_footer.hidden = true;
+    }
 }
 
 - (void)presentHomeBanner:(NSArray *)array{
@@ -118,10 +147,10 @@
 - (void)initNavBar{
 
     self.title = @"";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.locationView];
-    UIBarButtonItem *message = [[UIBarButtonItem alloc]initWithCustomView:self.messageView];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.locationView];
+//    UIBarButtonItem *message = [[UIBarButtonItem alloc]initWithCustomView:self.messageView];
     UIBarButtonItem *scan = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"scan"] style:UIBarButtonItemStylePlain target:self action:@selector(scanClick)];
-    self.navigationItem.rightBarButtonItems = @[message, scan];
+    self.navigationItem.rightBarButtonItem = scan;
 }
 
 #pragma mark - 做下拉放大
@@ -159,8 +188,10 @@
     _tableView.tableFooterView = [CommonBottomView shareInstance];
     
     
+    WEAKSELF;
     _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        
+        weakSelf.pageIndex++;
+        [self getCommunityActivities];
     }];
 }
 
@@ -174,7 +205,8 @@
             return 1;
             break;
             case 2:
-            return 3;
+            _tableView.mj_footer.hidden = self.activityArray.count == 0;
+            return self.activityArray.count;
         default:
             break;
     }
@@ -199,6 +231,7 @@
         case 2:
         {
             ActivityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ActivityTableViewCell class]) forIndexPath:indexPath];
+            [cell setCellWithDict:self.activityArray[indexPath.row] indexPath:indexPath];
             return cell;
         }
             break;
@@ -254,7 +287,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 2) {
-        
+        CommunityActDetailViewController *activityVc = [[CommunityActDetailViewController alloc]init];
+        activityVc.Id = [[self.activityArray[indexPath.row] objectForKey:kId] integerValue];
+        activityVc.hidesBottomBarWhenPushed = true;
+        [self.navigationController pushViewController:activityVc animated:true];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:true];
 }
@@ -305,7 +341,7 @@
 
 #pragma mark - 点击扫描
 - (void)scanClick{
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF;
     QRCodeScannerViewController *vc = [[QRCodeScannerViewController alloc]initWithCardName:nil centerImage:nil completed:^(NSString *result) {
         //扫描结果
         

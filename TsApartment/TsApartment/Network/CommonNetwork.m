@@ -12,6 +12,7 @@
 #import "UserStatus.h"
 #import <CommonCrypto/CommonCrypto.h>
 #import <zlib.h>
+#import "JSONKit.h"
 
 #define kTimeOutInterval 10
 
@@ -51,7 +52,8 @@ static NSString *const kJsonType = @"application/json";
     if (showLoader) {
         [AlertView showProgress];
     }
-    NSURLSessionDataTask *dataTask = [manager POST:url parameters:finalParam progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSLog(@"%@", [finalParam JSONString]);
+    NSURLSessionDataTask *dataTask = [manager POST:url parameters:finalParam   progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (showLoader) {

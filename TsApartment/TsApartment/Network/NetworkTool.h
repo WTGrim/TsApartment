@@ -61,4 +61,21 @@
  */
 + (NSURLSessionDataTask *)getCommunityActivitiesWithPageIndex:(NSInteger)pageIndex count:(NSInteger)count SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
 
+/**
+ 社区活动列表
+ */
++ (NSURLSessionDataTask *)getCommunityActivityDetailWithId:(NSInteger)Id SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
+/**
+ 社区活动列表
+ */
++ (NSURLSessionDataTask *)getCommunityActivityJoin_listDetailWithId:(NSInteger)Id pageIndex:(NSInteger)pageIndex count:(NSInteger)count SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
+/**
+ 服务菜单
+ */
++ (NSURLSessionDataTask *)getServiceMenuWithSucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
+
+
 @end

@@ -15,7 +15,7 @@
 @interface ServiceOnlineCell()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property(nonatomic, strong)UICollectionView *collectionView;
-@property(nonatomic, strong)NSMutableArray *dataArray;
+@property(nonatomic, strong)NSArray *dataArray;
 
 @end
 
@@ -31,6 +31,12 @@
         [self setupUI];
     }
     return self;
+}
+
+- (void)setCellWithArray:(NSArray *)array{
+    
+    _dataArray = [NSArray arrayWithArray:array];
+    [_collectionView reloadData];
 }
 
 - (void)setupUI{
@@ -52,27 +58,21 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 3;
+    return _dataArray.count - 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     ServiceOnlineCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ServiceOnlineCollectionViewCell class]) forIndexPath:indexPath];
+    if (_dataArray.count != 0) {
+        [cell setCellWithDict:_dataArray[indexPath.item] indexPath:indexPath];
+    }
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
 }
-
-#pragma mark - lazy
-- (NSMutableArray *)dataArr{
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray array];
-    }
-    return _dataArray;
-}
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
