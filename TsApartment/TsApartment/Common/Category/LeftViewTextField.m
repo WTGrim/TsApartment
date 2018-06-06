@@ -31,3 +31,28 @@
 }
 
 @end
+
+@implementation CommentTextField
+
+- (CGRect)leftViewRectForBounds:(CGRect)bounds
+{
+    CGRect iconRect = [super leftViewRectForBounds:bounds];
+    iconRect.origin.x += 15; //右边偏11
+    return iconRect;
+}
+
+//UITextField 文字与输入框的距离
+- (CGRect)textRectForBounds:(CGRect)bounds{
+    
+    return CGRectInset(bounds, 50, 0);
+    
+}
+
+//控制文本的位置
+- (CGRect)editingRectForBounds:(CGRect)bounds{
+    
+    return CGRectInset(bounds, 50, 0);
+}
+
+
+@end

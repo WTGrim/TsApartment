@@ -60,6 +60,7 @@
 - (void)setupUI{
     
     self.title = @"服务资讯";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"share_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(shareClick)];
     [self initTableView];
 }
 
@@ -96,8 +97,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     ServiceInfoDetailController *detailVc = [[ServiceInfoDetailController alloc]init];
+    detailVc.hidesBottomBarWhenPushed = true;
     detailVc.Id = [[self.dataArray[indexPath.row] objectForKey:kId] integerValue];
     [self.navigationController pushViewController:detailVc animated:true];
+}
+
+- (void)shareClick{
+    
 }
 
 - (NSMutableArray *)dataArray{

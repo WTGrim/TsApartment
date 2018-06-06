@@ -103,6 +103,33 @@
 		08E20CD620BC0D5A009FFAE1 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E20CD420BC0D5A009FFAE1 /* ActivityTableViewCell.xib */; };
 		08EBF88E20B800EA00A6FDED /* BadgeSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EBF88B20B800EA00A6FDED /* BadgeSegment.m */; };
 		08EBF88F20B800EA00A6FDED /* SegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EBF88D20B800EA00A6FDED /* SegmentItem.m */; };
+		08F869E820C793710022EB85 /* ServiceInfoDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */; };
+		08F869EA20C7937B0022EB85 /* ServiceInfoDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */; };
+		08F869ED20C7B3410022EB85 /* CommentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869EC20C7B3410022EB85 /* CommentBottomView.m */; };
+		08F869F020C7B94E0022EB85 /* ServiceCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869EF20C7B94E0022EB85 /* ServiceCommentCell.m */; };
+		08F869F320C7BB440022EB85 /* CommentTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869F220C7BB440022EB85 /* CommentTextCell.m */; };
+		08F869F620C7CC950022EB85 /* CommonCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869F520C7CC950022EB85 /* CommonCommentCell.m */; };
+		08F869F920C7CDEB0022EB85 /* ContainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869F820C7CDEB0022EB85 /* ContainView.m */; };
+		08F869FD20C7CE670022EB85 /* CommentCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869FC20C7CE670022EB85 /* CommentCellModel.m */; };
+		08F86A0020C7D0350022EB85 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869FF20C7D0350022EB85 /* CommentView.m */; };
+		08F86A0320C7D07F0022EB85 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A0220C7D07F0022EB85 /* CommentModel.m */; };
+		08F86A1D20C7D1010022EB85 /* NSAttributedString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A0720C7D1010022EB85 /* NSAttributedString+MLLabel.m */; };
+		08F86A1E20C7D1010022EB85 /* NSMutableAttributedString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A0920C7D1010022EB85 /* NSMutableAttributedString+MLLabel.m */; };
+		08F86A1F20C7D1010022EB85 /* NSString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A0B20C7D1010022EB85 /* NSString+MLLabel.m */; };
+		08F86A2020C7D1010022EB85 /* MLExpressionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A0E20C7D1010022EB85 /* MLExpressionManager.m */; };
+		08F86A2120C7D1010022EB85 /* MLTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A1020C7D1010022EB85 /* MLTextAttachment.m */; };
+		08F86A2220C7D1010022EB85 /* NSAttributedString+MLExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A1220C7D1010022EB85 /* NSAttributedString+MLExpression.m */; };
+		08F86A2320C7D1010022EB85 /* NSString+MLExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A1420C7D1010022EB85 /* NSString+MLExpression.m */; };
+		08F86A2420C7D1010022EB85 /* MLLabelLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A1820C7D1010022EB85 /* MLLabelLayoutManager.m */; };
+		08F86A2520C7D1010022EB85 /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A1A20C7D1010022EB85 /* MLLabel.m */; };
+		08F86A2620C7D1010022EB85 /* MLLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A1C20C7D1010022EB85 /* MLLinkLabel.m */; };
+		08F86A2920C7D1780022EB85 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A2820C7D1780022EB85 /* CommentCell.m */; };
+		08F86A2F20C7D1F30022EB85 /* UITableView+HYBCacheHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A2C20C7D1F30022EB85 /* UITableView+HYBCacheHeight.m */; };
+		08F86A3020C7D1F30022EB85 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A2E20C7D1F30022EB85 /* UITableViewCell+HYBMasonryAutoCellHeight.m */; };
+		08F86A3320C7D79E0022EB85 /* NSString+WT.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A3220C7D79E0022EB85 /* NSString+WT.m */; };
+		08F86A3720C7D9100022EB85 /* DataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A3620C7D9100022EB85 /* DataSourceManager.m */; };
+		08F86A3A20C7E43C0022EB85 /* OperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A3820C7E43C0022EB85 /* OperationView.m */; };
+		08F86A3D20C7E80B0022EB85 /* ServiceCommentListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F86A3C20C7E80B0022EB85 /* ServiceCommentListController.m */; };
 		4AC5DF36AC849DB4539DDBC9 /* libPods-TsApartment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96196ECEDDD4EDD4D0AD1863 /* libPods-TsApartment.a */; };
 /* End PBXBuildFile section */
 
@@ -301,6 +328,60 @@
 		08EBF88B20B800EA00A6FDED /* BadgeSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeSegment.m; sourceTree = "<group>"; };
 		08EBF88C20B800EA00A6FDED /* SegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentItem.h; sourceTree = "<group>"; };
 		08EBF88D20B800EA00A6FDED /* SegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentItem.m; sourceTree = "<group>"; };
+		08F869E620C793710022EB85 /* ServiceInfoDetailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceInfoDetailHeader.h; sourceTree = "<group>"; };
+		08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceInfoDetailHeader.m; sourceTree = "<group>"; };
+		08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceInfoDetailHeader.xib; sourceTree = "<group>"; };
+		08F869EB20C7B3410022EB85 /* CommentBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentBottomView.h; sourceTree = "<group>"; };
+		08F869EC20C7B3410022EB85 /* CommentBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentBottomView.m; sourceTree = "<group>"; };
+		08F869EE20C7B94E0022EB85 /* ServiceCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceCommentCell.h; sourceTree = "<group>"; };
+		08F869EF20C7B94E0022EB85 /* ServiceCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceCommentCell.m; sourceTree = "<group>"; };
+		08F869F120C7BB440022EB85 /* CommentTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTextCell.h; sourceTree = "<group>"; };
+		08F869F220C7BB440022EB85 /* CommentTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTextCell.m; sourceTree = "<group>"; };
+		08F869F420C7CC950022EB85 /* CommonCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCommentCell.h; sourceTree = "<group>"; };
+		08F869F520C7CC950022EB85 /* CommonCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonCommentCell.m; sourceTree = "<group>"; };
+		08F869F720C7CDEB0022EB85 /* ContainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainView.h; sourceTree = "<group>"; };
+		08F869F820C7CDEB0022EB85 /* ContainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContainView.m; sourceTree = "<group>"; };
+		08F869FB20C7CE670022EB85 /* CommentCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCellModel.h; sourceTree = "<group>"; };
+		08F869FC20C7CE670022EB85 /* CommentCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentCellModel.m; sourceTree = "<group>"; };
+		08F869FE20C7D0350022EB85 /* CommentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		08F869FF20C7D0350022EB85 /* CommentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
+		08F86A0120C7D07F0022EB85 /* CommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		08F86A0220C7D07F0022EB85 /* CommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		08F86A0620C7D1010022EB85 /* NSAttributedString+MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+MLLabel.h"; sourceTree = "<group>"; };
+		08F86A0720C7D1010022EB85 /* NSAttributedString+MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+MLLabel.m"; sourceTree = "<group>"; };
+		08F86A0820C7D1010022EB85 /* NSMutableAttributedString+MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+MLLabel.h"; sourceTree = "<group>"; };
+		08F86A0920C7D1010022EB85 /* NSMutableAttributedString+MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+MLLabel.m"; sourceTree = "<group>"; };
+		08F86A0A20C7D1010022EB85 /* NSString+MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MLLabel.h"; sourceTree = "<group>"; };
+		08F86A0B20C7D1010022EB85 /* NSString+MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MLLabel.m"; sourceTree = "<group>"; };
+		08F86A0D20C7D1010022EB85 /* MLExpressionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLExpressionManager.h; sourceTree = "<group>"; };
+		08F86A0E20C7D1010022EB85 /* MLExpressionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLExpressionManager.m; sourceTree = "<group>"; };
+		08F86A0F20C7D1010022EB85 /* MLTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTextAttachment.h; sourceTree = "<group>"; };
+		08F86A1020C7D1010022EB85 /* MLTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTextAttachment.m; sourceTree = "<group>"; };
+		08F86A1120C7D1010022EB85 /* NSAttributedString+MLExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+MLExpression.h"; sourceTree = "<group>"; };
+		08F86A1220C7D1010022EB85 /* NSAttributedString+MLExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+MLExpression.m"; sourceTree = "<group>"; };
+		08F86A1320C7D1010022EB85 /* NSString+MLExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MLExpression.h"; sourceTree = "<group>"; };
+		08F86A1420C7D1010022EB85 /* NSString+MLExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MLExpression.m"; sourceTree = "<group>"; };
+		08F86A1620C7D1010022EB85 /* MLLabel+Override.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLLabel+Override.h"; sourceTree = "<group>"; };
+		08F86A1720C7D1010022EB85 /* MLLabelLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLabelLayoutManager.h; sourceTree = "<group>"; };
+		08F86A1820C7D1010022EB85 /* MLLabelLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabelLayoutManager.m; sourceTree = "<group>"; };
+		08F86A1920C7D1010022EB85 /* MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLabel.h; sourceTree = "<group>"; };
+		08F86A1A20C7D1010022EB85 /* MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabel.m; sourceTree = "<group>"; };
+		08F86A1B20C7D1010022EB85 /* MLLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkLabel.h; sourceTree = "<group>"; };
+		08F86A1C20C7D1010022EB85 /* MLLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkLabel.m; sourceTree = "<group>"; };
+		08F86A2720C7D1780022EB85 /* CommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		08F86A2820C7D1780022EB85 /* CommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		08F86A2B20C7D1F30022EB85 /* UITableView+HYBCacheHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HYBCacheHeight.h"; sourceTree = "<group>"; };
+		08F86A2C20C7D1F30022EB85 /* UITableView+HYBCacheHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HYBCacheHeight.m"; sourceTree = "<group>"; };
+		08F86A2D20C7D1F30022EB85 /* UITableViewCell+HYBMasonryAutoCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HYBMasonryAutoCellHeight.h"; sourceTree = "<group>"; };
+		08F86A2E20C7D1F30022EB85 /* UITableViewCell+HYBMasonryAutoCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HYBMasonryAutoCellHeight.m"; sourceTree = "<group>"; };
+		08F86A3120C7D79E0022EB85 /* NSString+WT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+WT.h"; sourceTree = "<group>"; };
+		08F86A3220C7D79E0022EB85 /* NSString+WT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+WT.m"; sourceTree = "<group>"; };
+		08F86A3520C7D9100022EB85 /* DataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceManager.h; sourceTree = "<group>"; };
+		08F86A3620C7D9100022EB85 /* DataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceManager.m; sourceTree = "<group>"; };
+		08F86A3820C7E43C0022EB85 /* OperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationView.m; sourceTree = "<group>"; };
+		08F86A3920C7E43C0022EB85 /* OperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationView.h; sourceTree = "<group>"; };
+		08F86A3B20C7E80B0022EB85 /* ServiceCommentListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceCommentListController.h; sourceTree = "<group>"; };
+		08F86A3C20C7E80B0022EB85 /* ServiceCommentListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceCommentListController.m; sourceTree = "<group>"; };
 		27826BEF6202B8AF49129E19 /* Pods-TsApartment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsApartment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TsApartment/Pods-TsApartment.debug.xcconfig"; sourceTree = "<group>"; };
 		96196ECEDDD4EDD4D0AD1863 /* libPods-TsApartment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TsApartment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3182F821E57FF4BA45D6EA /* Pods-TsApartment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsApartment.release.xcconfig"; path = "Pods/Target Support Files/Pods-TsApartment/Pods-TsApartment.release.xcconfig"; sourceTree = "<group>"; };
@@ -521,6 +602,9 @@
 		081BC4BB20B5632900AD0C0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				08F86A3420C7D9100022EB85 /* other */,
+				08F86A2A20C7D1F30022EB85 /* HYBMasonryAutoCellHeight */,
+				08F86A0420C7D1010022EB85 /* MyLinkLabel */,
 				086653BA20BEB09000004F92 /* CommonBtn */,
 				0866539820BE455600004F92 /* Photo */,
 				0869DE0520BCFD6F006A3BF1 /* WTAlertView */,
@@ -577,11 +661,14 @@
 		0830AC9820C14D1700EF0CB0 /* ServiceInfo */ = {
 			isa = PBXGroup;
 			children = (
+				08F869FA20C7CE3C0022EB85 /* Model */,
 				0830AC9D20C14D9300EF0CB0 /* View */,
 				0830AC9B20C14D8500EF0CB0 /* ServiceInfoListController.h */,
 				0830AC9A20C14D8500EF0CB0 /* ServiceInfoListController.m */,
 				0856460F20C6BFB8002D861E /* ServiceInfoDetailController.h */,
 				0856461020C6BFB8002D861E /* ServiceInfoDetailController.m */,
+				08F86A3B20C7E80B0022EB85 /* ServiceCommentListController.h */,
+				08F86A3C20C7E80B0022EB85 /* ServiceCommentListController.m */,
 			);
 			path = ServiceInfo;
 			sourceTree = "<group>";
@@ -599,6 +686,25 @@
 				0830ACA520C14DE300EF0CB0 /* ServiceInfoListCell.h */,
 				0830ACA320C14DE300EF0CB0 /* ServiceInfoListCell.m */,
 				0830ACA420C14DE300EF0CB0 /* ServiceInfoListCell.xib */,
+				08F869E620C793710022EB85 /* ServiceInfoDetailHeader.h */,
+				08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */,
+				08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */,
+				08F869EB20C7B3410022EB85 /* CommentBottomView.h */,
+				08F869EC20C7B3410022EB85 /* CommentBottomView.m */,
+				08F869EE20C7B94E0022EB85 /* ServiceCommentCell.h */,
+				08F869EF20C7B94E0022EB85 /* ServiceCommentCell.m */,
+				08F869F120C7BB440022EB85 /* CommentTextCell.h */,
+				08F869F220C7BB440022EB85 /* CommentTextCell.m */,
+				08F869F420C7CC950022EB85 /* CommonCommentCell.h */,
+				08F869F520C7CC950022EB85 /* CommonCommentCell.m */,
+				08F869F720C7CDEB0022EB85 /* ContainView.h */,
+				08F869F820C7CDEB0022EB85 /* ContainView.m */,
+				08F869FE20C7D0350022EB85 /* CommentView.h */,
+				08F869FF20C7D0350022EB85 /* CommentView.m */,
+				08F86A2720C7D1780022EB85 /* CommentCell.h */,
+				08F86A2820C7D1780022EB85 /* CommentCell.m */,
+				08F86A3920C7E43C0022EB85 /* OperationView.h */,
+				08F86A3820C7E43C0022EB85 /* OperationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -817,6 +923,8 @@
 				08A8DDAF20BFA4D000AADC3E /* LeftViewTextField.m */,
 				08E20CAE20BBD42D009FFAE1 /* UIView+Frame.h */,
 				08E20CAF20BBD42D009FFAE1 /* UIView+Frame.m */,
+				08F86A3120C7D79E0022EB85 /* NSString+WT.h */,
+				08F86A3220C7D79E0022EB85 /* NSString+WT.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -843,6 +951,89 @@
 				08EBF88D20B800EA00A6FDED /* SegmentItem.m */,
 			);
 			path = BadgeSegment;
+			sourceTree = "<group>";
+		};
+		08F869FA20C7CE3C0022EB85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08F869FB20C7CE670022EB85 /* CommentCellModel.h */,
+				08F869FC20C7CE670022EB85 /* CommentCellModel.m */,
+				08F86A0120C7D07F0022EB85 /* CommentModel.h */,
+				08F86A0220C7D07F0022EB85 /* CommentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		08F86A0420C7D1010022EB85 /* MyLinkLabel */ = {
+			isa = PBXGroup;
+			children = (
+				08F86A0520C7D1010022EB85 /* Category */,
+				08F86A0C20C7D1010022EB85 /* Expression */,
+				08F86A1520C7D1010022EB85 /* Helper */,
+				08F86A1920C7D1010022EB85 /* MLLabel.h */,
+				08F86A1A20C7D1010022EB85 /* MLLabel.m */,
+				08F86A1B20C7D1010022EB85 /* MLLinkLabel.h */,
+				08F86A1C20C7D1010022EB85 /* MLLinkLabel.m */,
+			);
+			path = MyLinkLabel;
+			sourceTree = "<group>";
+		};
+		08F86A0520C7D1010022EB85 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				08F86A0620C7D1010022EB85 /* NSAttributedString+MLLabel.h */,
+				08F86A0720C7D1010022EB85 /* NSAttributedString+MLLabel.m */,
+				08F86A0820C7D1010022EB85 /* NSMutableAttributedString+MLLabel.h */,
+				08F86A0920C7D1010022EB85 /* NSMutableAttributedString+MLLabel.m */,
+				08F86A0A20C7D1010022EB85 /* NSString+MLLabel.h */,
+				08F86A0B20C7D1010022EB85 /* NSString+MLLabel.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		08F86A0C20C7D1010022EB85 /* Expression */ = {
+			isa = PBXGroup;
+			children = (
+				08F86A0D20C7D1010022EB85 /* MLExpressionManager.h */,
+				08F86A0E20C7D1010022EB85 /* MLExpressionManager.m */,
+				08F86A0F20C7D1010022EB85 /* MLTextAttachment.h */,
+				08F86A1020C7D1010022EB85 /* MLTextAttachment.m */,
+				08F86A1120C7D1010022EB85 /* NSAttributedString+MLExpression.h */,
+				08F86A1220C7D1010022EB85 /* NSAttributedString+MLExpression.m */,
+				08F86A1320C7D1010022EB85 /* NSString+MLExpression.h */,
+				08F86A1420C7D1010022EB85 /* NSString+MLExpression.m */,
+			);
+			path = Expression;
+			sourceTree = "<group>";
+		};
+		08F86A1520C7D1010022EB85 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				08F86A1620C7D1010022EB85 /* MLLabel+Override.h */,
+				08F86A1720C7D1010022EB85 /* MLLabelLayoutManager.h */,
+				08F86A1820C7D1010022EB85 /* MLLabelLayoutManager.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		08F86A2A20C7D1F30022EB85 /* HYBMasonryAutoCellHeight */ = {
+			isa = PBXGroup;
+			children = (
+				08F86A2B20C7D1F30022EB85 /* UITableView+HYBCacheHeight.h */,
+				08F86A2C20C7D1F30022EB85 /* UITableView+HYBCacheHeight.m */,
+				08F86A2D20C7D1F30022EB85 /* UITableViewCell+HYBMasonryAutoCellHeight.h */,
+				08F86A2E20C7D1F30022EB85 /* UITableViewCell+HYBMasonryAutoCellHeight.m */,
+			);
+			path = HYBMasonryAutoCellHeight;
+			sourceTree = "<group>";
+		};
+		08F86A3420C7D9100022EB85 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				08F86A3520C7D9100022EB85 /* DataSourceManager.h */,
+				08F86A3620C7D9100022EB85 /* DataSourceManager.m */,
+			);
+			path = other;
 			sourceTree = "<group>";
 		};
 		976194E7EA4D3099753631D8 /* Pods */ = {
@@ -981,6 +1172,7 @@
 				08E20CCE20BBFB0F009FFAE1 /* DistCollectionViewCell.xib in Resources */,
 				081BC4C620B5632900AD0C0A /* HomeViewController.xib in Resources */,
 				0856460E20C6BBAD002D861E /* publicAreaBookView.xib in Resources */,
+				08F869EA20C7937B0022EB85 /* ServiceInfoDetailHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1050,9 +1242,12 @@
 			files = (
 				081BC4C220B5632900AD0C0A /* NetworkTool.m in Sources */,
 				081BC4D620B5676100AD0C0A /* AlertView.m in Sources */,
+				08F869F020C7B94E0022EB85 /* ServiceCommentCell.m in Sources */,
 				08E20CD520BC0D5A009FFAE1 /* ActivityTableViewCell.m in Sources */,
 				08A8DDA120BF92E800AADC3E /* DistributedViewController.m in Sources */,
+				08F86A3A20C7E43C0022EB85 /* OperationView.m in Sources */,
 				0841DDA420C625AA006F3704 /* ProtocolViewController.m in Sources */,
+				08F86A3320C7D79E0022EB85 /* NSString+WT.m in Sources */,
 				08A8DDBE20BFF90900AADC3E /* BasicTableViewCell.m in Sources */,
 				08EBF88E20B800EA00A6FDED /* BadgeSegment.m in Sources */,
 				085645F220C67E34002D861E /* UIImageView+EasyInOut.m in Sources */,
@@ -1061,12 +1256,17 @@
 				086653B220BE9C4D00004F92 /* ServiceOnlineCollectionViewCell.m in Sources */,
 				086653AA20BE966800004F92 /* ServiceInfoCell.m in Sources */,
 				081BC4C120B5632900AD0C0A /* CommonNetwork.m in Sources */,
+				08F86A2620C7D1010022EB85 /* MLLinkLabel.m in Sources */,
 				081BC47720B562D400AD0C0A /* main.m in Sources */,
+				08F86A1D20C7D1010022EB85 /* NSAttributedString+MLLabel.m in Sources */,
 				08AAC78D20BBAA7200E760AE /* MessageViewController.m in Sources */,
+				08F86A2F20C7D1F30022EB85 /* UITableView+HYBCacheHeight.m in Sources */,
+				08F86A3720C7D9100022EB85 /* DataSourceManager.m in Sources */,
 				085645F820C680EF002D861E /* NSURL+DSpersonEx.m in Sources */,
 				0856460020C68706002D861E /* CommunityActHeader.m in Sources */,
 				0830AC8520C1165A00EF0CB0 /* CommonBottomView.m in Sources */,
 				08A8DD9E20BF929100AADC3E /* CentralizedViewController.m in Sources */,
+				08F869ED20C7B3410022EB85 /* CommentBottomView.m in Sources */,
 				08AAC78320BB97B900E760AE /* HomeLocationView.m in Sources */,
 				08E20CB020BBD42D009FFAE1 /* UIView+Frame.m in Sources */,
 				085645FC20C68445002D861E /* CommunityActDetailViewController.m in Sources */,
@@ -1082,7 +1282,12 @@
 				08A8DDB020BFA4D100AADC3E /* LeftViewTextField.m in Sources */,
 				081BC4C720B5632900AD0C0A /* BasicViewController.m in Sources */,
 				08E20CD120BBFD2B009FFAE1 /* HomeSectionHeader.m in Sources */,
+				08F869F320C7BB440022EB85 /* CommentTextCell.m in Sources */,
+				08F86A2120C7D1010022EB85 /* MLTextAttachment.m in Sources */,
 				081BC4C320B5632900AD0C0A /* JSONKit.m in Sources */,
+				08F869E820C793710022EB85 /* ServiceInfoDetailHeader.m in Sources */,
+				08F869F920C7CDEB0022EB85 /* ContainView.m in Sources */,
+				08F86A2420C7D1010022EB85 /* MLLabelLayoutManager.m in Sources */,
 				086653BD20BEB0A400004F92 /* CommonBtn.m in Sources */,
 				0856461120C6BFB8002D861E /* ServiceInfoDetailController.m in Sources */,
 				08AAC79620BBABA900E760AE /* Scanner.m in Sources */,
@@ -1095,15 +1300,22 @@
 				08E20CCD20BBFB0F009FFAE1 /* DistCollectionViewCell.m in Sources */,
 				08A8DDBB20BFF19800AADC3E /* SearchItemView.m in Sources */,
 				086653AE20BE980900004F92 /* ServiceInfoCollectionViewCell.m in Sources */,
+				08F86A1F20C7D1010022EB85 /* NSString+MLLabel.m in Sources */,
 				081BC4CC20B5632900AD0C0A /* ServiceViewController.m in Sources */,
 				081BC4D020B5632900AD0C0A /* CommonTools.m in Sources */,
+				08F86A0020C7D0350022EB85 /* CommentView.m in Sources */,
 				0830ACA620C14DE300EF0CB0 /* ServiceInfoListCell.m in Sources */,
 				086653A420BE585C00004F92 /* MapViewController.m in Sources */,
+				08F86A2520C7D1010022EB85 /* MLLabel.m in Sources */,
+				08F86A2920C7D1780022EB85 /* CommentCell.m in Sources */,
 				081BC4CD20B5632900AD0C0A /* LoginViewController.m in Sources */,
 				0866539E20BE456A00004F92 /* UseCameraOrPhoto.m in Sources */,
+				08F86A2220C7D1010022EB85 /* NSAttributedString+MLExpression.m in Sources */,
 				0869DE1E20BD5AD0006A3BF1 /* CentralizeCell.m in Sources */,
+				08F86A2020C7D1010022EB85 /* MLExpressionManager.m in Sources */,
 				081BC4CF20B5632900AD0C0A /* UserStatus.m in Sources */,
 				0856460A20C6BB8F002D861E /* publicAreaBookView.m in Sources */,
+				08F86A1E20C7D1010022EB85 /* NSMutableAttributedString+MLLabel.m in Sources */,
 				08A8DDC120BFFE7B00AADC3E /* SearchHotTableViewCell.m in Sources */,
 				0869DE0B20BCFE1A006A3BF1 /* WTAlertView.m in Sources */,
 				08E20CC520BBEE14009FFAE1 /* WTCycleScrollView.m in Sources */,
@@ -1111,14 +1323,20 @@
 				08AAC79820BBABA900E760AE /* MultimediaTool.m in Sources */,
 				0830AC8920C142D800EF0CB0 /* ContractViewController.m in Sources */,
 				0830AC8E20C143E100EF0CB0 /* ContractTableViewCell.m in Sources */,
+				08F869F620C7CC950022EB85 /* CommonCommentCell.m in Sources */,
 				08AAC79720BBABA900E760AE /* ScannerMaskView.m in Sources */,
 				081BC4C520B5632900AD0C0A /* HomeViewController.m in Sources */,
+				08F86A2320C7D1010022EB85 /* NSString+MLExpression.m in Sources */,
 				08AAC78620BB9FE200E760AE /* LocationChooseController.m in Sources */,
 				08AAC79C20BBAC0500E760AE /* QRCodeScannerViewController.m in Sources */,
 				0856460620C68F92002D861E /* CommunityActDetailCell.m in Sources */,
+				08F86A3020C7D1F30022EB85 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
+				08F86A0320C7D07F0022EB85 /* CommentModel.m in Sources */,
 				0869DE0F20BD3A5F006A3BF1 /* EnsurePsdViewController.m in Sources */,
+				08F86A3D20C7E80B0022EB85 /* ServiceCommentListController.m in Sources */,
 				08A8DDA720BF952C00AADC3E /* CentraListTableViewCell.m in Sources */,
 				0830AC9C20C14D8500EF0CB0 /* ServiceInfoListController.m in Sources */,
+				08F869FD20C7CE670022EB85 /* CommentCellModel.m in Sources */,
 				0869DE2220BD5E9E006A3BF1 /* CentTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

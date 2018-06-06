@@ -72,6 +72,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:true];
     ServiceInfoDetailController *detailVc = [[ServiceInfoDetailController alloc]init];
+    detailVc.hidesBottomBarWhenPushed = true;
     detailVc.Id = [[_dataArray[indexPath.row] objectForKey:kId] integerValue];
     UIViewController *vc = [CommonTools findViewController:self];
     [vc.navigationController pushViewController:detailVc animated:true];

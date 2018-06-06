@@ -22,19 +22,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 维修" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgh-1E-QUM">
-                        <rect key="frame" x="15" y="15" width="41" height="21.5"/>
+                        <rect key="frame" x="10" y="15" width="41" height="21.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="及时专业 安全维护" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VC-KZ-fZl">
-                        <rect key="frame" x="15" y="51.5" width="181" height="13.5"/>
+                        <rect key="frame" x="10" y="46.5" width="191" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_service" translatesAutoresizingMaskIntoConstraints="NO" id="NAQ-bq-hFd">
-                        <rect key="frame" x="111.5" y="109.5" width="84.5" height="84.5"/>
+                        <rect key="frame" x="116.5" y="109.5" width="84.5" height="84.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="NAQ-bq-hFd" secondAttribute="height" id="btl-wq-QCw"/>
                         </constraints>
@@ -43,12 +43,12 @@
             </view>
             <constraints>
                 <constraint firstItem="NAQ-bq-hFd" firstAttribute="trailing" secondItem="3VC-KZ-fZl" secondAttribute="trailing" id="2LD-kv-XqB"/>
-                <constraint firstAttribute="trailing" secondItem="3VC-KZ-fZl" secondAttribute="trailing" constant="15" id="Gw9-JD-xPi"/>
+                <constraint firstAttribute="trailing" secondItem="3VC-KZ-fZl" secondAttribute="trailing" constant="10" id="Gw9-JD-xPi"/>
                 <constraint firstItem="3VC-KZ-fZl" firstAttribute="leading" secondItem="Mgh-1E-QUM" secondAttribute="leading" id="Lej-7W-aek"/>
                 <constraint firstItem="Mgh-1E-QUM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="Qq7-cs-Jrm"/>
                 <constraint firstItem="NAQ-bq-hFd" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.4" id="SZx-3R-8YB"/>
-                <constraint firstItem="Mgh-1E-QUM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="aqk-vj-wnP"/>
-                <constraint firstItem="3VC-KZ-fZl" firstAttribute="top" secondItem="Mgh-1E-QUM" secondAttribute="bottom" constant="15" id="qTg-PN-U8k"/>
+                <constraint firstItem="Mgh-1E-QUM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="aqk-vj-wnP"/>
+                <constraint firstItem="3VC-KZ-fZl" firstAttribute="top" secondItem="Mgh-1E-QUM" secondAttribute="bottom" constant="10" id="qTg-PN-U8k"/>
                 <constraint firstAttribute="bottom" secondItem="NAQ-bq-hFd" secondAttribute="bottom" constant="10" id="wYf-Ef-uVR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>

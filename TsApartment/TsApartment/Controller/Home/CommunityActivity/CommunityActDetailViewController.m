@@ -55,7 +55,7 @@
     
     self.title =  @"活动详情";
     _pageIndex = 1;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(shareClick)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"share_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(shareClick)];
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     _tableView.contentInset = UIEdgeInsetsMake(- SAFE_NAV_HEIGHT, 0, 0, 0);
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -91,7 +91,7 @@
         weakSelf.header.frame = CGRectMake(0, 0, SCREEN_WIDTH, height);
         [weakSelf.tableView reloadData];
     }];
-    _sectionTitle.text = [NSString stringWithFormat:@"%ld人已成功报名", [[dict objectForKey:kLimit] integerValue]];
+    _sectionTitle.text = [NSString stringWithFormat:@"%ld人已成功报名", (long)[[dict objectForKey:kLimit] integerValue]];
 }
 
 #pragma mark - 活动报名列表

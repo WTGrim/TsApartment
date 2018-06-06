@@ -11,3 +11,8 @@
 @interface LeftViewTextField : UITextField
 
 @end
+
+@interface CommentTextField : UITextField
+
+
+@end
