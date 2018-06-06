@@ -8,11 +8,14 @@
 
 #import "ServiceInfoListController.h"
 #import "ServiceInfoListCell.h"
+#import "NetworkTool.h"
+#import "ServiceInfoDetailController.h"
 
 @interface ServiceInfoListController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong)UITableView *tableView;
 @property(nonatomic, strong)NSMutableArray *dataArray;
+@property(nonatomic, assign)NSInteger pageIndex;
 
 @end
 
@@ -22,7 +25,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self commonConfig];
     [self setupUI];
+    [self getData];
+}
+
+- (void)commonConfig{
+    _pageIndex = 1;
+}
+
+- (void)getData{
+    
+    WEAKSELF;
+    [NetworkTool getServiceInfoListWithPageIndex:_pageIndex succeedBlock:^(NSDictionary * _Nullable result) {
+        [self presentData:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [weakSelf.tableView.mj_footer endRefreshing];
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+- (void)presentData:(NSArray *)array{
+    [_tableView.mj_footer endRefreshing];
+    if (array.count < COMMON_PAGE_SIZE) {
+        [_tableView.mj_footer endRefreshingWithNoMoreData];
+    }
+    [self.dataArray addObjectsFromArray:array];
+    [_tableView reloadData];
+    if (array.count == 0 && _pageIndex == 1) {
+        _tableView.mj_footer.hidden = true;
+    }
 }
 
 - (void)setupUI{
@@ -41,15 +73,38 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ServiceInfoListCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ServiceInfoListCell class])];
     [self.view addSubview:_tableView];
+    WEAKSELF;
+    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        weakSelf.pageIndex ++;
+        [self getData];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    _tableView.mj_footer.hidden = self.dataArray.count == 0;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ServiceInfoListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ServiceInfoListCell class]) forIndexPath:indexPath];
+    if (self.dataArray.count != 0) {
+        [cell setCellWithDict:self.dataArray[indexPath.row] indexPath:indexPath];
+    }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    ServiceInfoDetailController *detailVc = [[ServiceInfoDetailController alloc]init];
+    detailVc.Id = [[self.dataArray[indexPath.row] objectForKey:kId] integerValue];
+    [self.navigationController pushViewController:detailVc animated:true];
+}
+
+- (NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
 }
 
 - (void)didReceiveMemoryWarning {

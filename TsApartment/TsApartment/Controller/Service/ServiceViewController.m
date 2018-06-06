@@ -35,8 +35,14 @@
 @property(nonatomic, strong)NSArray *serviceBannerArr;
 //menu
 @property(nonatomic, strong)NSArray *menuArray;
+//服务资讯列表
+@property(nonatomic, strong)NSArray *serviceInfoList;
+//周边商业列表
+@property(nonatomic, strong)NSArray *circleCommerceList;
 //公区预约
 @property(nonatomic, strong)publicAreaBookView *bookView;
+//页码
+@property(nonatomic, assign)NSInteger pageIndex;
 
 @end
 
@@ -69,16 +75,21 @@
 
 #pragma mark - initView
 - (void)setupUI{
+    [self commonConfig];
     [self initNav];
     [self initTableView];
     [self initTopView];
 
 }
 
+- (void)commonConfig{
+    _pageIndex = 1;
+}
+
 - (void)getData{
     [self getServiceBanner];
     [self getServiceMenu];
-
+    [self getServiceInfoList];
 }
 
 #pragma mark - 获取服务轮播图
@@ -97,6 +108,20 @@
     } failedBlock:^(id  _Nullable errorInfo) {
         [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
     }];
+}
+
+#pragma mark - 服务资讯列表
+- (void)getServiceInfoList{
+    [NetworkTool getServiceInfoListWithPageIndex:_pageIndex succeedBlock:^(NSDictionary * _Nullable result) {
+        [self presentServiceInfoList:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+- (void)presentServiceInfoList:(NSArray *)array{
+    _serviceInfoList = [NSArray arrayWithArray:array];
+    [_tableView reloadData];
 }
 
 - (void)presentServiceMenu:(NSArray *)array{
@@ -193,6 +218,16 @@
         case 1:case 2:
         {
             ServiceInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ServiceInfoCell class]) forIndexPath:indexPath];
+            if (indexPath.section == 1) {
+                if (_serviceInfoList.count != 0) {
+                    [cell setCellWithArray:_serviceInfoList];
+                }
+            }else{
+                if (_circleCommerceList.count != 0) {
+                    [cell setCellWithArray:_circleCommerceList];
+                }
+            }
+
             return cell;
         }
             break;
@@ -215,6 +250,11 @@
         [weakSelf checkMore:section];
     };
     return header;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    
 }
 
 

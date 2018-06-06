@@ -89,6 +89,11 @@
 /**
  服务资讯列表
  */
++ (NSURLSessionDataTask *)getServiceInfo_commentListWithId:(NSInteger)Id pageIndex:(NSInteger)pageIndex succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+
+/**
+ 评论列表
+ */
 + (NSURLSessionDataTask *)getServiceInfoListWithPageIndex:(NSInteger)PageIndex succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
 
 /**

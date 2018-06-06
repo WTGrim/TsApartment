@@ -232,7 +232,9 @@
         case 2:
         {
             ActivityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ActivityTableViewCell class]) forIndexPath:indexPath];
-            [cell setCellWithDict:self.activityArray[indexPath.row] indexPath:indexPath];
+            if (self.activityArray.count != 0) {
+                [cell setCellWithDict:self.activityArray[indexPath.row] indexPath:indexPath];
+            }
             return cell;
         }
             break;

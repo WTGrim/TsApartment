@@ -8,6 +8,7 @@
 
 #import "ServiceInfoCell.h"
 #import "ServiceInfoCollectionViewCell.h"
+#import "ServiceInfoDetailController.h"
 
 #define ITEM_W 300
 #define ITEM_H 230
@@ -15,7 +16,7 @@
 @interface ServiceInfoCell()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property(nonatomic, strong)UICollectionView *collectionView;
-@property(nonatomic, strong)NSMutableArray *dataArray;
+@property(nonatomic, strong)NSArray *dataArray;
 
 @end
 
@@ -31,6 +32,11 @@
         [self setupUI];
     }
     return self;
+}
+
+- (void)setCellWithArray:(NSArray *)array{
+    _dataArray = [NSArray arrayWithArray:array];
+    [_collectionView reloadData];
 }
 
 - (void)setupUI{
@@ -51,23 +57,25 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 4;
+    return _dataArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     ServiceInfoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ServiceInfoCollectionViewCell class]) forIndexPath:indexPath];
+    if (_dataArray.count != 0) {
+        [cell setCellWithDict:_dataArray[indexPath.row] indexPath:indexPath];
+    }
     return cell;
 }
 
-#pragma mark - lazy
-- (NSMutableArray *)dataArr{
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray array];
-    }
-    return _dataArray;
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [collectionView deselectItemAtIndexPath:indexPath animated:true];
+    ServiceInfoDetailController *detailVc = [[ServiceInfoDetailController alloc]init];
+    detailVc.Id = [[_dataArray[indexPath.row] objectForKey:kId] integerValue];
+    UIViewController *vc = [CommonTools findViewController:self];
+    [vc.navigationController pushViewController:detailVc animated:true];
 }
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

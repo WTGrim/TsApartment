@@ -10,4 +10,6 @@
 
 @interface ServiceInfoDetailController : BasicViewController
 
+@property(nonatomic, assign)NSInteger Id;
+
 @end

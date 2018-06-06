@@ -10,4 +10,6 @@
 
 @interface ServiceInfoCollectionViewCell : UICollectionViewCell
 
+- (void)setCellWithDict:(NSDictionary *)dict indexPath:(NSIndexPath *)indexPath;
+
 @end

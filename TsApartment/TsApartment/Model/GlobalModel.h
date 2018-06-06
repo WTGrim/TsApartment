@@ -65,5 +65,6 @@ static NSString *const kUsername = @"username";
 static NSString *const kDesc = @"desc";
 static NSString *const kImgurl2 = @"imgurl2";
 static NSString *const kImgurl3 = @"imgurl3";
+static NSString *const kDescription = @"description";
 
 #endif /* GlobalModel_h */

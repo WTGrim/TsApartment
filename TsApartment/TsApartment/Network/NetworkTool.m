@@ -144,6 +144,18 @@
     return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
++ (NSURLSessionDataTask *)getServiceInfo_commentListWithId:(NSInteger)Id pageIndex:(NSInteger)pageIndex succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *pagination = [[NSMutableDictionary alloc]init];
+    [pagination setObject:@(pageIndex) forKey:kPage];
+    [pagination setObject:@(COMMON_PAGE_SIZE) forKey:kCount];
+    [param setObject:pagination forKey:kPagination];
+    [param setObject:@(Id) forKey:kId];
+    NSString *url = [NSString stringWithFormat:@"%@service/information/comment_list",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
+
 
 
 @end

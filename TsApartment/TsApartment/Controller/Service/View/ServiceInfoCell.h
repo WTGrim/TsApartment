@@ -10,4 +10,6 @@
 
 @interface ServiceInfoCell : UITableViewCell
 
+- (void)setCellWithArray:(NSArray *)array;
+
 @end

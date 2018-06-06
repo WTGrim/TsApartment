@@ -8,6 +8,7 @@
 
 #import "ServiceInfoCollectionViewCell.h"
 #import <Masonry.h>
+#import "UIImageView+EasyInOut.h"
 
 @interface ServiceInfoCollectionViewCell()
 
@@ -30,6 +31,11 @@
         [self setupUI];
     }
     return self;
+}
+
+- (void)setCellWithDict:(NSDictionary *)dict indexPath:(NSIndexPath *)indexPath{
+    _title.text = [CommonTools getStringWithDict:dict key:kTitle];
+    [_pic wt_setImageWithURL:[dict objectForKey:kIndex_img] placeholderImage:[UIImage imageNamed:@"placeholder_img"] completed:nil];
 }
 
 - (void)setupUI{
