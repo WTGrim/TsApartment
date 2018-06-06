@@ -173,6 +173,21 @@
     return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
++ (NSURLSessionDataTask *)editUserInfoWithNickName:(NSString *)nickName sex:(NSInteger)sex imageArray:(NSArray *)imageArray password:(NSString *)password SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    if (nickName) {
+        [param setObject:nickName forKey:kNickName];
+    }
+    if (sex) {
+        [param setObject:@(sex) forKey:kSex];
+    }
+    if (password) {
+        [param setObject:password forKey:kPassword];
+    }
+    NSString *url = [NSString stringWithFormat:@"%@user/edit/basicinfo",SERVER_IP];
+    return [CommonNetwork uploadWithUrl:url param:param imageArray:imageArray showLoader:true showAlert:true progress:nil gZip:false succeedBlock:succeed failedBlock:failed];
+}
 
 
 

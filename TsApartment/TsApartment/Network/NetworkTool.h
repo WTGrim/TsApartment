@@ -40,7 +40,7 @@
 /**
  用户信息修改
  */
-+ (NSURLSessionDataTask *)editUserInfoWithNickName:(NSString *)nickName sex:(NSString *)sex file:(id)files password:(NSString *)password SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
++ (NSURLSessionDataTask *)editUserInfoWithNickName:(NSString *)nickName sex:(NSInteger)sex imageArray:(NSArray *)imageArray password:(NSString *)password SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
 
 /**
  个人菜单

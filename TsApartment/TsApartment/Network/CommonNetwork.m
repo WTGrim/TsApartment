@@ -72,6 +72,56 @@ static NSString *const kJsonType = @"application/json";
     return dataTask;
 }
 
++ (NSURLSessionDataTask *)uploadWithUrl:(NSString *)url param:(id )params imageArray:(NSArray *)imageArray showLoader:(BOOL)showLoader showAlert:(BOOL)showAlert progress:(Progress)progress gZip:(BOOL)gZip succeedBlock:(RequestSucceed)succeedBlock failedBlock:(RequestFailed)failed {
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", nil];
+    [manager.requestSerializer setStringEncoding:NSUTF8StringEncoding];
+    
+    NSMutableArray *finalParam = [NSMutableArray array];
+    finalParam = [params mutableCopy];
+    
+    if ([UserStatus shareInstance].isLogin && params != nil) {
+        //        [manager.requestSerializer setValue:[UserStatus shareInstance].sid forHTTPHeaderField:@"Authorization"];
+        NSMutableArray *session = [NSMutableArray array];
+        [session setValue:[UserStatus shareInstance].uid forKey:kUid];
+        [session setValue:[UserStatus shareInstance].sid forKey:kSid];
+        [finalParam setValue:session forKey:kSession];
+    }
+    if (showLoader) {
+        [AlertView showProgress];
+    }
+    NSURLSessionDataTask *dataTask = [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        NSData *data = nil;
+        for (UIImage *image in imageArray) {
+            data = UIImagePNGRepresentation(image);
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            // 设置时间格式
+            formatter.dateFormat = @"yyyyMMddHHmmss";
+            NSString *str = [formatter stringFromDate:[NSDate date]];
+            NSString *fileName = [NSString stringWithFormat:@"%@.png", str];
+            [formData appendPartWithFileData:data name:@"file" fileName:fileName mimeType:@"image/png"];
+        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progress) progress(uploadProgress.completedUnitCount/uploadProgress.totalUnitCount);
+
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self dealResult:responseObject showLoader:showLoader showAlert:showAlert succeedBlock:succeedBlock failedBlock:failed];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (showLoader) {
+            [AlertView dismiss];
+        }
+        if ([error.description containsString:@"Error Domain=NSURLErrorDomain"]) {
+            failed(@{kMessage:@"似乎已断开与互联网的连接。"});
+        }else {
+            failed(@{kMessage:error.description});
+        }
+    }];
+    return dataTask;
+}
+
 + (NSURLSessionDataTask *)postPayDataWithUrl:(NSString *)url param:(id)params showLoader:(BOOL)showLoader showAlert:(BOOL)showAlert gZip:(BOOL)gZip succeedBlock:(RequestSucceed)succeedBlock failedBlock:(RequestFailed)failed {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];

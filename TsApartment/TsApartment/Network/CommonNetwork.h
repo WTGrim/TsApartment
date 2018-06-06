@@ -10,6 +10,8 @@
 
 typedef void (^ RequestSucceed)(NSDictionary *_Nullable result);
 typedef void (^ RequestFailed)(id _Nullable errorInfo);
+typedef void(^Progress)(float progress);
+
 
 @interface CommonNetwork : NSObject
 
@@ -20,6 +22,16 @@ typedef void (^ RequestFailed)(id _Nullable errorInfo);
                                               gZip:(BOOL)gZip
                                       succeedBlock:(RequestSucceed _Nullable)succeedBlock
                                        failedBlock:(RequestFailed _Nullable)failed;
+
++ (NSURLSessionDataTask *)uploadWithUrl:(NSString *)url
+                                  param:(id )params
+                             imageArray:(NSArray *)imageArray
+                             showLoader:(BOOL)showLoader
+                              showAlert:(BOOL)showAlert
+                               progress:(Progress)progress
+                                   gZip:(BOOL)gZip
+                           succeedBlock:(RequestSucceed)succeedBlock
+                            failedBlock:(RequestFailed)failed;
 
 + (NSURLSessionDataTask *_Nullable)postPayDataWithUrl:(NSString *_Nullable)url
                                                 param:(id _Nullable)params
