@@ -41,6 +41,12 @@
     return iconRect;
 }
 
+- (CGRect)rightViewRectForBounds:(CGRect)bounds{
+    CGRect iconRect = [super rightViewRectForBounds:bounds];
+    iconRect.origin.x -= 15; //右边偏11
+    return iconRect;
+}
+
 //UITextField 文字与输入框的距离
 - (CGRect)textRectForBounds:(CGRect)bounds{
     

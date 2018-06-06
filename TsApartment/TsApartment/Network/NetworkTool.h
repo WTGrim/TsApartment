@@ -97,6 +97,14 @@
 + (NSURLSessionDataTask *)getServiceInfoListWithPageIndex:(NSInteger)PageIndex succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
 
 /**
+ 发布评论
+ */
++ (NSURLSessionDataTask *)serviceInfoComment_submitWithId:(NSInteger)Id content:(NSString *)content ip_address:(NSString *)ip_address parent_id:(NSInteger )parent_id succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+/**
+ 点赞和取消点赞
+ */
++ (NSURLSessionDataTask *)serviceInfoAgreeWithId:(NSInteger)Id type:(NSInteger)type succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;
+/**
  活动报名
  */
 + (NSURLSessionDataTask *)serviceApplyWithId:(NSInteger)Id Name:(NSString *)name mobile:(NSString *)mobile num:(NSInteger)num SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed;

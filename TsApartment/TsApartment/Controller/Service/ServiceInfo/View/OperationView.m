@@ -28,25 +28,25 @@
     self.clipsToBounds = YES;//AlbumLike   AlbumComment
     self.layer.cornerRadius = 5;
     self.backgroundColor = [UIColor whiteColor];
-    _likeButton = [self creatButtonWithTitle:@"赞" image:[UIImage imageNamed:@"service_like"] selImage:nil target:self selector:@selector(likeButtonClicked)];
+    _likeButton = [self creatButtonWithTitle:@"" image:[UIImage imageNamed:@"service_like"] selImage:nil target:self selector:@selector(likeButtonClicked)];
     [self addSubview:_likeButton];
-    _commentButton = [self creatButtonWithTitle:@"评论" image:[UIImage imageNamed:@"service_comment"] selImage:nil target:self selector:@selector(commentButtonClicked)];
+    _commentButton = [self creatButtonWithTitle:@"" image:[UIImage imageNamed:@"service_comment"] selImage:nil target:self selector:@selector(commentButtonClicked)];
     [self addSubview:_commentButton];
 
     
     WEAKSELF;
     [_likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self).offset(0);
-        make.left.mas_equalTo(self).offset(5);
+        make.right.mas_equalTo(self).offset(0);
         make.bottom.mas_equalTo(self).offset(0);
-        make.width.mas_equalTo(80);
+//        make.width.mas_equalTo(80);
     }];
 
     [_commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self).offset(0);
-        make.left.mas_equalTo(weakSelf.likeButton.mas_right).offset(20);
+        make.right.mas_equalTo(weakSelf.likeButton.mas_right).offset(-60);
         make.bottom.mas_equalTo(self).offset(0);
-        make.width.mas_equalTo(80);
+//        make.width.mas_equalTo(80);
     }];
 }
 

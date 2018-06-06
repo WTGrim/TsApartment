@@ -67,5 +67,8 @@ static NSString *const kImgurl2 = @"imgurl2";
 static NSString *const kImgurl3 = @"imgurl3";
 static NSString *const kDescription = @"description";
 static NSString *const kAuthor = @"author";
+static NSString *const kParent_id = @"parent_id";
+static NSString *const kType = @"type";
+
 
 #endif /* GlobalModel_h */

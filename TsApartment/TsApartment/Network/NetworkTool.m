@@ -155,6 +155,24 @@
     return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
++ (NSURLSessionDataTask *)serviceInfoComment_submitWithId:(NSInteger)Id content:(NSString *)content ip_address:(NSString *)ip_address parent_id:(NSInteger)parent_id succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setObject:@(Id) forKey:kId];
+    [param setObject:content forKey:kContent];
+    [param setObject:@"" forKey:@"ip_address"];
+    [param setObject:@(parent_id) forKey:kParent_id];
+    NSString *url = [NSString stringWithFormat:@"%@service/information/comment_submit",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
++ (NSURLSessionDataTask *)serviceInfoAgreeWithId:(NSInteger)Id type:(NSInteger)type succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setObject:@(Id) forKey:kId];
+    [param setObject:@(type) forKey:kType];
+    NSString *url = [NSString stringWithFormat:@"%@service/information/agree",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
 
 
 

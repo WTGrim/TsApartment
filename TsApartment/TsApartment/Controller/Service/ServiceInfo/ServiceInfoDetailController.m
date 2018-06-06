@@ -49,17 +49,11 @@
     _pageIndex = 1;
     [self initTableView];
     [self initBottomView];
-    [self getmock];
-}
-
-- (void)getmock{
-    self.dataArray = [DataSourceManager loadDataArray].mutableCopy;
-    [_tableView reloadData];
 }
 
 - (void)initTableView{
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - SAFE_NAV_HEIGHT -BOTTOM_H) style:UITableViewStyleGrouped];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -68,6 +62,10 @@
 
 - (void)initBottomView{
     _bottomView = [[CommentBottomView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - BOTTOM_H - SAFE_NAV_HEIGHT, SCREEN_WIDTH, BOTTOM_H)];
+    WEAKSELF;
+    _bottomView.publicCallBack = ^(NSString *comment) {
+        [weakSelf commentSend:comment parent_id:0];
+    };
     [self.view addSubview:_bottomView];
 }
 
@@ -106,6 +104,13 @@
 
 - (void)presentCommentsData:(NSArray *)array{
     
+    if (array.count == 0) {
+        return;
+    }
+    CommentCellModel *model = [[CommentCellModel alloc] init];
+    
+    [self.dataArray addObjectsFromArray:array];
+    [_tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -137,22 +142,6 @@
     return cell;
 }
 
-#pragma mark - lazy
-- (ServiceInfoDetailHeader *)header{
-    if (!_header) {
-        _header = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([ServiceInfoDetailHeader class]) owner:nil options:nil].firstObject;
-        _tableView.tableHeaderView = _header;
-    }
-    return _header;
-}
-
-- (NSMutableArray *)dataArray{
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray array];
-    }
-    return _dataArray;
-}
-
 #pragma mark -- 点击全文、收起
 -(void)didClickedMoreBtn:(UIButton *)btn indexPath:(NSIndexPath *)indexPath;{
     CommentCellModel *model = self.dataArray[indexPath.row];
@@ -162,11 +151,71 @@
 
 #pragma mark -- 点击评论按钮
 -(void)didClickCommentBtnWithIndexPath:(NSIndexPath *)indexPath{
+    
+}
 
+#pragma mark - 发布评论
+- (void)commentSend:(NSString *)commentString parent_id:(NSInteger)parent_id{
+  
+    CommentCellModel *model = self.dataArray[self.commentIndexpath.row];
+    
+    CommentModel *newComModel = [[CommentModel alloc] init];
+//    newComModel.userName = @"Sky";
+//    if(self.replyIndexpath)
+//    {
+//        CommentModel *comModel = model.commentArray[self.replyIndexpath.row];
+//        newComModel.replyUserName = comModel.userName;
+//    }
+//    newComModel.content = commentString;
+//
+//    NSMutableArray *mutableArray = model.commentArray.mutableCopy;
+//    [mutableArray addObject:newComModel];
+//    model.commentArray = mutableArray.copy;
+//
+//    [self.tableView reloadRowsAtIndexPaths:@[self.commentIndexpath] withRowAnimation:UITableViewRowAnimationFade];
+    
+    NSInteger parentId = 0;
+    self.replyIndexpath = nil;
+    [self sendComment:commentString parentId:parent_id];
+}
+
+- (void)sendComment:(NSString *)commmentString parentId:(NSInteger)parentId{
+    WEAKSELF;
+    [NetworkTool serviceInfoComment_submitWithId:_Id content:commmentString ip_address:@"" parent_id:parentId succeedBlock:^(NSDictionary * _Nullable result) {
+        [weakSelf commentSucceed:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+#pragma mark - 评论成功
+- (void)commentSucceed:(NSArray *)array{
+    
 }
 
 #pragma mark -- 点击赞
 -(void)didClickenLikeBtnWithIndexPath:(NSIndexPath *)indexPath{
+    CommentCellModel *model = self.dataArray[indexPath.row];
+//    NSMutableArray *likeArray = [NSMutableArray arrayWithArray:model.likeNameArray];
+//    model.isLiked ==YES ? [likeArray removeObject:@"Sky"]:[likeArray addObject:@"Sky"];
+//
+//    model.likeNameArray = [likeArray copy];
+//    model.isLiked = !model.isLiked;
+//    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [self sendLike];
+}
+
+#pragma mark - 点赞网络请求
+- (void)sendLike{
+    WEAKSELF;
+    [NetworkTool serviceInfoAgreeWithId:_Id type:2 succeedBlock:^(NSDictionary * _Nullable result) {
+        [weakSelf likeSucceed:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+- (void)likeSucceed:(NSArray *)array{
     
 }
 
@@ -191,6 +240,7 @@
         self.replyIndexpath = secIndexPath;
 //        self.chatKeyBoard.placeHolder = [NSString stringWithFormat:@"回复：%@",comModel.userName];
 //        [self.chatKeyBoard keyboardUpforComment];
+        [_bottomView.commentTextField becomeFirstResponder];
     }
 }
 
@@ -200,12 +250,28 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    //手气键盘
+    //收取键盘
     if (_bottomView.commentTextField.isFirstResponder) {
         [_bottomView.commentTextField resignFirstResponder];
     }
 }
 
+
+#pragma mark - lazy
+- (ServiceInfoDetailHeader *)header{
+    if (!_header) {
+        _header = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([ServiceInfoDetailHeader class]) owner:nil options:nil].firstObject;
+        _tableView.tableHeaderView = _header;
+    }
+    return _header;
+}
+
+- (NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 
 - (void)didReceiveMemoryWarning {
