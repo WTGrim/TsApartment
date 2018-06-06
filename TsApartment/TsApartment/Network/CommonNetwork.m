@@ -151,7 +151,7 @@ static NSString *const kJsonType = @"application/json";
         succeedBlock(result);
     }else {
         NSString *message = [statusDict objectForKey:@"error_desc"];
-        if (!StringIsNull(message) &&[message containsString:@"验证失效，请重新登陆"]) {
+        if (!StringIsNull(message) && [message containsString:@"验证失效，请重新登陆"]) {
             [[UserStatus shareInstance] destoryUserStatus];
         }
         if (failed) {

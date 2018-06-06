@@ -71,6 +71,17 @@ BOOL StringIsNull(NSString *string) {
     return NO;
 }
 
++ (UIViewController *)findViewController:(UIView *)sourceView {
+    id target=sourceView;
+    while (target) {
+        target = ((UIResponder *)target).nextResponder;
+        if ([target isKindOfClass:[UIViewController class]]) {
+            break;
+        }
+    }
+    return target;
+}
+
 +(void)saveLocalWithKey:(NSString*)key Obj:(id)obj
 {
     NSUserDefaults *ud =[NSUserDefaults standardUserDefaults];
@@ -83,6 +94,13 @@ BOOL StringIsNull(NSString *string) {
     NSUserDefaults *ud =[NSUserDefaults standardUserDefaults];
     [ud removeObjectForKey:key];//设置值
     [[NSUserDefaults standardUserDefaults] synchronize]; //手动保存
+}
+
++(id)loadLocalWithKey:(NSString*)key
+{
+    NSUserDefaults *ud =[NSUserDefaults standardUserDefaults];
+    
+    return [ud objectForKey:key];
 }
 
 + (NSString *)getStringWithDict:(NSDictionary *)dict key:(NSString *)key{
@@ -114,6 +132,14 @@ BOOL StringIsNull(NSString *string) {
         return kImgurl2;
     }
     return kImgurl3;
+}
+
++ (NSString *)dealMobileString:(NSString *)mobile{
+    if ([CommonTools isTelNumber:mobile]) {
+        NSString *string = [mobile stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+        return string;
+    }
+    return mobile;
 }
 
 @end

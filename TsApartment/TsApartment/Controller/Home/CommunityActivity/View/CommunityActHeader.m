@@ -71,9 +71,11 @@
     _cycleViewHeight.constant = CYCLE_H;
     [_cycleBgView addSubview:self.cycleScrollView];
     _applyView.layer.cornerRadius = 5;
-    _applyView.layer.masksToBounds = true;
+    _applyView.layer.borderColor = ThemeColor_lightBg.CGColor;
+    _applyView.layer.borderWidth = 1;
+//    _applyView.layer.masksToBounds = true;
     _applyView.layer.shadowOpacity = 0.4;
-    _applyView.layer.shadowOffset = CGSizeMake(1, 1);
+    _applyView.layer.shadowOffset = CGSizeMake(2, 2);
     _applyView.layer.shadowColor = RGBA(0, 0, 0, 0.4).CGColor;
     
     HomeSectionHeader *header = [[HomeSectionHeader alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, CGRectGetHeight(_headerView.frame))];
@@ -124,6 +126,12 @@
 
 - (void)applySucceed{
     [WTAlertView showMessage:@"报名成功"];
+}
+
+- (void)clearApplyData{
+    _name.text = nil;
+    _mobile.text = nil;
+    _joinNum.text = nil;
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{

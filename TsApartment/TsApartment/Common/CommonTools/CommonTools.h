@@ -32,6 +32,8 @@ BOOL StringIsNull(NSString *string);
 //删除缓存
 +(void)removeLocalWithKey:(NSString*)key;
 
++(id)loadLocalWithKey:(NSString*)key;
+
 + (NSString *)getStringWithDict:(NSDictionary *)dict key:(NSString *)key;
 
 + (UIViewController *)findViewController:(UIView *)sourceView;
@@ -42,4 +44,6 @@ BOOL StringIsNull(NSString *string);
 
 //返回适配图片
 + (NSString *)getFitImgName;
+//电话处理
++ (NSString *)dealMobileString:(NSString *)mobile;
 @end

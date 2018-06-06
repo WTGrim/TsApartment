@@ -20,7 +20,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="李彦宏" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvC-fX-WKs">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="李彦宏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvC-fX-WKs">
                         <rect key="frame" x="15" y="12.5" width="78.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -44,19 +44,29 @@
                         <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ytx-oj-J9n">
+                        <rect key="frame" x="15" y="42" width="305" height="1"/>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="0fJ-Vt-ie5"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Ytx-oj-J9n" firstAttribute="trailing" secondItem="QI8-FB-j5T" secondAttribute="trailing" id="4QV-DQ-AvS"/>
                     <constraint firstItem="BU5-Jg-yjB" firstAttribute="width" secondItem="MvC-fX-WKs" secondAttribute="width" multiplier="0.6" id="AQB-e4-rKl"/>
                     <constraint firstItem="QI8-FB-j5T" firstAttribute="width" secondItem="MvC-fX-WKs" secondAttribute="width" id="CYB-QO-FE2"/>
                     <constraint firstItem="lSi-ak-L2v" firstAttribute="centerY" secondItem="MvC-fX-WKs" secondAttribute="centerY" id="FtK-jd-vYg"/>
                     <constraint firstItem="MvC-fX-WKs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GV9-Wl-VU4"/>
                     <constraint firstItem="lSi-ak-L2v" firstAttribute="width" secondItem="MvC-fX-WKs" secondAttribute="width" multiplier="1.3" id="N4R-W1-mRF"/>
+                    <constraint firstAttribute="bottom" secondItem="Ytx-oj-J9n" secondAttribute="bottom" id="NYz-Vy-LEk"/>
                     <constraint firstItem="BU5-Jg-yjB" firstAttribute="centerY" secondItem="MvC-fX-WKs" secondAttribute="centerY" id="PTS-kl-Xta"/>
                     <constraint firstAttribute="trailing" secondItem="QI8-FB-j5T" secondAttribute="trailing" id="WQK-wh-SUX"/>
                     <constraint firstItem="MvC-fX-WKs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="cGh-Ix-361"/>
                     <constraint firstItem="QI8-FB-j5T" firstAttribute="centerY" secondItem="MvC-fX-WKs" secondAttribute="centerY" id="gOp-gH-jpI"/>
                     <constraint firstItem="lSi-ak-L2v" firstAttribute="leading" secondItem="BU5-Jg-yjB" secondAttribute="trailing" id="jST-k3-VzB"/>
                     <constraint firstItem="QI8-FB-j5T" firstAttribute="leading" secondItem="lSi-ak-L2v" secondAttribute="trailing" id="n0l-zr-PTb"/>
+                    <constraint firstItem="Ytx-oj-J9n" firstAttribute="leading" secondItem="MvC-fX-WKs" secondAttribute="leading" id="rkY-Zn-ciF"/>
                     <constraint firstItem="BU5-Jg-yjB" firstAttribute="leading" secondItem="MvC-fX-WKs" secondAttribute="trailing" id="zml-LX-txl"/>
                 </constraints>
             </tableViewCellContentView>

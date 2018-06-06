@@ -23,6 +23,11 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     [[UINavigationBar appearance] setTranslucent:false];
     
+    NSDictionary *userInfo = [CommonTools loadLocalWithKey:kSaveUserInfo];
+    if (![userInfo isKindOfClass:[NSNull class]] && userInfo != nil) {
+        [[UserStatus shareInstance] initWithDict:userInfo];
+    }
+
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [BootViewControllerManager initBootController];

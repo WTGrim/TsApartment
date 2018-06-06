@@ -11,5 +11,7 @@
 @interface CommunityActHeader : UIView
 
 - (void)setHeaderWithDict:(NSDictionary *)dict heightCallBack:(void(^)(CGFloat height))heightCallBack;
+//报名成功回调
+@property(nonatomic, copy)void(^applySucceedCallBack)(void);
 
 @end

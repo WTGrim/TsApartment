@@ -25,7 +25,10 @@
 }
 
 - (void)setCellWithDict:(NSDictionary *)dict indexPath:(NSIndexPath *)indexPath{
-    
+    _name.text = [CommonTools getStringWithDict:dict key:kUsername];
+    _num.text = [NSString stringWithFormat:@"%ld人", [[dict objectForKey:kNumber] integerValue]];
+    _mobile.text = [CommonTools getStringWithDict:dict  key:kMobile];
+    _time.text = [CommonTools getStringWithDict:dict key:kAdd_time];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

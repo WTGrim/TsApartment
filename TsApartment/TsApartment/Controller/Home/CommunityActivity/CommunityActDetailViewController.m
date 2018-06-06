@@ -11,6 +11,8 @@
 #import "CommunityActDetailCell.h"
 #import "NetworkTool.h"
 
+#define SECTION_HEADER 40
+
 @interface CommunityActDetailViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong)UITableView *tableView;
@@ -18,6 +20,8 @@
 //页码
 @property(nonatomic, assign)NSInteger pageIndex;
 @property(nonatomic, strong)CommunityActHeader *header;
+@property(nonatomic, strong)UIView *sectionHeader;
+@property(nonatomic, strong)UILabel *sectionTitle;
 
 @end
 
@@ -58,6 +62,11 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityActDetailCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CommunityActDetailCell class])];
+    WEAKSELF;
+    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        weakSelf.pageIndex ++;
+        [self getJoinInfoData];
+    }];
     [self.view addSubview:_tableView];
 }
 
@@ -82,6 +91,7 @@
         weakSelf.header.frame = CGRectMake(0, 0, SCREEN_WIDTH, height);
         [weakSelf.tableView reloadData];
     }];
+    _sectionTitle.text = [NSString stringWithFormat:@"%ld人已成功报名", [[dict objectForKey:kLimit] integerValue]];
 }
 
 #pragma mark - 活动报名列表
@@ -120,9 +130,37 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    return self.sectionHeader;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return SECTION_HEADER;
+}
+
 #pragma mark - 分享
 - (void)shareClick{
     
+}
+
+- (void)refreshData{
+    [self.joinListArray removeAllObjects];
+    _pageIndex = 1;
+    [self getJoinInfoData];
 }
 
 #pragma mark - lazy
@@ -136,9 +174,25 @@
 - (CommunityActHeader *)header{
     if (!_header) {
         _header = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([CommunityActHeader class]) owner:nil options:nil].firstObject;
+        WEAKSELF;
+        _header.applySucceedCallBack = ^{
+            [weakSelf refreshData];
+        };
         _tableView.tableHeaderView = _header;
     }
     return _header;
+}
+
+- (UIView *)sectionHeader{
+    if (!_sectionHeader) {
+        _sectionHeader = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SECTION_HEADER)];
+        _sectionHeader.backgroundColor = ThemeColor_Background;
+        _sectionTitle = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, SCREEN_WIDTH, CGRectGetHeight(_sectionHeader.frame))];
+        _sectionTitle.textColor =  ThemeColor_BlackText;
+        _sectionTitle.font = [UIFont systemFontOfSize:13];
+        [_sectionHeader addSubview:_sectionTitle];
+    }
+    return _sectionHeader;
 }
 
 - (void)didReceiveMemoryWarning {

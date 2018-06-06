@@ -75,7 +75,8 @@
     
     //缓存用户信息到本地
     [self saveUserInfoWith:user];
-    [self dismissViewControllerAnimated:true completion:nil];
+    [WTAlertView showMessage:@"登录成功"];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 - (void)saveUserInfoWith:(NSDictionary *)result {

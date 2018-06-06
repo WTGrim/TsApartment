@@ -46,7 +46,7 @@
     NSInteger mobileNo = [mobile integerValue];
     [param setObject:@(mobileNo) forKey:kMobile];
     [param setObject:psd forKey:kPassword];
-    NSString *url = [NSString stringWithFormat:@"%@user/sigin",SERVER_IP];
+    NSString *url = [NSString stringWithFormat:@"%@user/signin",SERVER_IP];
     return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
@@ -76,10 +76,10 @@
     return [CommonNetwork postDataWithUrl:url param:nil showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
 
-+ (NSURLSessionDataTask *)editUserInfoWithNickName:(NSString *)nickName sex:(NSString *)sex file:(id)files password:(NSString *)password SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
-    
-    
-}
+//+ (NSURLSessionDataTask *)editUserInfoWithNickName:(NSString *)nickName sex:(NSString *)sex file:(id)files password:(NSString *)password SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+//    
+//    
+//}
 
 + (NSURLSessionDataTask *)getCommunityActivitiesWithPageIndex:(NSInteger)pageIndex count:(NSInteger)count SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
@@ -117,14 +117,33 @@
 
 + (NSURLSessionDataTask *)serviceApplyWithId:(NSInteger)Id Name:(NSString *)name mobile:(NSString *)mobile num:(NSInteger )num SucceedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *pagination = [[NSMutableDictionary alloc]init];
-    [pagination setObject:@(Id) forKey:kId];
-    [pagination setObject:@(num) forKey:kNumber];
-    [param setObject:pagination forKey:kPagination];
     [param setObject:@(Id) forKey:kId];
+    [param setObject:name forKey:kUsername];
+    [param setObject:mobile forKey:kMobile];
+    [param setObject:@(num) forKey:kNumber];
     
-    NSString *url = [NSString stringWithFormat:@"%@home/activity/join_list",SERVER_IP];
+    NSString *url = [NSString stringWithFormat:@"%@home/activity/join",SERVER_IP];
     return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
 }
+
++ (NSURLSessionDataTask *)getServiceInfoDetailWithId:(NSInteger)Id succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setObject:@(Id) forKey:kId];
+    
+    NSString *url = [NSString stringWithFormat:@"%@service/information/detail",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
++ (NSURLSessionDataTask *)getServiceInfoListWithPageIndex:(NSInteger)PageIndex succeedBlock:(RequestSucceed)succeed failedBlock:(RequestFailed)failed{
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *pagination = [[NSMutableDictionary alloc]init];
+    [pagination setObject:@(PageIndex) forKey:kPage];
+    [pagination setObject:@(COMMON_PAGE_SIZE) forKey:kCount];
+    [param setObject:pagination forKey:kPagination];
+    NSString *url = [NSString stringWithFormat:@"%@service/information/list",SERVER_IP];
+    return [CommonNetwork postDataWithUrl:url param:param showLoader:true showAlert:true gZip:NO succeedBlock:succeed failedBlock:failed];
+}
+
+
 
 @end
