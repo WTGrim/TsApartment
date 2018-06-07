@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BootViewControllerManager.h"
 #import <IQKeyboardManager.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()
 
@@ -34,10 +35,17 @@
     [self.window makeKeyAndVisible];
     
     [IQKeyboardManager sharedManager].enable = true;
+    //高德
+    [self registerAMap];
     
     return YES;
 }
 
+#pragma mark - 高德地图
+- (void)registerAMap{
+    [AMapServices sharedServices].apiKey = AMAP_KEY;
+    [AMapServices sharedServices].enableHTTPS = YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
