@@ -84,11 +84,9 @@
     _progressView.bounds = CGRectMake(0, 0, 100, 100);
     [self addSubview:_progressView];
     __weak typeof(self)weakself = self;
-    [self sd_setImageWithURL:url placeholderImage:placeholderImage options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        
-        _progressView.progress = (CGFloat)receivedSize / expectedSize;
-        
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [self sd_setImageWithURL:url placeholderImage:placeholderImage options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        weakself.progressView.progress = (CGFloat)receivedSize / expectedSize;
+    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         [weakself removeProgressView];
         if(image){
             _imageView.image = image;

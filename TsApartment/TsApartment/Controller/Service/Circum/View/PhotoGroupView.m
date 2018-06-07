@@ -65,7 +65,7 @@
     CGFloat itemH = 0;
     
     if (_imageUrlArray.count == 1) {
-        itemH = (ScreenWidth - headerW - 65) / 2;
+        itemH = (SCREEN_WIDTH - headerW - 65) / 2;
     }else{
         itemH = itemW;
     }
@@ -100,13 +100,13 @@
         return 0;
     }
     if (imageUrlArray.count == 1) {
-        return ScreenWidth - headerW - 65;
+        return SCREEN_WIDTH - headerW - 65;
     }
     
     if (imageUrlArray.count == 2 || imageUrlArray.count == 4) {
-        return (ScreenWidth - headerW - 65 - margin) / 2;
+        return (SCREEN_WIDTH - headerW - 65 - margin) / 2;
     }else{
-        return (ScreenWidth - headerW - 65 - 2 * margin) / 3;
+        return (SCREEN_WIDTH - headerW - 65 - 2 * margin) / 3;
     }
     
 }
