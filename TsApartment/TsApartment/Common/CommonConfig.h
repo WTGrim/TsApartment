@@ -16,7 +16,7 @@
 //#define SERVER_IP @"http://192.168.2.107:9888"
 
 //高德地图的key
-#define AMAP_KEY @""
+#define AMAP_KEY @"b9314e1070693e1144b3d3f009863169"
 
 //分页数大小
 #define COMMON_PAGE_SIZE 15
