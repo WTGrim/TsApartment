@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, ServiceInfoCellType) {
+    ServiceInfoCellType_ServiceInfo,
+    ServiceInfoCellType_Circum,
+};
+
 @interface ServiceInfoCell : UITableViewCell
 
-- (void)setCellWithArray:(NSArray *)array;
+- (void)setCellWithArray:(NSArray *)array cellType:(ServiceInfoCellType)cellType;
 
 @end

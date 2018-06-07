@@ -10,6 +10,7 @@
 
 @interface CircumCommonHeader : UIView
 
+@property(nonatomic, copy)void(^onClick)(NSInteger index);
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles heightCallBack:(void(^)(CGFloat height))heightCallBack;
 
 @end

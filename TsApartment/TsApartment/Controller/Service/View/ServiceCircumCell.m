@@ -1,27 +1,25 @@
 //
-//  ServiceInfoCell.m
+//  ServiceCircumCell.m
 //  TsApartment
 //
-//  Created by 董文涛 on 2018/5/30.
+//  Created by 董文涛 on 2018/6/7.
 //  Copyright © 2018年 PmMaster. All rights reserved.
 //
 
-#import "ServiceInfoCell.h"
+#import "ServiceCircumCell.h"
 #import "ServiceInfoCollectionViewCell.h"
-#import "ServiceInfoDetailController.h"
 #import "CircumDetailViewController.h"
 
 #define ITEM_W 300
 #define ITEM_H 230
-
-@interface ServiceInfoCell()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ServiceCircumCell()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property(nonatomic, strong)UICollectionView *collectionView;
 @property(nonatomic, strong)NSArray *dataArray;
-@property(nonatomic, assign)ServiceInfoCellType cellType;
+
 @end
 
-@implementation ServiceInfoCell
+@implementation ServiceCircumCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -35,8 +33,7 @@
     return self;
 }
 
-- (void)setCellWithArray:(NSArray *)array cellType:(ServiceInfoCellType)cellType{
-    _cellType = cellType;
+- (void)setCellWithArray:(NSArray *)array{
     _dataArray = [NSArray arrayWithArray:array];
     [_collectionView reloadData];
 }
@@ -73,30 +70,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:true];
-    switch (_cellType) {
-        case ServiceInfoCellType_ServiceInfo:
-        {
-            ServiceInfoDetailController *detailVc = [[ServiceInfoDetailController alloc]init];
-            detailVc.hidesBottomBarWhenPushed = true;
-            detailVc.Id = [[_dataArray[indexPath.row] objectForKey:kId] integerValue];
-            UIViewController *vc = [CommonTools findViewController:self];
-            [vc.navigationController pushViewController:detailVc animated:true];
-        }
-            break;
-        case ServiceInfoCellType_Circum:
-        {
-            CircumDetailViewController *detailVc = [[CircumDetailViewController alloc]init];
-            detailVc.hidesBottomBarWhenPushed = true;
-            detailVc.Id = [[_dataArray[indexPath.row] objectForKey:kId] integerValue];
-            UIViewController *vc = [CommonTools findViewController:self];
-            [vc.navigationController pushViewController:detailVc animated:true];
-        }
-            break;
-        default:
-            break;
-    }
-
+    
+    CircumDetailViewController *detailVc = [[CircumDetailViewController alloc]init];
+    detailVc.hidesBottomBarWhenPushed = true;
+    UIViewController *vc = [CommonTools findViewController:self];
+    [vc.navigationController pushViewController:detailVc animated:true];
 }
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

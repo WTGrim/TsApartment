@@ -15,6 +15,8 @@
 #import "ServiceInfoListController.h"
 #import "NetworkTool.h"
 #import "publicAreaBookView.h"
+#import "CircumViewController.h"
+#import "ServiceCircumCell.h"
 
 #define CYCLE_H SCREEN_WIDTH * (650 / 750.0)
 #define HEADER_H 40
@@ -156,6 +158,8 @@
     _tableView.delegate = self;
     [_tableView registerClass:[ServiceInfoCell class] forCellReuseIdentifier:NSStringFromClass([ServiceInfoCell class])];
     [_tableView registerClass:[ServiceOnlineCell class] forCellReuseIdentifier:NSStringFromClass([ServiceOnlineCell class])];
+    [_tableView registerClass:[ServiceCircumCell class] forCellReuseIdentifier:NSStringFromClass([ServiceCircumCell class])];
+
     [self.view addSubview:_tableView];
     _tableView.tableFooterView = [CommonBottomView shareInstance];
     
@@ -187,7 +191,9 @@
             break;
         case 2://周边商业
         {
-            
+            CircumViewController *circumVc = [[CircumViewController alloc]init];
+            circumVc.hidesBottomBarWhenPushed = true;
+            [self.navigationController pushViewController:circumVc animated:true];
         }
             break;
         default:
@@ -215,22 +221,26 @@
             return cell;
         }
             break;
-        case 1:case 2:
+        case 1:
         {
             ServiceInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ServiceInfoCell class]) forIndexPath:indexPath];
-            if (indexPath.section == 1) {
-                if (_serviceInfoList.count != 0) {
-                    [cell setCellWithArray:_serviceInfoList];
-                }
-            }else{
-                if (_circleCommerceList.count != 0) {
-                    [cell setCellWithArray:_circleCommerceList];
-                }
+            if (_serviceInfoList.count != 0) {
+                [cell setCellWithArray:_serviceInfoList cellType:ServiceInfoCellType_ServiceInfo];
             }
-
             return cell;
+            
         }
             break;
+            
+        case 2:
+        {
+            ServiceCircumCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ServiceCircumCell class]) forIndexPath:indexPath];
+            
+            if (_circleCommerceList.count != 0) {
+                [cell setCellWithArray:_circleCommerceList];
+            }
+            return cell;
+        }
         default:
             break;
     }

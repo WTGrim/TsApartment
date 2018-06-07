@@ -8,7 +8,6 @@
 
 #import "PageContentView.h"
 #import "UIViewController+PageController.h"
-#import "MyRewardAlertView.h"
 
 @interface PageContentView ()<UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>{
     
@@ -348,12 +347,6 @@ static NSString *const cellID = @"cellID";
     [self didMoveFromIndex:currentIndex toIndex:currentIndex progress:1.0];
     [self adjustSegmentTitleToCurrentIndex:currentIndex];
     
-    if (!_canScroll && currentIndex != 0 && _currentIndex != 3) {
-        DSWeakSelf(self);
-        [[MyRewardAlertView shareInstance]showAlert:@"请先完成每日任务\n再来做任务吧" btnTitle:@"去完成" btnClick:^{
-            [weakself.segmentView setSelectedIndex:0 animated:YES];
-        }];
-    }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{

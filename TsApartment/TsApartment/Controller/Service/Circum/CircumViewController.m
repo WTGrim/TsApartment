@@ -45,7 +45,11 @@
     style.showSlider = true;
     style.changeTitleColor = true;
     style.sliderWidthFitTitle = true;
+    style.sliderColor = ThemeColor_Yellow;
+    style.selectedTitleColor = ThemeColor_BlackText;
+    style.normalTitleColor = ThemeColor_GrayText;
     style.adjustCoverOrSliderWidth = true;
+    style.titleFont = [UIFont systemFontOfSize:15];
     if (self.titleArray.count < 5) {
         style.scrollTitle = false;
     }

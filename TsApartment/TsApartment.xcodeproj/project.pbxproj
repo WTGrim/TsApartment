@@ -116,6 +116,13 @@
 		08F1CAC920C8E03400137592 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAC220C8E03300137592 /* TitleView.m */; };
 		08F1CACA20C8E03400137592 /* UIViewController+PageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAC420C8E03300137592 /* UIViewController+PageController.m */; };
 		08F1CACE20C8E2AC00137592 /* CircumCommonHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CACD20C8E2AC00137592 /* CircumCommonHeader.m */; };
+		08F1CAD220C8FD0600137592 /* CircumListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAD020C8FD0600137592 /* CircumListTableViewCell.m */; };
+		08F1CAD320C8FD0600137592 /* CircumListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F1CAD120C8FD0600137592 /* CircumListTableViewCell.xib */; };
+		08F1CAD620C9024B00137592 /* CircumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAD520C9024B00137592 /* CircumDetailViewController.m */; };
+		08F1CAD920C90A5F00137592 /* ServiceCircumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAD820C90A5F00137592 /* ServiceCircumCell.m */; };
+		08F1CADD20C91A3400137592 /* StarLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CADC20C91A3400137592 /* StarLevelView.m */; };
+		08F1CAE020C91DE900137592 /* CircumDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CADF20C91DE900137592 /* CircumDetailHeader.m */; };
+		08F1CAE220C91DF500137592 /* CircumDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F1CAE120C91DF500137592 /* CircumDetailHeader.xib */; };
 		08F869E820C793710022EB85 /* ServiceInfoDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */; };
 		08F869EA20C7937B0022EB85 /* ServiceInfoDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */; };
 		08F869ED20C7B3410022EB85 /* CommentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869EC20C7B3410022EB85 /* CommentBottomView.m */; };
@@ -366,6 +373,18 @@
 		08F1CAC420C8E03300137592 /* UIViewController+PageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PageController.m"; sourceTree = "<group>"; };
 		08F1CACC20C8E2AC00137592 /* CircumCommonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumCommonHeader.h; sourceTree = "<group>"; };
 		08F1CACD20C8E2AC00137592 /* CircumCommonHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumCommonHeader.m; sourceTree = "<group>"; };
+		08F1CACF20C8FD0600137592 /* CircumListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumListTableViewCell.h; sourceTree = "<group>"; };
+		08F1CAD020C8FD0600137592 /* CircumListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumListTableViewCell.m; sourceTree = "<group>"; };
+		08F1CAD120C8FD0600137592 /* CircumListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircumListTableViewCell.xib; sourceTree = "<group>"; };
+		08F1CAD420C9024B00137592 /* CircumDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumDetailViewController.h; sourceTree = "<group>"; };
+		08F1CAD520C9024B00137592 /* CircumDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumDetailViewController.m; sourceTree = "<group>"; };
+		08F1CAD720C90A5F00137592 /* ServiceCircumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceCircumCell.h; sourceTree = "<group>"; };
+		08F1CAD820C90A5F00137592 /* ServiceCircumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceCircumCell.m; sourceTree = "<group>"; };
+		08F1CADB20C91A3400137592 /* StarLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarLevelView.h; sourceTree = "<group>"; };
+		08F1CADC20C91A3400137592 /* StarLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarLevelView.m; sourceTree = "<group>"; };
+		08F1CADE20C91DE900137592 /* CircumDetailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumDetailHeader.h; sourceTree = "<group>"; };
+		08F1CADF20C91DE900137592 /* CircumDetailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumDetailHeader.m; sourceTree = "<group>"; };
+		08F1CAE120C91DF500137592 /* CircumDetailHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircumDetailHeader.xib; sourceTree = "<group>"; };
 		08F869E620C793710022EB85 /* ServiceInfoDetailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceInfoDetailHeader.h; sourceTree = "<group>"; };
 		08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceInfoDetailHeader.m; sourceTree = "<group>"; };
 		08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceInfoDetailHeader.xib; sourceTree = "<group>"; };
@@ -638,6 +657,7 @@
 		081BC4BB20B5632900AD0C0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				08F1CADA20C91A2D00137592 /* StarView */,
 				08F1CAB720C8E03300137592 /* PageScrollView */,
 				08F86A3420C7D9100022EB85 /* other */,
 				08F86A2A20C7D1F30022EB85 /* HYBMasonryAutoCellHeight */,
@@ -718,6 +738,8 @@
 				08F1CAB220C8DC4F00137592 /* CircumViewController.m */,
 				08F1CAB420C8DCD300137592 /* CircumPageViewController.h */,
 				08F1CAB520C8DCD300137592 /* CircumPageViewController.m */,
+				08F1CAD420C9024B00137592 /* CircumDetailViewController.h */,
+				08F1CAD520C9024B00137592 /* CircumDetailViewController.m */,
 			);
 			path = Circum;
 			sourceTree = "<group>";
@@ -810,6 +832,8 @@
 				0856460820C6BB8F002D861E /* publicAreaBookView.h */,
 				0856460920C6BB8F002D861E /* publicAreaBookView.m */,
 				0856460D20C6BBAD002D861E /* publicAreaBookView.xib */,
+				08F1CAD720C90A5F00137592 /* ServiceCircumCell.h */,
+				08F1CAD820C90A5F00137592 /* ServiceCircumCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1036,8 +1060,23 @@
 			children = (
 				08F1CACC20C8E2AC00137592 /* CircumCommonHeader.h */,
 				08F1CACD20C8E2AC00137592 /* CircumCommonHeader.m */,
+				08F1CACF20C8FD0600137592 /* CircumListTableViewCell.h */,
+				08F1CAD020C8FD0600137592 /* CircumListTableViewCell.m */,
+				08F1CAD120C8FD0600137592 /* CircumListTableViewCell.xib */,
+				08F1CADE20C91DE900137592 /* CircumDetailHeader.h */,
+				08F1CADF20C91DE900137592 /* CircumDetailHeader.m */,
+				08F1CAE120C91DF500137592 /* CircumDetailHeader.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		08F1CADA20C91A2D00137592 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				08F1CADB20C91A3400137592 /* StarLevelView.h */,
+				08F1CADC20C91A3400137592 /* StarLevelView.m */,
+			);
+			path = StarView;
 			sourceTree = "<group>";
 		};
 		08F869FA20C7CE3C0022EB85 /* Model */ = {
@@ -1241,12 +1280,14 @@
 				0869DE0420BCDF05006A3BF1 /* SignUpViewController.xib in Resources */,
 				0856460220C68785002D861E /* CommunityActHeader.xib in Resources */,
 				081BC4CB20B5632900AD0C0A /* ServiceViewController.xib in Resources */,
+				08F1CAE220C91DF500137592 /* CircumDetailHeader.xib in Resources */,
 				086653B320BE9C4D00004F92 /* ServiceOnlineCollectionViewCell.xib in Resources */,
 				0869DE1020BD3A5F006A3BF1 /* EnsurePsdViewController.xib in Resources */,
 				0856460720C68F92002D861E /* CommunityActDetailCell.xib in Resources */,
 				0830ACA720C14DE300EF0CB0 /* ServiceInfoListCell.xib in Resources */,
 				08E20CD620BC0D5A009FFAE1 /* ActivityTableViewCell.xib in Resources */,
 				0869DE1F20BD5AD0006A3BF1 /* CentralizeCell.xib in Resources */,
+				08F1CAD320C8FD0600137592 /* CircumListTableViewCell.xib in Resources */,
 				08A8DDAD20BF955600AADC3E /* DistrListTableViewCell.xib in Resources */,
 				08F1CAAB20C8C8F100137592 /* UserNameViewController.xib in Resources */,
 				08AAC79920BBABA900E760AE /* sound.mp3 in Resources */,
@@ -1331,6 +1372,7 @@
 			files = (
 				08F1CAAF20C8D41600137592 /* AboutUsViewController.m in Sources */,
 				081BC4C220B5632900AD0C0A /* NetworkTool.m in Sources */,
+				08F1CAD220C8FD0600137592 /* CircumListTableViewCell.m in Sources */,
 				081BC4D620B5676100AD0C0A /* AlertView.m in Sources */,
 				08F869F020C7B94E0022EB85 /* ServiceCommentCell.m in Sources */,
 				08E20CD520BC0D5A009FFAE1 /* ActivityTableViewCell.m in Sources */,
@@ -1381,6 +1423,7 @@
 				08F869F320C7BB440022EB85 /* CommentTextCell.m in Sources */,
 				08F86A2120C7D1010022EB85 /* MLTextAttachment.m in Sources */,
 				081BC4C320B5632900AD0C0A /* JSONKit.m in Sources */,
+				08F1CAD620C9024B00137592 /* CircumDetailViewController.m in Sources */,
 				08F869E820C793710022EB85 /* ServiceInfoDetailHeader.m in Sources */,
 				08F869F920C7CDEB0022EB85 /* ContainView.m in Sources */,
 				08F86A2420C7D1010022EB85 /* MLLabelLayoutManager.m in Sources */,
@@ -1425,6 +1468,7 @@
 				0830AC8E20C143E100EF0CB0 /* ContractTableViewCell.m in Sources */,
 				08F869F620C7CC950022EB85 /* CommonCommentCell.m in Sources */,
 				08AAC79720BBABA900E760AE /* ScannerMaskView.m in Sources */,
+				08F1CAD920C90A5F00137592 /* ServiceCircumCell.m in Sources */,
 				081BC4C520B5632900AD0C0A /* HomeViewController.m in Sources */,
 				08F86A2320C7D1010022EB85 /* NSString+MLExpression.m in Sources */,
 				08AAC78620BB9FE200E760AE /* LocationChooseController.m in Sources */,
@@ -1437,6 +1481,8 @@
 				08A8DDA720BF952C00AADC3E /* CentraListTableViewCell.m in Sources */,
 				0830AC9C20C14D8500EF0CB0 /* ServiceInfoListController.m in Sources */,
 				08F869FD20C7CE670022EB85 /* CommentCellModel.m in Sources */,
+				08F1CADD20C91A3400137592 /* StarLevelView.m in Sources */,
+				08F1CAE020C91DE900137592 /* CircumDetailHeader.m in Sources */,
 				0869DE2220BD5E9E006A3BF1 /* CentTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
