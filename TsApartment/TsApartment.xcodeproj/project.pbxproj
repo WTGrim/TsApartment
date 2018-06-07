@@ -123,6 +123,11 @@
 		08F1CADD20C91A3400137592 /* StarLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CADC20C91A3400137592 /* StarLevelView.m */; };
 		08F1CAE020C91DE900137592 /* CircumDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CADF20C91DE900137592 /* CircumDetailHeader.m */; };
 		08F1CAE220C91DF500137592 /* CircumDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F1CAE120C91DF500137592 /* CircumDetailHeader.xib */; };
+		08F1CAE820C934E500137592 /* CircumDetailCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAE720C934E500137592 /* CircumDetailCommentCell.m */; };
+		08F1CAEB20C938BF00137592 /* PhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAEA20C938BF00137592 /* PhotoGroupView.m */; };
+		08F1CAF320C938EF00137592 /* PhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAEE20C938EF00137592 /* PhotoProgressView.m */; };
+		08F1CAF420C938EF00137592 /* PhotoScanImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAF020C938EF00137592 /* PhotoScanImageView.m */; };
+		08F1CAF520C938EF00137592 /* PhotoScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAF220C938EF00137592 /* PhotoScanView.m */; };
 		08F869E820C793710022EB85 /* ServiceInfoDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */; };
 		08F869EA20C7937B0022EB85 /* ServiceInfoDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */; };
 		08F869ED20C7B3410022EB85 /* CommentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869EC20C7B3410022EB85 /* CommentBottomView.m */; };
@@ -385,6 +390,16 @@
 		08F1CADE20C91DE900137592 /* CircumDetailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumDetailHeader.h; sourceTree = "<group>"; };
 		08F1CADF20C91DE900137592 /* CircumDetailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumDetailHeader.m; sourceTree = "<group>"; };
 		08F1CAE120C91DF500137592 /* CircumDetailHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircumDetailHeader.xib; sourceTree = "<group>"; };
+		08F1CAE620C934E500137592 /* CircumDetailCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumDetailCommentCell.h; sourceTree = "<group>"; };
+		08F1CAE720C934E500137592 /* CircumDetailCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumDetailCommentCell.m; sourceTree = "<group>"; };
+		08F1CAE920C938BF00137592 /* PhotoGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGroupView.h; sourceTree = "<group>"; };
+		08F1CAEA20C938BF00137592 /* PhotoGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGroupView.m; sourceTree = "<group>"; };
+		08F1CAED20C938EF00137592 /* PhotoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoProgressView.h; sourceTree = "<group>"; };
+		08F1CAEE20C938EF00137592 /* PhotoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoProgressView.m; sourceTree = "<group>"; };
+		08F1CAEF20C938EF00137592 /* PhotoScanImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoScanImageView.h; sourceTree = "<group>"; };
+		08F1CAF020C938EF00137592 /* PhotoScanImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoScanImageView.m; sourceTree = "<group>"; };
+		08F1CAF120C938EF00137592 /* PhotoScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoScanView.h; sourceTree = "<group>"; };
+		08F1CAF220C938EF00137592 /* PhotoScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoScanView.m; sourceTree = "<group>"; };
 		08F869E620C793710022EB85 /* ServiceInfoDetailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceInfoDetailHeader.h; sourceTree = "<group>"; };
 		08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceInfoDetailHeader.m; sourceTree = "<group>"; };
 		08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceInfoDetailHeader.xib; sourceTree = "<group>"; };
@@ -657,6 +672,7 @@
 		081BC4BB20B5632900AD0C0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				08F1CAEC20C938EF00137592 /* PhotoScan */,
 				08F1CADA20C91A2D00137592 /* StarView */,
 				08F1CAB720C8E03300137592 /* PageScrollView */,
 				08F86A3420C7D9100022EB85 /* other */,
@@ -1066,6 +1082,10 @@
 				08F1CADE20C91DE900137592 /* CircumDetailHeader.h */,
 				08F1CADF20C91DE900137592 /* CircumDetailHeader.m */,
 				08F1CAE120C91DF500137592 /* CircumDetailHeader.xib */,
+				08F1CAE620C934E500137592 /* CircumDetailCommentCell.h */,
+				08F1CAE720C934E500137592 /* CircumDetailCommentCell.m */,
+				08F1CAE920C938BF00137592 /* PhotoGroupView.h */,
+				08F1CAEA20C938BF00137592 /* PhotoGroupView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1077,6 +1097,19 @@
 				08F1CADC20C91A3400137592 /* StarLevelView.m */,
 			);
 			path = StarView;
+			sourceTree = "<group>";
+		};
+		08F1CAEC20C938EF00137592 /* PhotoScan */ = {
+			isa = PBXGroup;
+			children = (
+				08F1CAED20C938EF00137592 /* PhotoProgressView.h */,
+				08F1CAEE20C938EF00137592 /* PhotoProgressView.m */,
+				08F1CAEF20C938EF00137592 /* PhotoScanImageView.h */,
+				08F1CAF020C938EF00137592 /* PhotoScanImageView.m */,
+				08F1CAF120C938EF00137592 /* PhotoScanView.h */,
+				08F1CAF220C938EF00137592 /* PhotoScanView.m */,
+			);
+			path = PhotoScan;
 			sourceTree = "<group>";
 		};
 		08F869FA20C7CE3C0022EB85 /* Model */ = {
@@ -1390,6 +1423,7 @@
 				086653B220BE9C4D00004F92 /* ServiceOnlineCollectionViewCell.m in Sources */,
 				086653AA20BE966800004F92 /* ServiceInfoCell.m in Sources */,
 				081BC4C120B5632900AD0C0A /* CommonNetwork.m in Sources */,
+				08F1CAF320C938EF00137592 /* PhotoProgressView.m in Sources */,
 				08F86A2620C7D1010022EB85 /* MLLinkLabel.m in Sources */,
 				081BC47720B562D400AD0C0A /* main.m in Sources */,
 				08F86A1D20C7D1010022EB85 /* NSAttributedString+MLLabel.m in Sources */,
@@ -1415,6 +1449,7 @@
 				08F1CAB320C8DC4F00137592 /* CircumViewController.m in Sources */,
 				081BC4C820B5632900AD0C0A /* BootViewControllerManager.m in Sources */,
 				08E20CB320BBDBD8009FFAE1 /* DistributedCell.m in Sources */,
+				08F1CAEB20C938BF00137592 /* PhotoGroupView.m in Sources */,
 				08A8DDAC20BF955600AADC3E /* DistrListTableViewCell.m in Sources */,
 				08A8DDB020BFA4D100AADC3E /* LeftViewTextField.m in Sources */,
 				081BC4C720B5632900AD0C0A /* BasicViewController.m in Sources */,
@@ -1423,18 +1458,21 @@
 				08F869F320C7BB440022EB85 /* CommentTextCell.m in Sources */,
 				08F86A2120C7D1010022EB85 /* MLTextAttachment.m in Sources */,
 				081BC4C320B5632900AD0C0A /* JSONKit.m in Sources */,
+				08F1CAF520C938EF00137592 /* PhotoScanView.m in Sources */,
 				08F1CAD620C9024B00137592 /* CircumDetailViewController.m in Sources */,
 				08F869E820C793710022EB85 /* ServiceInfoDetailHeader.m in Sources */,
 				08F869F920C7CDEB0022EB85 /* ContainView.m in Sources */,
 				08F86A2420C7D1010022EB85 /* MLLabelLayoutManager.m in Sources */,
 				086653BD20BEB0A400004F92 /* CommonBtn.m in Sources */,
 				0856461120C6BFB8002D861E /* ServiceInfoDetailController.m in Sources */,
+				08F1CAE820C934E500137592 /* CircumDetailCommentCell.m in Sources */,
 				08AAC79620BBABA900E760AE /* Scanner.m in Sources */,
 				08EBF88F20B800EA00A6FDED /* SegmentItem.m in Sources */,
 				08AAC78920BBA32800E760AE /* MessageView.m in Sources */,
 				086653B620BE9C6900004F92 /* ServiceOnlineCell.m in Sources */,
 				08F1CAA620C8C8D700137592 /* ProfileSettingController.m in Sources */,
 				0869DE0320BCDF05006A3BF1 /* SignUpViewController.m in Sources */,
+				08F1CAF420C938EF00137592 /* PhotoScanImageView.m in Sources */,
 				08A8DDB420BFA9C900AADC3E /* SearchViewController.m in Sources */,
 				08E20CCD20BBFB0F009FFAE1 /* DistCollectionViewCell.m in Sources */,
 				08A8DDBB20BFF19800AADC3E /* SearchItemView.m in Sources */,

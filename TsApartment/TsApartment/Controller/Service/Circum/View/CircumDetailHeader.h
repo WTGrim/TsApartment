@@ -10,4 +10,7 @@
 
 @interface CircumDetailHeader : UIView
 
+- (void)setHeaderWithDict:(NSDictionary *)dict heightCallBack:(void(^)(CGFloat height))heightCallBack;
+
+
 @end
