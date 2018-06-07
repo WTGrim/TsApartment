@@ -107,6 +107,15 @@
 		08F1CAAB20C8C8F100137592 /* UserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F1CAA920C8C8F100137592 /* UserNameViewController.xib */; };
 		08F1CAAF20C8D41600137592 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAAD20C8D41600137592 /* AboutUsViewController.m */; };
 		08F1CAB020C8D41600137592 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F1CAAE20C8D41600137592 /* AboutUsViewController.xib */; };
+		08F1CAB320C8DC4F00137592 /* CircumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAB220C8DC4F00137592 /* CircumViewController.m */; };
+		08F1CAB620C8DCD300137592 /* CircumPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAB520C8DCD300137592 /* CircumPageViewController.m */; };
+		08F1CAC520C8E03400137592 /* PageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAB920C8E03300137592 /* PageContentView.m */; };
+		08F1CAC620C8E03400137592 /* PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CABB20C8E03300137592 /* PageScrollView.m */; };
+		08F1CAC720C8E03400137592 /* PageTitleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CABE20C8E03300137592 /* PageTitleStyle.m */; };
+		08F1CAC820C8E03400137592 /* SegmentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAC020C8E03300137592 /* SegmentScrollView.m */; };
+		08F1CAC920C8E03400137592 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAC220C8E03300137592 /* TitleView.m */; };
+		08F1CACA20C8E03400137592 /* UIViewController+PageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAC420C8E03300137592 /* UIViewController+PageController.m */; };
+		08F1CACE20C8E2AC00137592 /* CircumCommonHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CACD20C8E2AC00137592 /* CircumCommonHeader.m */; };
 		08F869E820C793710022EB85 /* ServiceInfoDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */; };
 		08F869EA20C7937B0022EB85 /* ServiceInfoDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */; };
 		08F869ED20C7B3410022EB85 /* CommentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869EC20C7B3410022EB85 /* CommentBottomView.m */; };
@@ -338,6 +347,25 @@
 		08F1CAAC20C8D41600137592 /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		08F1CAAD20C8D41600137592 /* AboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		08F1CAAE20C8D41600137592 /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		08F1CAB120C8DC4F00137592 /* CircumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumViewController.h; sourceTree = "<group>"; };
+		08F1CAB220C8DC4F00137592 /* CircumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumViewController.m; sourceTree = "<group>"; };
+		08F1CAB420C8DCD300137592 /* CircumPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumPageViewController.h; sourceTree = "<group>"; };
+		08F1CAB520C8DCD300137592 /* CircumPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumPageViewController.m; sourceTree = "<group>"; };
+		08F1CAB820C8E03300137592 /* PageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentView.h; sourceTree = "<group>"; };
+		08F1CAB920C8E03300137592 /* PageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentView.m; sourceTree = "<group>"; };
+		08F1CABA20C8E03300137592 /* PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollView.h; sourceTree = "<group>"; };
+		08F1CABB20C8E03300137592 /* PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollView.m; sourceTree = "<group>"; };
+		08F1CABC20C8E03300137592 /* PageScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollViewDelegate.h; sourceTree = "<group>"; };
+		08F1CABD20C8E03300137592 /* PageTitleStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageTitleStyle.h; sourceTree = "<group>"; };
+		08F1CABE20C8E03300137592 /* PageTitleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageTitleStyle.m; sourceTree = "<group>"; };
+		08F1CABF20C8E03300137592 /* SegmentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentScrollView.h; sourceTree = "<group>"; };
+		08F1CAC020C8E03300137592 /* SegmentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentScrollView.m; sourceTree = "<group>"; };
+		08F1CAC120C8E03300137592 /* TitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
+		08F1CAC220C8E03300137592 /* TitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
+		08F1CAC320C8E03300137592 /* UIViewController+PageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PageController.h"; sourceTree = "<group>"; };
+		08F1CAC420C8E03300137592 /* UIViewController+PageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PageController.m"; sourceTree = "<group>"; };
+		08F1CACC20C8E2AC00137592 /* CircumCommonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircumCommonHeader.h; sourceTree = "<group>"; };
+		08F1CACD20C8E2AC00137592 /* CircumCommonHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircumCommonHeader.m; sourceTree = "<group>"; };
 		08F869E620C793710022EB85 /* ServiceInfoDetailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceInfoDetailHeader.h; sourceTree = "<group>"; };
 		08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceInfoDetailHeader.m; sourceTree = "<group>"; };
 		08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceInfoDetailHeader.xib; sourceTree = "<group>"; };
@@ -610,6 +638,7 @@
 		081BC4BB20B5632900AD0C0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				08F1CAB720C8E03300137592 /* PageScrollView */,
 				08F86A3420C7D9100022EB85 /* other */,
 				08F86A2A20C7D1F30022EB85 /* HYBMasonryAutoCellHeight */,
 				08F86A0420C7D1010022EB85 /* MyLinkLabel */,
@@ -684,6 +713,11 @@
 		0830AC9920C14D6400EF0CB0 /* Circum */ = {
 			isa = PBXGroup;
 			children = (
+				08F1CACB20C8E28200137592 /* View */,
+				08F1CAB120C8DC4F00137592 /* CircumViewController.h */,
+				08F1CAB220C8DC4F00137592 /* CircumViewController.m */,
+				08F1CAB420C8DCD300137592 /* CircumPageViewController.h */,
+				08F1CAB520C8DCD300137592 /* CircumPageViewController.m */,
 			);
 			path = Circum;
 			sourceTree = "<group>";
@@ -975,6 +1009,35 @@
 				08F1CAAE20C8D41600137592 /* AboutUsViewController.xib */,
 			);
 			path = ProfileSetting;
+			sourceTree = "<group>";
+		};
+		08F1CAB720C8E03300137592 /* PageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				08F1CAB820C8E03300137592 /* PageContentView.h */,
+				08F1CAB920C8E03300137592 /* PageContentView.m */,
+				08F1CABA20C8E03300137592 /* PageScrollView.h */,
+				08F1CABB20C8E03300137592 /* PageScrollView.m */,
+				08F1CABC20C8E03300137592 /* PageScrollViewDelegate.h */,
+				08F1CABD20C8E03300137592 /* PageTitleStyle.h */,
+				08F1CABE20C8E03300137592 /* PageTitleStyle.m */,
+				08F1CABF20C8E03300137592 /* SegmentScrollView.h */,
+				08F1CAC020C8E03300137592 /* SegmentScrollView.m */,
+				08F1CAC120C8E03300137592 /* TitleView.h */,
+				08F1CAC220C8E03300137592 /* TitleView.m */,
+				08F1CAC320C8E03300137592 /* UIViewController+PageController.h */,
+				08F1CAC420C8E03300137592 /* UIViewController+PageController.m */,
+			);
+			path = PageScrollView;
+			sourceTree = "<group>";
+		};
+		08F1CACB20C8E28200137592 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08F1CACC20C8E2AC00137592 /* CircumCommonHeader.h */,
+				08F1CACD20C8E2AC00137592 /* CircumCommonHeader.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		08F869FA20C7CE3C0022EB85 /* Model */ = {
@@ -1274,7 +1337,9 @@
 				08A8DDA120BF92E800AADC3E /* DistributedViewController.m in Sources */,
 				08F86A3A20C7E43C0022EB85 /* OperationView.m in Sources */,
 				0841DDA420C625AA006F3704 /* ProtocolViewController.m in Sources */,
+				08F1CAC920C8E03400137592 /* TitleView.m in Sources */,
 				08F86A3320C7D79E0022EB85 /* NSString+WT.m in Sources */,
+				08F1CACE20C8E2AC00137592 /* CircumCommonHeader.m in Sources */,
 				08A8DDBE20BFF90900AADC3E /* BasicTableViewCell.m in Sources */,
 				08EBF88E20B800EA00A6FDED /* BadgeSegment.m in Sources */,
 				085645F220C67E34002D861E /* UIImageView+EasyInOut.m in Sources */,
@@ -1288,9 +1353,11 @@
 				08F86A1D20C7D1010022EB85 /* NSAttributedString+MLLabel.m in Sources */,
 				08AAC78D20BBAA7200E760AE /* MessageViewController.m in Sources */,
 				08F86A2F20C7D1F30022EB85 /* UITableView+HYBCacheHeight.m in Sources */,
+				08F1CACA20C8E03400137592 /* UIViewController+PageController.m in Sources */,
 				08F86A3720C7D9100022EB85 /* DataSourceManager.m in Sources */,
 				085645F820C680EF002D861E /* NSURL+DSpersonEx.m in Sources */,
 				0856460020C68706002D861E /* CommunityActHeader.m in Sources */,
+				08F1CAC520C8E03400137592 /* PageContentView.m in Sources */,
 				0830AC8520C1165A00EF0CB0 /* CommonBottomView.m in Sources */,
 				08A8DD9E20BF929100AADC3E /* CentralizedViewController.m in Sources */,
 				08F869ED20C7B3410022EB85 /* CommentBottomView.m in Sources */,
@@ -1303,12 +1370,14 @@
 				081BC46920B562D400AD0C0A /* AppDelegate.m in Sources */,
 				0866539620BE340200004F92 /* LocationChooseCell.m in Sources */,
 				0866539D20BE456A00004F92 /* PhotoClipViewController.m in Sources */,
+				08F1CAB320C8DC4F00137592 /* CircumViewController.m in Sources */,
 				081BC4C820B5632900AD0C0A /* BootViewControllerManager.m in Sources */,
 				08E20CB320BBDBD8009FFAE1 /* DistributedCell.m in Sources */,
 				08A8DDAC20BF955600AADC3E /* DistrListTableViewCell.m in Sources */,
 				08A8DDB020BFA4D100AADC3E /* LeftViewTextField.m in Sources */,
 				081BC4C720B5632900AD0C0A /* BasicViewController.m in Sources */,
 				08E20CD120BBFD2B009FFAE1 /* HomeSectionHeader.m in Sources */,
+				08F1CAB620C8DCD300137592 /* CircumPageViewController.m in Sources */,
 				08F869F320C7BB440022EB85 /* CommentTextCell.m in Sources */,
 				08F86A2120C7D1010022EB85 /* MLTextAttachment.m in Sources */,
 				081BC4C320B5632900AD0C0A /* JSONKit.m in Sources */,
@@ -1329,6 +1398,7 @@
 				086653AE20BE980900004F92 /* ServiceInfoCollectionViewCell.m in Sources */,
 				08F86A1F20C7D1010022EB85 /* NSString+MLLabel.m in Sources */,
 				081BC4CC20B5632900AD0C0A /* ServiceViewController.m in Sources */,
+				08F1CAC620C8E03400137592 /* PageScrollView.m in Sources */,
 				081BC4D020B5632900AD0C0A /* CommonTools.m in Sources */,
 				08F86A0020C7D0350022EB85 /* CommentView.m in Sources */,
 				0830ACA620C14DE300EF0CB0 /* ServiceInfoListCell.m in Sources */,
@@ -1341,9 +1411,11 @@
 				0869DE1E20BD5AD0006A3BF1 /* CentralizeCell.m in Sources */,
 				08F1CAAA20C8C8F100137592 /* UserNameViewController.m in Sources */,
 				08F86A2020C7D1010022EB85 /* MLExpressionManager.m in Sources */,
+				08F1CAC820C8E03400137592 /* SegmentScrollView.m in Sources */,
 				081BC4CF20B5632900AD0C0A /* UserStatus.m in Sources */,
 				0856460A20C6BB8F002D861E /* publicAreaBookView.m in Sources */,
 				08F86A1E20C7D1010022EB85 /* NSMutableAttributedString+MLLabel.m in Sources */,
+				08F1CAC720C8E03400137592 /* PageTitleStyle.m in Sources */,
 				08A8DDC120BFFE7B00AADC3E /* SearchHotTableViewCell.m in Sources */,
 				0869DE0B20BCFE1A006A3BF1 /* WTAlertView.m in Sources */,
 				08E20CC520BBEE14009FFAE1 /* WTCycleScrollView.m in Sources */,
