@@ -223,7 +223,7 @@
                                         <action selector="myService:" destination="-1" eventType="touchUpInside" id="BzB-qm-jtt"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="2043" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-ij-jXN" customClass="CommonBtn">
+                                <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-ij-jXN" customClass="CommonBtn">
                                     <rect key="frame" x="300" y="0.0" width="75" height="100"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" title="我的服务" image="profile_service">

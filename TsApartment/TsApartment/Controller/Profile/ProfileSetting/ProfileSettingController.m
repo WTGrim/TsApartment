@@ -9,10 +9,19 @@
 #import "ProfileSettingController.h"
 #import "UseCameraOrPhoto.h"
 #import "NetworkTool.h"
+#import "UIImageView+EasyInOut.h"
+#import "UserNameViewController.h"
+#import "EnsurePsdViewController.h"
 
 @interface ProfileSettingController ()
 //头像
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+//用户名
+@property (weak, nonatomic) IBOutlet UILabel *nickName;
+//手机号
+@property (weak, nonatomic) IBOutlet UILabel *mobile;
+//登录密码
+@property (weak, nonatomic) IBOutlet UILabel *password;
 //缓存
 @property (weak, nonatomic) IBOutlet UILabel *cacheLabel;
 //更换头像的图片
@@ -22,6 +31,9 @@
 
 @end
 
+static NSString *const defaultNickName = @"请填写您喜欢的用户名";
+static NSString *const defaultPassword = @"填写您登录的密码";
+
 @implementation ProfileSettingController
 
 - (void)viewDidLoad {
@@ -29,6 +41,50 @@
     // Do any additional setup after loading the view from its nib.
     
     [self setupUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self getData];
+}
+
+#pragma mark - 获取数据
+- (void)getData{
+
+    WEAKSELF;
+    [NetworkTool getUserInfoWithSucceedBlock:^(NSDictionary * _Nullable result) {
+        [weakSelf presentData:[result objectForKey:kData]];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        [WTAlertView showMessage:[errorInfo objectForKey:kMessage]];
+    }];
+}
+
+- (void)presentData:(NSDictionary *)dict{
+    
+    if (StringIsNull([dict objectForKey:kHeadimage])) {
+        _iconImageView.image = [UIImage imageNamed:@"profile_user"];
+    }else{
+        [_iconImageView wt_setImageWithURL:[dict objectForKey:kHeadimage] placeholderImage:[UIImage imageNamed:@"profile_user"] completed:nil];
+    }
+    
+    _mobile.text = [CommonTools getStringWithDict:dict key:kMobile];
+    
+    NSString *nickName = @"";
+    if (StringIsNull([dict objectForKey:kNickName])) {
+        nickName = defaultNickName;
+    }else{
+        nickName = [dict objectForKey:kNickName];
+    }
+    _nickName.text = nickName;
+    
+    NSString *password = @"";
+    if (StringIsNull([dict objectForKey:kPassword])) {
+        password = defaultPassword;
+    }else{
+        password = [dict objectForKey:kPassword];
+    }
+    _password.text = password;
 }
 
 #pragma mark - initView
@@ -58,10 +114,18 @@
             }];
         }
             break;
-            
+        case 101://修改用户名
+        {
+            UserNameViewController *userNameVc = [[UserNameViewController alloc]init];
+            userNameVc.hidesBottomBarWhenPushed = true;
+            [self.navigationController pushViewController:userNameVc animated:true];
+        }
+            break;
         case 103://设置密码
         {
-            
+            EnsurePsdViewController *psd = [[EnsurePsdViewController alloc]init];
+            psd.hidesBottomBarWhenPushed = true;
+            [self.navigationController pushViewController:psd animated:true];
         }
             break;
         case 104://关于我们
@@ -83,6 +147,17 @@
             }];
         }
             break;
+            
+        case 106://退出登录
+        {
+            [CommonTools alertWithTitle:@"" message:@"确定退出登录吗？" style:UIAlertControllerStyleAlert leftBtnTitle:@"取消" rightBtnTitle:@"确定" rootVc:self leftClick:^{
+                
+            } rightClick:^{
+                [[UserStatus shareInstance]destoryUserStatus];
+                [CommonTools removeLocalWithKey:kSaveUserInfo];
+            }];
+        }
+            break;
         default:
             break;
     }
@@ -93,25 +168,17 @@
                  
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveClick)];
     _iconImageView.image = image;
+    [self uploadImage];
                  
 }
 
-#pragma mark - 保存操作
-- (void)saveClick{
-    
-//    [NetworkTool ]
-}
-
-#pragma mark - 退出登录
-- (IBAction)logoutClick:(UIButton *)sender {
-    
-    [CommonTools alertWithTitle:@"" message:@"确定退出登录吗？" style:UIAlertControllerStyleAlert leftBtnTitle:@"取消" rightBtnTitle:@"确定" rootVc:self leftClick:^{
+#pragma mark - 上传头像
+- (void)uploadImage{
+    [NetworkTool editUserInfoWithNickName:@"" sex:0 imageArray:@[_iconImageView.image] password:@"" SucceedBlock:^(NSDictionary * _Nullable result) {
         
-    } rightClick:^{
-        [[UserStatus shareInstance]destoryUserStatus];
-        [CommonTools removeLocalWithKey:kSaveUserInfo];
+    } failedBlock:^(id  _Nullable errorInfo) {
+        
     }];
-    
 }
 
 - (UseCameraOrPhoto *)cameraOrPhoto{

@@ -65,8 +65,6 @@
 		0869DE0B20BCFE1A006A3BF1 /* WTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869DE0A20BCFE1A006A3BF1 /* WTAlertView.m */; };
 		0869DE0F20BD3A5F006A3BF1 /* EnsurePsdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869DE0D20BD3A5F006A3BF1 /* EnsurePsdViewController.m */; };
 		0869DE1020BD3A5F006A3BF1 /* EnsurePsdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0869DE0E20BD3A5F006A3BF1 /* EnsurePsdViewController.xib */; };
-		0869DE1420BD560B006A3BF1 /* ProfileSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869DE1220BD560B006A3BF1 /* ProfileSettingController.m */; };
-		0869DE1520BD560B006A3BF1 /* ProfileSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0869DE1320BD560B006A3BF1 /* ProfileSettingController.xib */; };
 		0869DE1E20BD5AD0006A3BF1 /* CentralizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869DE1C20BD5AD0006A3BF1 /* CentralizeCell.m */; };
 		0869DE1F20BD5AD0006A3BF1 /* CentralizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0869DE1D20BD5AD0006A3BF1 /* CentralizeCell.xib */; };
 		0869DE2220BD5E9E006A3BF1 /* CentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0869DE2120BD5E9E006A3BF1 /* CentTableViewCell.m */; };
@@ -103,6 +101,12 @@
 		08E20CD620BC0D5A009FFAE1 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E20CD420BC0D5A009FFAE1 /* ActivityTableViewCell.xib */; };
 		08EBF88E20B800EA00A6FDED /* BadgeSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EBF88B20B800EA00A6FDED /* BadgeSegment.m */; };
 		08EBF88F20B800EA00A6FDED /* SegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EBF88D20B800EA00A6FDED /* SegmentItem.m */; };
+		08F1CAA520C8C8D700137592 /* ProfileSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F1CAA320C8C8D700137592 /* ProfileSettingController.xib */; };
+		08F1CAA620C8C8D700137592 /* ProfileSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAA420C8C8D700137592 /* ProfileSettingController.m */; };
+		08F1CAAA20C8C8F100137592 /* UserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAA820C8C8F100137592 /* UserNameViewController.m */; };
+		08F1CAAB20C8C8F100137592 /* UserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F1CAA920C8C8F100137592 /* UserNameViewController.xib */; };
+		08F1CAAF20C8D41600137592 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F1CAAD20C8D41600137592 /* AboutUsViewController.m */; };
+		08F1CAB020C8D41600137592 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F1CAAE20C8D41600137592 /* AboutUsViewController.xib */; };
 		08F869E820C793710022EB85 /* ServiceInfoDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */; };
 		08F869EA20C7937B0022EB85 /* ServiceInfoDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */; };
 		08F869ED20C7B3410022EB85 /* CommentBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F869EC20C7B3410022EB85 /* CommentBottomView.m */; };
@@ -259,9 +263,6 @@
 		0869DE0C20BD3A5F006A3BF1 /* EnsurePsdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnsurePsdViewController.h; sourceTree = "<group>"; };
 		0869DE0D20BD3A5F006A3BF1 /* EnsurePsdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnsurePsdViewController.m; sourceTree = "<group>"; };
 		0869DE0E20BD3A5F006A3BF1 /* EnsurePsdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnsurePsdViewController.xib; sourceTree = "<group>"; };
-		0869DE1120BD560B006A3BF1 /* ProfileSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileSettingController.h; sourceTree = "<group>"; };
-		0869DE1220BD560B006A3BF1 /* ProfileSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileSettingController.m; sourceTree = "<group>"; };
-		0869DE1320BD560B006A3BF1 /* ProfileSettingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSettingController.xib; sourceTree = "<group>"; };
 		0869DE1B20BD5AD0006A3BF1 /* CentralizeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CentralizeCell.h; sourceTree = "<group>"; };
 		0869DE1C20BD5AD0006A3BF1 /* CentralizeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CentralizeCell.m; sourceTree = "<group>"; };
 		0869DE1D20BD5AD0006A3BF1 /* CentralizeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentralizeCell.xib; sourceTree = "<group>"; };
@@ -328,6 +329,15 @@
 		08EBF88B20B800EA00A6FDED /* BadgeSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeSegment.m; sourceTree = "<group>"; };
 		08EBF88C20B800EA00A6FDED /* SegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentItem.h; sourceTree = "<group>"; };
 		08EBF88D20B800EA00A6FDED /* SegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentItem.m; sourceTree = "<group>"; };
+		08F1CAA220C8C8D700137592 /* ProfileSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileSettingController.h; sourceTree = "<group>"; };
+		08F1CAA320C8C8D700137592 /* ProfileSettingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSettingController.xib; sourceTree = "<group>"; };
+		08F1CAA420C8C8D700137592 /* ProfileSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileSettingController.m; sourceTree = "<group>"; };
+		08F1CAA720C8C8F100137592 /* UserNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserNameViewController.h; sourceTree = "<group>"; };
+		08F1CAA820C8C8F100137592 /* UserNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserNameViewController.m; sourceTree = "<group>"; };
+		08F1CAA920C8C8F100137592 /* UserNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserNameViewController.xib; sourceTree = "<group>"; };
+		08F1CAAC20C8D41600137592 /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		08F1CAAD20C8D41600137592 /* AboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		08F1CAAE20C8D41600137592 /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 		08F869E620C793710022EB85 /* ServiceInfoDetailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceInfoDetailHeader.h; sourceTree = "<group>"; };
 		08F869E720C793710022EB85 /* ServiceInfoDetailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceInfoDetailHeader.m; sourceTree = "<group>"; };
 		08F869E920C7937B0022EB85 /* ServiceInfoDetailHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceInfoDetailHeader.xib; sourceTree = "<group>"; };
@@ -547,13 +557,11 @@
 		081BC4AC20B5632800AD0C0A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				08F1CAA120C8C8BD00137592 /* ProfileSetting */,
 				0830AC8620C142B800EF0CB0 /* Contract */,
 				081BC4AE20B5632800AD0C0A /* ProfileViewController.h */,
 				081BC4AF20B5632800AD0C0A /* ProfileViewController.m */,
 				081BC4AD20B5632800AD0C0A /* ProfileViewController.xib */,
-				0869DE1120BD560B006A3BF1 /* ProfileSettingController.h */,
-				0869DE1220BD560B006A3BF1 /* ProfileSettingController.m */,
-				0869DE1320BD560B006A3BF1 /* ProfileSettingController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -953,6 +961,22 @@
 			path = BadgeSegment;
 			sourceTree = "<group>";
 		};
+		08F1CAA120C8C8BD00137592 /* ProfileSetting */ = {
+			isa = PBXGroup;
+			children = (
+				08F1CAA220C8C8D700137592 /* ProfileSettingController.h */,
+				08F1CAA420C8C8D700137592 /* ProfileSettingController.m */,
+				08F1CAA320C8C8D700137592 /* ProfileSettingController.xib */,
+				08F1CAA720C8C8F100137592 /* UserNameViewController.h */,
+				08F1CAA820C8C8F100137592 /* UserNameViewController.m */,
+				08F1CAA920C8C8F100137592 /* UserNameViewController.xib */,
+				08F1CAAC20C8D41600137592 /* AboutUsViewController.h */,
+				08F1CAAD20C8D41600137592 /* AboutUsViewController.m */,
+				08F1CAAE20C8D41600137592 /* AboutUsViewController.xib */,
+			);
+			path = ProfileSetting;
+			sourceTree = "<group>";
+		};
 		08F869FA20C7CE3C0022EB85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1150,6 +1174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F1CAB020C8D41600137592 /* AboutUsViewController.xib in Resources */,
 				0869DE0420BCDF05006A3BF1 /* SignUpViewController.xib in Resources */,
 				0856460220C68785002D861E /* CommunityActHeader.xib in Resources */,
 				081BC4CB20B5632900AD0C0A /* ServiceViewController.xib in Resources */,
@@ -1160,18 +1185,19 @@
 				08E20CD620BC0D5A009FFAE1 /* ActivityTableViewCell.xib in Resources */,
 				0869DE1F20BD5AD0006A3BF1 /* CentralizeCell.xib in Resources */,
 				08A8DDAD20BF955600AADC3E /* DistrListTableViewCell.xib in Resources */,
+				08F1CAAB20C8C8F100137592 /* UserNameViewController.xib in Resources */,
 				08AAC79920BBABA900E760AE /* sound.mp3 in Resources */,
 				081BC4C420B5632900AD0C0A /* README.md in Resources */,
 				08A8DDA820BF952C00AADC3E /* CentraListTableViewCell.xib in Resources */,
 				081BC4CE20B5632900AD0C0A /* LoginViewController.xib in Resources */,
 				081BC47120B562D400AD0C0A /* Assets.xcassets in Resources */,
-				0869DE1520BD560B006A3BF1 /* ProfileSettingController.xib in Resources */,
 				081BC4C920B5632900AD0C0A /* ProfileViewController.xib in Resources */,
 				086653A520BE585C00004F92 /* MapViewController.xib in Resources */,
 				0830AC8F20C143E100EF0CB0 /* ContractTableViewCell.xib in Resources */,
 				08E20CCE20BBFB0F009FFAE1 /* DistCollectionViewCell.xib in Resources */,
 				081BC4C620B5632900AD0C0A /* HomeViewController.xib in Resources */,
 				0856460E20C6BBAD002D861E /* publicAreaBookView.xib in Resources */,
+				08F1CAA520C8C8D700137592 /* ProfileSettingController.xib in Resources */,
 				08F869EA20C7937B0022EB85 /* ServiceInfoDetailHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1240,6 +1266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F1CAAF20C8D41600137592 /* AboutUsViewController.m in Sources */,
 				081BC4C220B5632900AD0C0A /* NetworkTool.m in Sources */,
 				081BC4D620B5676100AD0C0A /* AlertView.m in Sources */,
 				08F869F020C7B94E0022EB85 /* ServiceCommentCell.m in Sources */,
@@ -1294,7 +1321,7 @@
 				08EBF88F20B800EA00A6FDED /* SegmentItem.m in Sources */,
 				08AAC78920BBA32800E760AE /* MessageView.m in Sources */,
 				086653B620BE9C6900004F92 /* ServiceOnlineCell.m in Sources */,
-				0869DE1420BD560B006A3BF1 /* ProfileSettingController.m in Sources */,
+				08F1CAA620C8C8D700137592 /* ProfileSettingController.m in Sources */,
 				0869DE0320BCDF05006A3BF1 /* SignUpViewController.m in Sources */,
 				08A8DDB420BFA9C900AADC3E /* SearchViewController.m in Sources */,
 				08E20CCD20BBFB0F009FFAE1 /* DistCollectionViewCell.m in Sources */,
@@ -1312,6 +1339,7 @@
 				0866539E20BE456A00004F92 /* UseCameraOrPhoto.m in Sources */,
 				08F86A2220C7D1010022EB85 /* NSAttributedString+MLExpression.m in Sources */,
 				0869DE1E20BD5AD0006A3BF1 /* CentralizeCell.m in Sources */,
+				08F1CAAA20C8C8F100137592 /* UserNameViewController.m in Sources */,
 				08F86A2020C7D1010022EB85 /* MLExpressionManager.m in Sources */,
 				081BC4CF20B5632900AD0C0A /* UserStatus.m in Sources */,
 				0856460A20C6BB8F002D861E /* publicAreaBookView.m in Sources */,

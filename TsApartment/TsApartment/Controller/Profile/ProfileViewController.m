@@ -88,8 +88,8 @@
         }else{
             
         }
-        if (!StringIsNull([obj objectForKey:kImgUrl])) {
-            [btnArray[idx] sd_setImageWithURL:[NSURL URLWithString:[obj objectForKey:kImgUrl]] forState:UIControlStateNormal];
+        if (!StringIsNull([obj objectForKey:[CommonTools getFitImgName]])) {
+            [btnArray[idx] sd_setImageWithURL:[NSURL URLWithString:[obj objectForKey:[CommonTools getFitImgName]]] forState:UIControlStateNormal];
         }else{//本地图片
             [btnArray[idx] setImage:imgsNames[idx] forState:UIControlStateNormal];
         }
@@ -116,8 +116,8 @@
         }else{
             
         }
-        if (!StringIsNull([obj objectForKey:kImgUrl])) {
-            [btnArray[idx] sd_setImageWithURL:[NSURL URLWithString:[obj objectForKey:kImgUrl]] forState:UIControlStateNormal];
+        if (!StringIsNull([obj objectForKey:[CommonTools getFitImgName]])) {
+            [btnArray[idx] sd_setImageWithURL:[NSURL URLWithString:[obj objectForKey:[CommonTools getFitImgName]]] forState:UIControlStateNormal];
         }else{//本地图片
             [btnArray[idx] setImage:imgsNames[idx] forState:UIControlStateNormal];
         }
@@ -134,11 +134,6 @@
     LoginViewController *loginVc = [[LoginViewController alloc]init];
     loginVc.hidesBottomBarWhenPushed = true;
     [self.navigationController pushViewController:loginVc animated:true];
-}
-
-#pragma mark - 去登录
-- (void)goLogin{
-    
 }
 
 #pragma mark - 我的住所

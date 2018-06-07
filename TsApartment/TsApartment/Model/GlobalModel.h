@@ -40,6 +40,8 @@ static NSString *const kLocalSearchHistory = @"localSearchHistory";
 static NSString *const kName = @"name";
 static NSString *const kImgUrl = @"imgurl";
 static NSString *const kIos = @"ios";
+static NSString *const kHeadimage = @"headimage";
+static NSString *const kNot_read = @"not_read";
 
 /**======================首页=============================**/
 static NSString *const kPage = @"page";
